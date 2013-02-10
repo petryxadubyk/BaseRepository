@@ -244,9 +244,9 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DataAccess\DataAccess.csproj">
+    <ProjectReference Include="..\DataAccess\KRS.DataAccess.csproj">
       <Project>{d4970a13-735b-40ba-b47b-e7c7753d7af3}</Project>
-      <Name>DataAccess</Name>
+      <Name>KRS.DataAccess</Name>
     </ProjectReference>
     <ProjectReference Include="..\Infrastructure\Infrastructure.csproj">
       <Project>{5231b0c6-bca5-4162-87f4-ccb0a4bf52b5}</Project>

@@ -1,13 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\DataAccess.csproj", "{D4970A13-735B-40BA-B47B-E7C7753D7AF3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KRS.DataAccess", "DataAccess\KRS.DataAccess.csproj", "{D4970A13-735B-40BA-B47B-E7C7753D7AF3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure", "Infrastructure\Infrastructure.csproj", "{5231B0C6-BCA5-4162-87F4-CCB0A4BF52B5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KitchenRecipesWebApi", "KitchenRecipesWebApi\KitchenRecipesWebApi.csproj", "{4AEA2B99-CE57-4526-8FCC-E30BD6EE99DB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KitchenRecipesWebApi.Tests", "KitchenRecipesWebApi.Tests\KitchenRecipesWebApi.Tests.csproj", "{1A4DD810-2854-4D04-88E7-2310FDEB2754}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KRS.Model", "KRS.Model\KRS.Model.csproj", "{6B4499A2-9D67-4D82-835D-92DC41BF479A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,6 +33,10 @@ Global
 		{1A4DD810-2854-4D04-88E7-2310FDEB2754}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1A4DD810-2854-4D04-88E7-2310FDEB2754}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1A4DD810-2854-4D04-88E7-2310FDEB2754}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B4499A2-9D67-4D82-835D-92DC41BF479A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B4499A2-9D67-4D82-835D-92DC41BF479A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B4499A2-9D67-4D82-835D-92DC41BF479A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B4499A2-9D67-4D82-835D-92DC41BF479A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("KRS.DataAccess")]
+[assembly: AssemblyTitle("KRS.Model")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("KRS.DataAccess")]
+[assembly: AssemblyProduct("KRS.Model")]
 [assembly: AssemblyCopyright("Copyright ©  2013")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("dfb02d8b-956b-4c93-a93f-b2e51b541d7c")]
+[assembly: Guid("d64f728b-8a88-4a27-ad4b-82e7a8c499b1")]
 
 // Version information for an assembly consists of the following four values:
 //
