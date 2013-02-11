@@ -47,19 +47,26 @@
     <Compile Include="DataContext\KRSContext.cs" />
     <Compile Include="IInfrastructure\Disposable.cs" />
     <Compile Include="IInfrastructure\IDatabaseFactory.cs" />
-    <Compile Include="IInfrastructure\IRepository.cs" />
+    <Compile Include="IRepositories\IRepository.cs" />
     <Compile Include="IInfrastructure\IUnitOfWork.cs" />
     <Compile Include="Infrastructure\DatabaseFactory.cs" />
     <Compile Include="Infrastructure\PagedResult.cs" />
-    <Compile Include="Infrastructure\RepositoryBase.cs" />
+    <Compile Include="IRepositories\RepositoryBase.cs" />
     <Compile Include="Infrastructure\UnitOfWork.cs" />
+    <Compile Include="Migrations\201302112329474_Initial.cs" />
+    <Compile Include="Migrations\201302112329474_Initial.Designer.cs">
+      <DependentUpon>201302112329474_Initial.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\DeliveryRepository.cs" />
+    <Compile Include="Repositories\RecipeRepository.cs" />
     <Compile Include="Repositories\UserRepository.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="IRepositories\" />
+    <EmbeddedResource Include="Migrations\201302112329474_Initial.resx">
+      <DependentUpon>201302112329474_Initial.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

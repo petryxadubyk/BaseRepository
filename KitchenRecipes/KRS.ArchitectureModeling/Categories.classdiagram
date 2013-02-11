@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="ff8fa590-0965-45ce-b986-eb2544c6ecf0" name="Categories" linkedPackageId="8e639a78-d4a2-4dbe-aa25-c79ed7f1b0f3" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="897730fc-abcc-402e-9280-b45bf0b13b46" name="Category" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="93ecf3e7-ad1e-4166-a3b9-fe7ff9fa5d6d" />
+        <suppliersInternal>
+          <dependency Id="d9016e6b-c340-49bf-84aa-00352a91b9a1">
+            <interfaceMoniker Id="33ee43c7-dd11-476a-8a1a-8f46b06ae90f" LastKnownName="IRecipe" />
+            <elementDefinition Id="fc42488b-7a6c-46aa-8f4a-090393dfa3a7" />
+          </dependency>
+          <dependency Id="3c6c31f4-4051-4d7d-b3dd-acbf8d576a19">
+            <interfaceMoniker Id="1c5bcbb8-a06f-46df-aef7-e3faf5d86ddc" LastKnownName="IRecipePart" />
+            <elementDefinition Id="e0a7c30d-c315-4682-9f87-d4d38469262a" />
+          </dependency>
+        </suppliersInternal>
+        <ownedAttributesInternal>
+          <property Id="3dea71fd-0822-4cda-a5b8-641354256664" name="CategoryId" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="4c941b78-5f32-4119-b725-95eb7c7ac799" />
+          </property>
+          <property Id="a203d4f2-41ef-4345-9a82-b3fc4ac85153" name="Name" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="eda9ae10-17e0-4473-b18f-84873497d5c3" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="f46f2c96-dc90-479f-8c2d-4d1dac47fe0a" name="RecipeCategory" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="f0428027-2d58-4222-bd50-ed55aac3c6ba" />
+        <generalsInternal>
+          <generalization Id="fe538e5c-2e80-4741-a0c1-53070e5a21e0" isSubstitutable="false">
+            <classMoniker Id="897730fc-abcc-402e-9280-b45bf0b13b46" LastKnownName="Category" />
+            <elementDefinition Id="4f4ed892-4933-4953-9719-5cf71315ffd3" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property Id="adc16d6d-2565-475d-adc3-85ae825e91cb" name="ICollection&lt;Recipe&gt; Recipes" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="7b754ceb-c99b-449f-aad2-4a6db9fdbfca" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="6da270a0-62e4-45a1-9b6c-8ff2c985cecd" name="IngredientCategory" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="a73499f1-2266-4081-846b-bbfb4cf3e255" />
+        <generalsInternal>
+          <generalization Id="cfc639d9-8043-4e39-a746-06145aac3272" isSubstitutable="false">
+            <classMoniker Id="897730fc-abcc-402e-9280-b45bf0b13b46" LastKnownName="Category" />
+            <elementDefinition Id="d741786d-d8d7-4566-b1f3-637cefba8019" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property Id="fcd74841-5d1b-4240-9f58-6c6faf2ee71e" name="ICollection&lt;RecipeParts&gt; Ingredients" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="697799eb-70fa-4ad1-9625-b75f02dd396d" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="97e07257-a2d2-446a-a545-0e9fc2fdaf13" name="KitchenwareCategory" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="1f7b776e-a75a-442a-8605-13749a7a9405" />
+        <generalsInternal>
+          <generalization Id="896f03a9-8d2f-4fed-88ea-094135e9b348" isSubstitutable="false">
+            <classMoniker Id="897730fc-abcc-402e-9280-b45bf0b13b46" LastKnownName="Category" />
+            <elementDefinition Id="9fbcb693-4fda-4113-bbd3-afd44b168f37" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property Id="97f6d6ad-8367-475b-b7fc-bfa7bd54599f" name="ICollection&lt;IIngredients&gt; Ingredients" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="e2e6ef72-50ff-4efa-91a8-3a8fc093e90b" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="1c5bcbb8-a06f-46df-aef7-e3faf5d86ddc" name="IRecipePart" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="f59c275d-8640-40aa-b432-775c3463d2b9" />
+        <ownedAttributes>
+          <property Id="1299a3de-c25a-468c-b573-b6e6674ad832" name="Category" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="ba4c4eba-814d-4922-9b77-17a50051f48b" />
+          </property>
+        </ownedAttributes>
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="33ee43c7-dd11-476a-8a1a-8f46b06ae90f" name="IRecipe" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="6354e8eb-a15d-448f-9a40-dcab10214557" />
+        <ownedAttributes>
+          <property Id="6cc16461-20a7-4d30-9c30-1302033906ff" name="Category" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="f2169d92-cccc-464f-987a-a33a3ced47f1" />
+          </property>
+          <property Id="16601b3c-3596-492c-8cea-854854f70761" name="NationalCategory" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="c9f35114-224f-442a-abc5-8b5ee17a9a22" />
+          </property>
+        </ownedAttributes>
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="863faeb7-cd45-4c93-aaf9-0537c8a56a53" name="NationalCategory" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="de213ccd-3d87-4556-8b11-936d208e51a7" />
+        <ownedAttributesInternal>
+          <property Id="305cfedb-b07a-4b66-902d-f1797c4cec56" name="ICollection&lt;IRecipe&gt; Recipes" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="3817a060-8df4-40f3-b0b8-9a2a7b3c5ca8" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="8e639a78-d4a2-4dbe-aa25-c79ed7f1b0f3" name="KRS.ArchitectureModeling">
+    <elementDefinition Id="86c41531-8766-453c-9775-a6850d9c5a0d" />
+    <profileInstances>
+      <packageHasProfileInstances Id="e3780567-d9a8-4227-aa21-2187c475952f">
+        <profileInstance Id="d208d052-5984-47cc-9de2-098142b7ee89" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="184ec4a6-07a0-41b2-a2ee-c9a3fa698d6a">
+        <profileInstance Id="17ffeb7e-f598-4b84-bd1b-84283609c686" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</logicalClassDesignerModel>

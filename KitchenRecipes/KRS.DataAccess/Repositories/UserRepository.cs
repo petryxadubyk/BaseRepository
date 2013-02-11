@@ -1,4 +1,5 @@
 ﻿using KRS.DataAccess.IInfrastructure;
+using KRS.DataAccess.IRepositories;
 using KRS.DataAccess.Infrastructure;
 using KRS.Model;
 

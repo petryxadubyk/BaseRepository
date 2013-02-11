@@ -354,6 +354,266 @@
         </ownedAttributesInternal>
       </class>
     </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="93ecf3e7-ad1e-4166-a3b9-fe7ff9fa5d6d"
+        name="Category"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <dependency
+            Id="63a0a4f0-92ce-41a4-9197-d2d18c629429">
+            <classMoniker
+              Id="09512765-e40e-4613-9ca9-0d6f686f3afb"
+              LastKnownName="Recipe"
+              LastKnownLocation="KRS.ArchitectureModeling.uml" />
+          </dependency>
+          <dependency
+            Id="fc42488b-7a6c-46aa-8f4a-090393dfa3a7">
+            <interfaceMoniker
+              Id="6354e8eb-a15d-448f-9a40-dcab10214557"
+              LastKnownName="IRecipe"
+              LastKnownLocation="KRS.ArchitectureModeling.uml" />
+          </dependency>
+          <dependency
+            Id="e0a7c30d-c315-4682-9f87-d4d38469262a">
+            <interfaceMoniker
+              Id="f59c275d-8640-40aa-b432-775c3463d2b9"
+              LastKnownName="IRecipePart"
+              LastKnownLocation="KRS.ArchitectureModeling.uml" />
+          </dependency>
+        </suppliersInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="4c941b78-5f32-4119-b725-95eb7c7ac799"
+            name="CategoryId"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="eda9ae10-17e0-4473-b18f-84873497d5c3"
+            name="Name"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="f0428027-2d58-4222-bd50-ed55aac3c6ba"
+        name="RecipeCategory"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <generalsInternal>
+          <generalization
+            Id="4f4ed892-4933-4953-9719-5cf71315ffd3"
+            isSubstitutable="false">
+            <classMoniker
+              Id="93ecf3e7-ad1e-4166-a3b9-fe7ff9fa5d6d"
+              LastKnownName="Category"
+              LastKnownLocation="KRS.ArchitectureModeling.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="7b754ceb-c99b-449f-aad2-4a6db9fdbfca"
+            name="ICollection&lt;Recipe&gt; Recipes"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="09512765-e40e-4613-9ca9-0d6f686f3afb"
+        name="Recipe"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="f4ba03e7-7c32-4d8a-b0b5-b8db9e1d9ccc"
+            name="RecipeId"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="b1c44ff9-03cb-4090-925c-c46b8377cb78"
+            name="Category"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="a73499f1-2266-4081-846b-bbfb4cf3e255"
+        name="IngredientCategory"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <generalsInternal>
+          <generalization
+            Id="d741786d-d8d7-4566-b1f3-637cefba8019"
+            isSubstitutable="false">
+            <classMoniker
+              Id="93ecf3e7-ad1e-4166-a3b9-fe7ff9fa5d6d"
+              LastKnownName="Category"
+              LastKnownLocation="KRS.ArchitectureModeling.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="697799eb-70fa-4ad1-9625-b75f02dd396d"
+            name="ICollection&lt;RecipeParts&gt; Ingredients"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="1f7b776e-a75a-442a-8605-13749a7a9405"
+        name="KitchenwareCategory"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <generalsInternal>
+          <generalization
+            Id="9fbcb693-4fda-4113-bbd3-afd44b168f37"
+            isSubstitutable="false">
+            <classMoniker
+              Id="93ecf3e7-ad1e-4166-a3b9-fe7ff9fa5d6d"
+              LastKnownName="Category"
+              LastKnownLocation="KRS.ArchitectureModeling.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="e2e6ef72-50ff-4efa-91a8-3a8fc093e90b"
+            name="ICollection&lt;IIngredients&gt; Ingredients"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="f59c275d-8640-40aa-b432-775c3463d2b9"
+        name="IRecipePart"
+        isAbstract="false"
+        isLeaf="false">
+        <ownedAttributes>
+          <property
+            Id="ba4c4eba-814d-4922-9b77-17a50051f48b"
+            name="Category"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributes>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="6354e8eb-a15d-448f-9a40-dcab10214557"
+        name="IRecipe"
+        isAbstract="false"
+        isLeaf="false">
+        <ownedAttributes>
+          <property
+            Id="f2169d92-cccc-464f-987a-a33a3ced47f1"
+            name="Category"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="c9f35114-224f-442a-abc5-8b5ee17a9a22"
+            name="NationalCategory"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributes>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="de213ccd-3d87-4556-8b11-936d208e51a7"
+        name="NationalCategory"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="3817a060-8df4-40f3-b0b8-9a2a7b3c5ca8"
+            name="ICollection&lt;IRecipe&gt; Recipes"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
   </packagedElements>
   <primitiveType
     Id="220a3521-e091-4221-bae9-3ef9018e845c"

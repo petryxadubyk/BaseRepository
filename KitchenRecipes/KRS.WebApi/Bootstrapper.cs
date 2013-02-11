@@ -24,7 +24,7 @@ namespace KRS.WebApi
             builder.RegisterType<UnitOfWork>().As<IUnitOfWork>().InstancePerApiRequest();
             builder.RegisterType<DatabaseFactory>().As<IDatabaseFactory>().InstancePerApiRequest();
 
-            builder.RegisterAssemblyTypes(typeof(DeliveryRepository)
+            builder.RegisterAssemblyTypes(typeof(RecipeRepository)
                 .Assembly).Where(t => t.Name.EndsWith("Repository"))
             .AsImplementedInterfaces().InstancePerApiRequest();
 
