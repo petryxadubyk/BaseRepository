@@ -29,6 +29,13 @@
       <SubType>Content</SubType>
       <DependentUpon>Categories.classdiagram</DependentUpon>
     </Content>
+    <Content Include="HighLevel\EF_Repository_UnitOfWork_Controllers.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="HighLevel\EF_Repository_UnitOfWork_Controllers.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>HighLevel\EF_Repository_UnitOfWork_Controllers.classdiagram</DependentUpon>
+    </Content>
     <Content Include="Recipes.classdiagram">
       <SubType>Content</SubType>
     </Content>
@@ -47,5 +54,6 @@
     <Content Include="ModelDefinition\KRS.ArchitectureModeling.uml">
       <SubType>Content</SubType>
     </Content>
+    <Folder Include="HighLevel" />
   </ItemGroup>
 </Project>

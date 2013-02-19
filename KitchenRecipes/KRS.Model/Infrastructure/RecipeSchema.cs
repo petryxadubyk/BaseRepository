@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
+using KRS.Model.Recipes;
 
 namespace KRS.Model.Infrastructure
 {
@@ -11,7 +7,12 @@ namespace KRS.Model.Infrastructure
     {
         [Key]
         public int SchemaId { get; set; }
+
         public int RecipeId { get; set; }
+        public Recipe Recipe { get; set; }
+        
+        public int StepId { get; set; }
+        
         public int RecipePartId { get; set; }
         public int? RecipePartMajor { get; set; }
     }

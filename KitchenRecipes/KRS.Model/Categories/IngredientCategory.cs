@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using KRS.Model.IRecipesParts;
+﻿using System.Collections.Generic;
+using KRS.Model.RecipesParts;
 
 namespace KRS.Model.Categories
 {
     public class IngredientCategory: Category
     {
-        public virtual ICollection<IIngredient> Ingredients { get; set; }
+        public virtual ICollection<Ingredient> Ingredients { get; set; }
     }
 }

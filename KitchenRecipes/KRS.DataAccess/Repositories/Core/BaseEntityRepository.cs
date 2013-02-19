@@ -1,0 +1,90 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Data.Entity;
+using System.Data.Entity.Infrastructure;
+using System.Linq;
+using System.Linq.Expressions;
+using KRS.DataAccess.Contracts.Repositories.Core;
+
+namespace KRS.DataAccess.Repositories.Core
+{
+    public class BaseEntityRepository<T> : IRepository<T> where T : class
+    {
+        public BaseEntityRepository(DbContext dbContext)
+        {
+            if (dbContext == null)
+                throw new ArgumentNullException("dbContext");
+            DbContext = dbContext;
+            DbSet = DbContext.Set<T>();
+        }
+
+        protected DbContext DbContext { get; set; }
+        protected DbSet<T> DbSet { get; set; }
+
+        public virtual IQueryable<T> GetAll()
+        {
+            return DbSet;
+        }
+
+        public virtual T GetById(long id)
+        {
+            return DbSet.Find(id);
+        }
+
+        public virtual void Add(T entity)
+        {
+            DbEntityEntry dbEntityEntry = DbContext.Entry(entity);
+            if (dbEntityEntry.State != EntityState.Detached)
+                dbEntityEntry.State = EntityState.Added;
+            else
+            {
+                DbSet.Add(entity);
+            }
+        }
+
+        public virtual void Update(T entity)
+        {
+            DbEntityEntry dbEntityEntry = DbContext.Entry(entity);
+            if (dbEntityEntry.State == EntityState.Detached)
+                DbSet.Attach(entity);
+            dbEntityEntry.State = EntityState.Modified;
+        }
+
+        public virtual void Delete(T entity)
+        {
+            DbEntityEntry dbEntityEntry = DbContext.Entry(entity);
+            if (dbEntityEntry.State != EntityState.Deleted)
+                dbEntityEntry.State = EntityState.Deleted;
+            else
+            {
+                DbSet.Attach(entity);
+                DbSet.Remove(entity);
+            }
+        }
+
+        public virtual void Delete(int id)
+        {
+            var entity = GetById(id);
+            if (entity == null) return;
+            Delete(entity);
+        }
+
+        public virtual void Delete(Expression<Func<T, bool>> where)
+        {
+            IEnumerable<T> objects = DbSet.Where(where).AsEnumerable();
+            foreach (T obj in objects)
+                DbSet.Remove(obj);
+        }
+
+        public virtual IEnumerable<T> GetMany(Expression<Func<T, bool>> where)
+        {
+            return DbSet.Where(where).ToList();
+        }
+
+        public virtual T Get(Expression<Func<T, bool>> where)
+        {
+            return DbSet.Where(where).FirstOrDefault();
+        }
+    }
+}

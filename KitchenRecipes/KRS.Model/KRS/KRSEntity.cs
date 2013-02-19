@@ -9,10 +9,19 @@ namespace KRS.Model.KRS
         public KRSEntity()
         {
             CreatedOn = DateTime.Now;
+            ModifiedOn = DateTime.Now;
         }
-        [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+
+        [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity), Required]
+        [Column("entityId")]
         public int Id { get; set; }
+
+        [DataType(DataType.DateTime)]
         public DateTime CreatedOn { get; set; }
-        public DateTime? ModifiedOn { get; set; }
+        [DataType(DataType.DateTime)]
+        public DateTime ModifiedOn { get; set; }
+
+        public int? CreatedBy { get; set; }
+        public int? ModifiedBy { get; set; }
     }
 }

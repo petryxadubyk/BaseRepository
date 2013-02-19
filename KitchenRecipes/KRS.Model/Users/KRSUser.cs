@@ -1,17 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using KRS.Core.Common;
-using KRS.Model.IUsers;
 using KRS.Model.KRS;
 using KRS.Model.Recipes;
 
 namespace KRS.Model.Users
 {
-    public class KRSUser : KRSEntity, IKRSUser
+    public class KRSUser : KRSEntity
     {
         [Required]
         public string Email { get; set; }
@@ -21,6 +18,11 @@ namespace KRS.Model.Users
         public string LastName { get; set; }
 
         public string PasswordHash { get; set; }
+
+        public string Blog { get; set; }
+        public string Twitter { get; set; }
+        public string Gender { get; set; }
+        public string Bio { get; set; }
 
         public DateTime? LastLoginTime { get; set; }
         public bool Activated { get; set; }

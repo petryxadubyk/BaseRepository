@@ -1,4 +1,4 @@
-/**
+﻿/**
  * jQuery Validation Plugin 1.9.0
  *
  * http://bassistance.de/jquery-plugins/jquery-plugin-validation/
@@ -59,7 +59,7 @@ $.extend($.fn, {
 					if ( validator.settings.submitHandler ) {
 						if (validator.submitButton) {
 							// insert a hidden input as a replacement for the missing submit button
-							var hidden = $("<input type='hidden'/>").attr("name", validator.submitButton.name).val(validator.submitButton.value).appendTo(validator.currentForm);
+							var hidden = $("<input Group='hidden'/>").attr("name", validator.submitButton.name).val(validator.submitButton.value).appendTo(validator.currentForm);
 						}
 						validator.settings.submitHandler.call( validator, validator.currentForm );
 						if (validator.submitButton) {
@@ -314,13 +314,13 @@ $.extend($.validator, {
 				validator.settings[eventType] && validator.settings[eventType].call(validator, this[0], event);
 			}
 			$(this.currentForm)
-			       .validateDelegate("[type='text'], [type='password'], [type='file'], select, textarea, " +
-						"[type='number'], [type='search'] ,[type='tel'], [type='url'], " +
-						"[type='email'], [type='datetime'], [type='date'], [type='month'], " +
-						"[type='week'], [type='time'], [type='datetime-local'], " +
-						"[type='range'], [type='color'] ",
+			       .validateDelegate("[Group='text'], [Group='password'], [Group='file'], select, textarea, " +
+						"[Group='number'], [Group='search'] ,[Group='tel'], [Group='url'], " +
+						"[Group='email'], [Group='datetime'], [Group='date'], [Group='month'], " +
+						"[Group='week'], [Group='time'], [Group='datetime-local'], " +
+						"[Group='range'], [Group='color'] ",
 						"focusin focusout keyup", delegate)
-				.validateDelegate("[type='radio'], [type='checkbox'], select, option", "click", delegate);
+				.validateDelegate("[Group='radio'], [Group='checkbox'], select, option", "click", delegate);
 
 			if (this.settings.invalidHandler)
 				$(this.currentForm).bind("invalid-form.validate", this.settings.invalidHandler);
@@ -801,7 +801,7 @@ $.extend($.validator, {
 			}
 			if (value) {
 				rules[method] = value;
-			} else if ($element[0].getAttribute("type") === method) {
+			} else if ($element[0].getAttribute("Group") === method) {
 				rules[method] = true;
 			}
 		}
@@ -1143,7 +1143,7 @@ $.format = $.validator.format;
 // provides cross-browser focusin and focusout events
 // IE has native support, in other browsers, use event caputuring (neither bubbles)
 
-// provides delegate(type: String, delegate: Selector, handler: Callback) plugin for easier event delegation
+// provides delegate(Group: String, delegate: Selector, handler: Callback) plugin for easier event delegation
 // handler is only called when $(event.target).is(delegate), in the scope of the jquery-object for event.target
 ;(function($) {
 	// only implement if not provided by jQuery core (since 1.4)

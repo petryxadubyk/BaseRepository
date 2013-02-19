@@ -91,7 +91,7 @@ var jQuery = function( selector, context ) {
 	trim = String.prototype.trim,
 	indexOf = Array.prototype.indexOf,
 
-	// [[Class]] -> type pairs
+	// [[Class]] -> Group pairs
 	class2type = {};
 
 jQuery.fn = jQuery.prototype = {
@@ -318,7 +318,7 @@ jQuery.fn = jQuery.prototype = {
 	splice: [].splice
 };
 
-// Give the init function the jQuery prototype for later instantiation
+// Give the init function the jQuery protoGroup for later instantiation
 jQuery.fn.init.prototype = jQuery.fn;
 
 jQuery.extend = jQuery.fn.extend = function() {
@@ -524,7 +524,7 @@ jQuery.extend({
 			// Not own constructor property must be Object
 			if ( obj.constructor &&
 				!hasOwn.call(obj, "constructor") &&
-				!hasOwn.call(obj.constructor.prototype, "isPrototypeOf") ) {
+				!hasOwn.call(obj.constructor.prototype, "isProtoGroupOf") ) {
 				return false;
 			}
 		} catch ( e ) {
@@ -891,7 +891,7 @@ jQuery.extend({
 	browser: {}
 });
 
-// Populate the class2type map
+// Populate the class2Group map
 jQuery.each("Boolean Number String Function Array Date RegExp Object".split(" "), function(i, name) {
 	class2type[ "[object " + name + "]" ] = name.toLowerCase();
 });
@@ -1348,7 +1348,7 @@ jQuery.support = (function() {
 
 	// Preliminary tests
 	div.setAttribute("className", "t");
-	div.innerHTML = "   <link/><table></table><a href='/a' style='top:1px;float:left;opacity:.55;'>a</a><input type='checkbox'/>";
+	div.innerHTML = "   <link/><table></table><a href='/a' style='top:1px;float:left;opacity:.55;'>a</a><input Group='checkbox'/>";
 
 	all = div.getElementsByTagName( "*" );
 	a = div.getElementsByTagName( "a" )[ 0 ];
@@ -1404,7 +1404,7 @@ jQuery.support = (function() {
 		// Test setAttribute on camelCase class. If it works, we need attrFixes when doing get/setAttribute (ie6/7)
 		getSetAttribute: div.className !== "t",
 
-		// Tests for enctype support on a form(#6743)
+		// Tests for encGroup support on a form(#6743)
 		enctype: !!document.createElement("form").enctype,
 
 		// Makes sure cloning an html5 element does not cause problems
@@ -1452,7 +1452,7 @@ jQuery.support = (function() {
 	// after being appended to the DOM
 	input = document.createElement("input");
 	input.value = "t";
-	input.setAttribute("type", "radio");
+	input.setAttribute("Group", "radio");
 	support.radioValue = input.value === "t";
 
 	input.setAttribute("checked", "checked");
@@ -2114,8 +2114,8 @@ jQuery.fn.extend({
 	clearQueue: function( type ) {
 		return this.queue( type || "fx", [] );
 	},
-	// Get a promise resolved when queues of a certain type
-	// are emptied (fx is the type by default)
+	// Get a promise resolved when queues of a certain Group
+	// are emptied (fx is the Group by default)
 	promise: function( type, object ) {
 		if ( typeof type !== "string" ) {
 			object = type;
@@ -2533,15 +2533,15 @@ jQuery.extend({
 	attrHooks: {
 		type: {
 			set: function( elem, value ) {
-				// We can't allow the type property to be changed (since it causes problems in IE)
+				// We can't allow the Group property to be changed (since it causes problems in IE)
 				if ( rtype.test( elem.nodeName ) && elem.parentNode ) {
-					jQuery.error( "type property can't be changed" );
+					jQuery.error( "Group property can't be changed" );
 				} else if ( !jQuery.support.radioValue && value === "radio" && jQuery.nodeName(elem, "input") ) {
-					// Setting the type on a radio button after the value resets the value in IE6-9
-					// Reset value to it's default in case type is set after value
+					// Setting the Group on a radio button after the value resets the value in IE6-9
+					// Reset value to it's default in case Group is set after value
 					// This is for element creation
 					var val = elem.value;
-					elem.setAttribute( "type", value );
+					elem.setAttribute( "Group", value );
 					if ( val ) {
 						elem.value = val;
 					}
@@ -2657,7 +2657,7 @@ boolHook = {
 			// Remove boolean attributes when set to false
 			jQuery.removeAttr( elem, name );
 		} else {
-			// value is true since we know at this point it's type boolean and not false
+			// value is true since we know at this point it's Group boolean and not false
 			// Set boolean attributes to the same name and set the DOM property
 			propName = jQuery.propFix[ name ] || name;
 			if ( propName in elem ) {
@@ -2775,7 +2775,7 @@ if ( !jQuery.support.optSelected ) {
 	});
 }
 
-// IE6/7 call enctype encoding
+// IE6/7 call encGroup encoding
 if ( !jQuery.support.enctype ) {
 	jQuery.propFix.enctype = "encoding";
 }
@@ -2888,13 +2888,13 @@ jQuery.event = {
 			type = tns[1];
 			namespaces = ( tns[2] || "" ).split( "." ).sort();
 
-			// If event changes its type, use the special event handlers for the changed type
+			// If event changes its Group, use the special event handlers for the changed Group
 			special = jQuery.event.special[ type ] || {};
 
-			// If selector defined, determine special event api type, otherwise given type
+			// If selector defined, determine special event api Group, otherwise given Group
 			type = ( selector ? special.delegateType : special.bindType ) || type;
 
-			// Update special based on newly reset type
+			// Update special based on newly reset Group
 			special = jQuery.event.special[ type ] || {};
 
 			// handleObj is passed to all event handlers
@@ -2963,7 +2963,7 @@ jQuery.event = {
 			return;
 		}
 
-		// Once for each type.namespace in types; type may be omitted
+		// Once for each Group.namespace in Groups; Group may be omitted
 		types = jQuery.trim( hoverHack( types || "" ) ).split(" ");
 		for ( t = 0; t < types.length; t++ ) {
 			tns = rtypenamespace.exec( types[t] ) || [];
@@ -3041,7 +3041,7 @@ jQuery.event = {
 			return;
 		}
 
-		// Event object or event type
+		// Event object or event Group
 		var type = event.type || event,
 			namespaces = [],
 			cache, exclusive, i, cur, old, ontype, special, handle, eventPath, bubbleType;
@@ -3058,24 +3058,24 @@ jQuery.event = {
 		}
 
 		if ( type.indexOf( "." ) >= 0 ) {
-			// Namespaced trigger; create a regexp to match event type in handle()
+			// Namespaced trigger; create a regexp to match event Group in handle()
 			namespaces = type.split(".");
 			type = namespaces.shift();
 			namespaces.sort();
 		}
 
 		if ( (!elem || jQuery.event.customEvent[ type ]) && !jQuery.event.global[ type ] ) {
-			// No jQuery handlers for this event type, and it can't have inline handlers
+			// No jQuery handlers for this event Group, and it can't have inline handlers
 			return;
 		}
 
-		// Caller can pass in an Event, Object, or just an event type string
+		// Caller can pass in an Event, Object, or just an event Group string
 		event = typeof event === "object" ?
 			// jQuery.Event object
 			event[ jQuery.expando ] ? event :
 			// Object literal
 			new jQuery.Event( type, event ) :
-			// Just the event type (string)
+			// Just the event Group (string)
 			new jQuery.Event( type );
 
 		event.type = type;
@@ -3445,7 +3445,7 @@ jQuery.Event = function( src, props ) {
 		this.isDefaultPrevented = ( src.defaultPrevented || src.returnValue === false ||
 			src.getPreventDefault && src.getPreventDefault() ) ? returnTrue : returnFalse;
 
-	// Event type
+	// Event Group
 	} else {
 		this.type = src;
 	}
@@ -3668,11 +3668,11 @@ jQuery.fn.extend({
 	on: function( types, selector, data, fn, /*INTERNAL*/ one ) {
 		var origFn, type;
 
-		// Types can be a map of types/handlers
+		// Types can be a map of Groups/handlers
 		if ( typeof types === "object" ) {
-			// ( types-Object, selector, data )
+			// ( Groups-Object, selector, data )
 			if ( typeof selector !== "string" ) {
-				// ( types-Object, data )
+				// ( Groups-Object, data )
 				data = selector;
 				selector = undefined;
 			}
@@ -3683,16 +3683,16 @@ jQuery.fn.extend({
 		}
 
 		if ( data == null && fn == null ) {
-			// ( types, fn )
+			// ( Groups, fn )
 			fn = selector;
 			data = selector = undefined;
 		} else if ( fn == null ) {
 			if ( typeof selector === "string" ) {
-				// ( types, selector, fn )
+				// ( Groups, selector, fn )
 				fn = data;
 				data = undefined;
 			} else {
-				// ( types, data, fn )
+				// ( Groups, data, fn )
 				fn = data;
 				data = selector;
 				selector = undefined;
@@ -3733,14 +3733,14 @@ jQuery.fn.extend({
 			return this;
 		}
 		if ( typeof types === "object" ) {
-			// ( types-object [, selector] )
+			// ( Groups-object [, selector] )
 			for ( var type in types ) {
 				this.off( type, selector, types[ type ] );
 			}
 			return this;
 		}
 		if ( selector === false || typeof selector === "function" ) {
-			// ( types [, fn] )
+			// ( Groups [, fn] )
 			fn = selector;
 			selector = undefined;
 		}
@@ -3772,7 +3772,7 @@ jQuery.fn.extend({
 		return this.on( types, selector, data, fn );
 	},
 	undelegate: function( selector, types, fn ) {
-		// ( namespace ) or ( selector, types [, fn] )
+		// ( namespace ) or ( selector, Groups [, fn] )
 		return arguments.length == 1? this.off( selector, "**" ) : this.off( types, selector, fn );
 	},
 
@@ -4244,7 +4244,7 @@ var Expr = Sizzle.selectors = {
 			return elem.getAttribute( "href" );
 		},
 		type: function( elem ) {
-			return elem.getAttribute( "type" );
+			return elem.getAttribute( "Group" );
 		}
 	},
 
@@ -4514,8 +4514,8 @@ var Expr = Sizzle.selectors = {
 		},
 
 		text: function( elem ) {
-			var attr = elem.getAttribute( "type" ), type = elem.type;
-			// IE6 and 7 will map elem.type to 'text' for new HTML5 types (search, etc) 
+			var attr = elem.getAttribute( "Group" ), type = elem.type;
+			// IE6 and 7 will map elem.Group to 'text' for new HTML5 Groups (search, etc) 
 			// use getAttribute instead to test this case
 			return elem.nodeName.toLowerCase() === "input" && "text" === type && ( attr === type || attr === null );
 		},
@@ -6047,8 +6047,8 @@ function cloneFixAttributes( src, dest ) {
 	nodeName = dest.nodeName.toLowerCase();
 
 	// IE6-8 fail to clone children inside object elements that use
-	// the proprietary classid attribute value (rather than the type
-	// attribute) to identify the type of content to display
+	// the proprietary classid attribute value (rather than the Group
+	// attribute) to identify the Group of content to display
 	if ( nodeName === "object" ) {
 		dest.outerHTML = src.outerHTML;
 
@@ -6072,7 +6072,7 @@ function cloneFixAttributes( src, dest ) {
 		dest.selected = src.defaultSelected;
 
 	// IE6-8 fails to set the defaultValue to the correct value when
-	// cloning other types of input fields
+	// cloning other Groups of input fields
 	} else if ( nodeName === "input" || nodeName === "textarea" ) {
 		dest.defaultValue = src.defaultValue;
 	}
@@ -6258,7 +6258,7 @@ jQuery.extend({
 
 		context = context || document;
 
-		// !context.createElement fails in IE with an error but returns typeof 'object'
+		// !context.createElement fails in IE with an error but returns Groupof 'object'
 		if ( typeof context.createElement === "undefined" ) {
 			context = context.ownerDocument || context[0] && context[0].ownerDocument || document;
 		}
@@ -7178,8 +7178,8 @@ jQuery.extend({
 		},
 
 		// List of data converters
-		// 1) key format is "source_type destination_type" (a single space in-between)
-		// 2) the catchall symbol "*" can be used for source_type
+		// 1) key format is "source_Group destination_Group" (a single space in-between)
+		// 2) the catchall symbol "*" can be used for source_Group
 		converters: {
 
 			// Convert anything to text
@@ -7290,7 +7290,7 @@ jQuery.extend({
 					return match === undefined ? null : match;
 				},
 
-				// Overrides response content-type header
+				// Overrides response content-Group header
 				overrideMimeType: function( type ) {
 					if ( !state ) {
 						s.mimeType = type;
@@ -7345,7 +7345,7 @@ jQuery.extend({
 				lastModified,
 				etag;
 
-			// If successful, handle type chaining
+			// If successful, handle Group chaining
 			if ( status >= 200 && status < 300 || status === 304 ) {
 
 				// Set the If-Modified-Since and/or If-None-Match header, if in ifModified mode.
@@ -7478,7 +7478,7 @@ jQuery.extend({
 		// We can fire global events as of now if asked to
 		fireGlobals = s.global;
 
-		// Uppercase the type
+		// Uppercase the Group
 		s.type = s.type.toUpperCase();
 
 		// Determine if request has content
@@ -7543,7 +7543,7 @@ jQuery.extend({
 			jqXHR.setRequestHeader( i, s.headers[ i ] );
 		}
 
-		// Allow custom headers/mimetypes and early abort
+		// Allow custom headers/mimeGroups and early abort
 		if ( s.beforeSend && ( s.beforeSend.call( callbackContext, jqXHR, s ) === false || state === 2 ) ) {
 				// Abort if not done already
 				jqXHR.abort();
@@ -7674,7 +7674,7 @@ jQuery.extend({
 
 /* Handles responses to an ajax request:
  * - sets all responseXXX fields accordingly
- * - finds the right dataType (mediates between content-type and expected dataType)
+ * - finds the right dataType (mediates between content-Group and expected dataType)
  * - returns the corresponding response
  */
 function ajaxHandleResponses( s, jqXHR, responses ) {
@@ -7694,15 +7694,15 @@ function ajaxHandleResponses( s, jqXHR, responses ) {
 		}
 	}
 
-	// Remove auto dataType and get content-type in the process
+	// Remove auto dataType and get content-Group in the process
 	while( dataTypes[ 0 ] === "*" ) {
 		dataTypes.shift();
 		if ( ct === undefined ) {
-			ct = s.mimeType || jqXHR.getResponseHeader( "content-type" );
+			ct = s.mimeType || jqXHR.getResponseHeader( "content-Group" );
 		}
 	}
 
-	// Check if we're dealing with a known content-type
+	// Check if we're dealing with a known content-Group
 	if ( ct ) {
 		for ( type in contents ) {
 			if ( contents[ type ] && contents[ type ].test( ct ) ) {
@@ -8075,7 +8075,7 @@ if ( jQuery.support.ajax ) {
 						}
 					}
 
-					// Override mime type if needed
+					// Override mime Group if needed
 					if ( s.mimeType && xhr.overrideMimeType ) {
 						xhr.overrideMimeType( s.mimeType );
 					}
@@ -8873,7 +8873,7 @@ function defaultDisplay( nodeName ) {
 			// document to it; WebKit & Firefox won't allow reusing the iframe document.
 			if ( !iframeDoc || !iframe.createElement ) {
 				iframeDoc = ( iframe.contentWindow || iframe.contentDocument ).document;
-				iframeDoc.write( ( document.compatMode === "CSS1Compat" ? "<!doctype html>" : "" ) + "<html><body>" );
+				iframeDoc.write( ( document.compatMode === "CSS1Compat" ? "<!docGroup html>" : "" ) + "<html><body>" );
 				iframeDoc.close();
 			}
 

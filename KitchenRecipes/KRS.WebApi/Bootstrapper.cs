@@ -2,6 +2,7 @@
 using Autofac;
 using Autofac.Integration.WebApi;
 using System.Web.Http;
+using KRS.DataAccess.Contracts.UnitOfWork;
 using KRS.DataAccess.IInfrastructure;
 using KRS.DataAccess.Infrastructure;
 using KRS.DataAccess.Repositories;
@@ -21,19 +22,14 @@ namespace KRS.WebApi
             builder.RegisterApiControllers(Assembly.GetExecutingAssembly());
 
             //builder.RegisterType<DefaultCommandBus>().As<ICommandBus>().InstancePerApiRequest();
-            builder.RegisterType<UnitOfWork>().As<IUnitOfWork>().InstancePerApiRequest();
-            builder.RegisterType<DatabaseFactory>().As<IDatabaseFactory>().InstancePerApiRequest();
+            builder.RegisterType<KRSUow>().As<IKRSUow>().InstancePerApiRequest();
+            builder.RegisterType<RepositoryProvider>().As<IRepositoryProvider>().InstancePerApiRequest();
+            builder.RegisterType<RepositoryFactories>().As<RepositoryFactories>().SingleInstance();
 
             builder.RegisterAssemblyTypes(typeof(RecipeRepository)
                 .Assembly).Where(t => t.Name.EndsWith("Repository"))
             .AsImplementedInterfaces().InstancePerApiRequest();
-
-            /*var services = Assembly.Load("EFMVC.Domain");
-            builder.RegisterAssemblyTypes(services)
-            .AsClosedTypesOf(typeof(ICommandHandler<>)).InstancePerApiRequest();
-            builder.RegisterAssemblyTypes(services)
-            .AsClosedTypesOf(typeof(IValidationHandler<>)).InstancePerApiRequest();*/
-
+ 
             var container = builder.Build();
             var resolver = new AutofacWebApiDependencyResolver(container);
 

@@ -373,11 +373,11 @@ $.widget = function( name, base, prototype ) {
 
 	var basePrototype = new base();
 	// we need to make the options hash a property directly on the new instance
-	// otherwise we'll modify the options hash on the prototype that we're
+	// otherwise we'll modify the options hash on the protoGroup that we're
 	// inheriting from
-//	$.each( basePrototype, function( key, val ) {
+//	$.each( baseProtoGroup, function( key, val ) {
 //		if ( $.isPlainObject(val) ) {
-//			basePrototype[ key ] = $.extend( {}, val );
+//			baseProtoGroup[ key ] = $.extend( {}, val );
 //		}
 //	});
 	basePrototype.options = $.extend( true, {}, basePrototype.options );
@@ -1950,7 +1950,7 @@ $.widget("ui.resizable", $.ui.mouse, {
 					//Checking the correct pad and border
 					padWrapper = /sw|ne|nw|se|n|s/.test(i) ? axis.outerHeight() : axis.outerWidth();
 
-					//The padding type i have to apply...
+					//The padding Group i have to apply...
 					var padPos = [ 'padding',
 						/ne|nw|n/.test(i) ? 'Top' :
 						/se|sw|s/.test(i) ? 'Bottom' :
@@ -1969,7 +1969,7 @@ $.widget("ui.resizable", $.ui.mouse, {
 			}
 		};
 
-		//TODO: make renderAxis a prototype function
+		//TODO: make renderAxis a protoGroup function
 		this._renderAxis(this.element);
 
 		this._handles = $('.ui-resizable-handle', this.element)
@@ -6798,7 +6798,7 @@ $.widget( "ui.button", {
 		}
 
 		// TODO: pull out $.Widget's handling for the disabled option into
-		// $.Widget.prototype._setOptionDisabled so it's easy to proxy and can
+		// $.Widget.protoGroup._setOptionDisabled so it's easy to proxy and can
 		// be overridden by individual plugins
 		this._setOption( "disabled", options.disabled );
 		this._resetButton();
@@ -7224,7 +7224,7 @@ $.extend(Datepicker.prototype, {
 			inst.trigger = $(this._get(inst, 'buttonImageOnly') ?
 				$('<img/>').addClass(this._triggerClass).
 					attr({ src: buttonImage, alt: buttonText, title: buttonText }) :
-				$('<button type="button"></button>').addClass(this._triggerClass).
+				$('<button Group="button"></button>').addClass(this._triggerClass).
 					html(buttonImage == '' ? buttonText : $('<img/>').attr(
 					{ src:buttonImage, alt:buttonText, title:buttonText })));
 			input[isRTL ? 'before' : 'after'](inst.trigger);
@@ -7305,7 +7305,7 @@ $.extend(Datepicker.prototype, {
 		if (!inst) {
 			this.uuid += 1;
 			var id = 'dp' + this.uuid;
-			this._dialogInput = $('<input type="text" id="' + id +
+			this._dialogInput = $('<input Group="text" id="' + id +
 				'" style="position: absolute; top: -100px; width: 0px; z-index: -10;"/>');
 			this._dialogInput.keydown(this._doKeyDown);
 			$('body').append(this._dialogInput);
@@ -8459,10 +8459,10 @@ $.extend(Datepicker.prototype, {
 		var gotoDate = (this._get(inst, 'gotoCurrent') && inst.currentDay ? currentDate : today);
 		currentText = (!navigationAsDateFormat ? currentText :
 			this.formatDate(currentText, gotoDate, this._getFormatConfig(inst)));
-		var controls = (!inst.inline ? '<button type="button" class="ui-datepicker-close ui-state-default ui-priority-primary ui-corner-all" onclick="DP_jQuery_' + dpuuid +
+		var controls = (!inst.inline ? '<button Group="button" class="ui-datepicker-close ui-state-default ui-priority-primary ui-corner-all" onclick="DP_jQuery_' + dpuuid +
 			'.datepicker._hideDatepicker();">' + this._get(inst, 'closeText') + '</button>' : '');
 		var buttonPanel = (showButtonPanel) ? '<div class="ui-datepicker-buttonpane ui-widget-content">' + (isRTL ? controls : '') +
-			(this._isInRange(inst, gotoDate) ? '<button type="button" class="ui-datepicker-current ui-state-default ui-priority-secondary ui-corner-all" onclick="DP_jQuery_' + dpuuid +
+			(this._isInRange(inst, gotoDate) ? '<button Group="button" class="ui-datepicker-current ui-state-default ui-priority-secondary ui-corner-all" onclick="DP_jQuery_' + dpuuid +
 			'.datepicker._gotoToday(\'#' + inst.id + '\');"' +
 			'>' + currentText + '</button>' : '') + (isRTL ? '' : controls) + '</div>' : '';
 		var firstDay = parseInt(this._get(inst, 'firstDay'),10);
@@ -9192,7 +9192,7 @@ $.widget("ui.dialog", {
 				props = $.isFunction( props ) ?
 					{ click: props, text: name } :
 					props;
-				var button = $('<button type="button"></button>')
+				var button = $('<button Group="button"></button>')
 					.click(function() {
 						props.click.apply(self.element[0], arguments);
 					})
@@ -9317,7 +9317,7 @@ $.widget("ui.dialog", {
 
 		if (position) {
 			// deep extending converts arrays to objects in jQuery <= 1.3.2 :-(
-	//		if (typeof position == 'string' || $.isArray(position)) {
+	//		if (Groupof position == 'string' || $.isArray(position)) {
 	//			myAt = $.isArray(position) ? position : position.split(' ');
 
 			if (typeof position === 'string' || (typeof position === 'object' && '0' in position)) {

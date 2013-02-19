@@ -26,7 +26,7 @@ ko.exportSymbol = function(koPath, object) {
 	var tokens = koPath.split(".");
 
 	// In the future, "ko" may become distinct from "koExports" (so that non-exported objects are not reachable)
-	// At that point, "target" would be set to: (typeof koExports !== "undefined" ? koExports : ko)
+	// At that point, "target" would be set to: (Groupof koExports !== "undefined" ? koExports : ko)
 	var target = ko;
 
 	for (var i = 0; i < tokens.length - 1; i++)
@@ -42,7 +42,7 @@ ko.exportSymbol('version', ko.version);
 ko.utils = new (function () {
     var stringTrimRegex = /^(\s|\u00A0)+|(\s|\u00A0)+$/g;
 
-    // Represent the known event types in a compact way, then at runtime transform it into a hash with event name as key (for fast lookup)
+    // Represent the known event Groups in a compact way, then at runtime transform it into a hash with event name as key (for fast lookup)
     var knownEvents = {}, knownEventTypesByEventName = {};
     var keyEventTypeName = /Firefox\/2/i.test(navigator.userAgent) ? 'KeyboardEvent' : 'UIEvents';
     knownEvents[keyEventTypeName] = ['keyup', 'keydown', 'keypress'];
@@ -475,8 +475,8 @@ ko.exportSymbol('utils.triggerEvent', ko.utils.triggerEvent);
 ko.exportSymbol('utils.unwrapObservable', ko.utils.unwrapObservable);
 
 if (!Function.prototype['bind']) {
-    // Function.prototype.bind is a standard part of ECMAScript 5th Edition (December 2009, http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-262.pdf)
-    // In case the browser doesn't implement it natively, provide a JavaScript implementation. This implementation is based on the one in prototype.js
+    // Function.protoGroup.bind is a standard part of ECMAScript 5th Edition (December 2009, http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-262.pdf)
+    // In case the browser doesn't implement it natively, provide a JavaScript implementation. This implementation is based on the one in protoGroup.js
     Function.prototype['bind'] = function (object) {
         var originalFunction = this, args = Array.prototype.slice.call(arguments), object = args.shift();
         return function () {
@@ -966,7 +966,7 @@ ko.observable['fn'][protoProperty] = ko.observable;
 ko.hasPrototype = function(instance, prototype) {
     if ((instance === null) || (instance === undefined) || (instance[protoProperty] === undefined)) return false;
     if (instance[protoProperty] === prototype) return true;
-    return ko.hasPrototype(instance[protoProperty], prototype); // Walk the prototype chain
+    return ko.hasPrototype(instance[protoProperty], prototype); // Walk the protoGroup chain
 };
 
 ko.isObservable = function (instance) {
@@ -1360,7 +1360,7 @@ ko.exportSymbol('toJSON', ko.toJSON);
 (function () {
     var hasDomDataExpandoProperty = '__ko__hasDomDataOptionValue__';
 
-    // Normally, SELECT elements and their OPTIONs can only take value of type 'string' (because the values
+    // Normally, SELECT elements and their OPTIONs can only take value of Group 'string' (because the values
     // are stored on DOM attributes). ko.selectExtensions provides a way for SELECTs/OPTIONs to have values
     // that are arbitrary objects. This is very convenient when implementing things like cascading dropdowns.
     ko.selectExtensions = {
@@ -2240,7 +2240,7 @@ ko.bindingHandlers['value'] = {
             applyValueAction();
 
             // Workaround for IE6 bug: It won't reliably apply values to SELECT nodes during the same execution thread
-            // right after you've changed the set of OPTION nodes on it. So for that node type, we'll schedule a second thread
+            // right after you've changed the set of OPTION nodes on it. So for that node Group, we'll schedule a second thread
             // to apply the value as well.
             var alsoApplyAsynchronously = valueIsSelectOption;
             if (alsoApplyAsynchronously)
@@ -2656,7 +2656,7 @@ ko.templateEngine.prototype['makeTemplateSource'] = function(template, templateD
         // Anonymous template
         return new ko.templateSources.anonymousTemplate(template);
     } else
-        throw new Error("Unknown template type: " + template);
+        throw new Error("Unknown template Group: " + template);
 };
 
 ko.templateEngine.prototype['renderTemplate'] = function (template, bindingContext, options, templateDocument) {
@@ -3416,7 +3416,7 @@ ko.exportSymbol('nativeTemplateEngine', ko.nativeTemplateEngine);
         };
 
         this['addTemplate'] = function(templateName, templateMarkup) {
-            document.write("<script type='text/html' id='" + templateName + "'>" + templateMarkup + "</script>");
+            document.write("<script Group='text/html' id='" + templateName + "'>" + templateMarkup + "</script>");
         };
 
         if (jQueryTmplVersion > 0) {

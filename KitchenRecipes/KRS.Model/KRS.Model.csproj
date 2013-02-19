@@ -41,25 +41,22 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Categories\Category.cs" />
+    <Compile Include="Categories\CategoryGroup.cs" />
     <Compile Include="Categories\IngredientCategory.cs" />
     <Compile Include="Categories\KitchenwareCategory.cs" />
-    <Compile Include="Categories\NationalCategory.cs" />
     <Compile Include="Categories\RecipeCategory.cs" />
-    <Compile Include="Customer.cs" />
-    <Compile Include="Delivery.cs" />
+    <Compile Include="Infrastructure\MeasurementUnit.cs" />
+    <Compile Include="Infrastructure\RecipesIngredients.cs" />
     <Compile Include="Infrastructure\RecipeSchema.cs" />
-    <Compile Include="IRecipesParts\ICookProcess.cs" />
-    <Compile Include="IRecipesParts\IIngredient.cs" />
-    <Compile Include="IRecipesParts\IKitchenware.cs" />
-    <Compile Include="IRecipesParts\IRecipePart.cs" />
-    <Compile Include="IRecipes\IRecipe.cs" />
-    <Compile Include="IUsers\IKRSUser.cs" />
+    <Compile Include="Infrastructure\RecipesKitchenwares.cs" />
     <Compile Include="KRS\KRSEntity.cs" />
     <Compile Include="Photos\Photo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RecipesParts\Ingredients\Ingredient.cs" />
-    <Compile Include="RecipesParts\CookProcesses\CookProcess.cs" />
-    <Compile Include="RecipesParts\Kitchenware\Kitchenware.cs" />
+    <Compile Include="RecipesParts\CookProcess.cs" />
+    <Compile Include="RecipesParts\Ingredient.cs" />
+    <Compile Include="RecipesParts\Kitchenware.cs" />
+    <Compile Include="RecipesParts\RecipePart.cs" />
+    <Compile Include="Recipes\ExtRecipe.cs" />
     <Compile Include="Recipes\Recipe.cs" />
     <Compile Include="Users\KRSUser.cs" />
     <Compile Include="Users\User.cs" />

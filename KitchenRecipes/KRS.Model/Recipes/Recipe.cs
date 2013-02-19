@@ -1,24 +1,51 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using KRS.Model.Categories;
-using KRS.Model.IRecipes;
-using KRS.Model.IRecipesParts;
+using KRS.Model.Infrastructure;
 using KRS.Model.KRS;
 using KRS.Model.Photos;
+using KRS.Model.RecipesParts;
 using KRS.Model.Users;
 
 namespace KRS.Model.Recipes
 {
-    public class Recipe: KRSEntity, IRecipe
+    public class Recipe : KRSEntity
     {
-        public String Name { get; set; }
+        public Recipe()
+        {
+            Likes = 0;
+            Dislikes = 0;
+        }
+
+        [MinLength(3), MaxLength(300), Required]
+        public string Name { get; set; }
+        [MaxLength(500)]
+        public string ShortDescription { get; set; }
+        [MaxLength(300)]
+        public string PhotoPath { get; set; }
+
         public int Likes { get; set; }
         public int Dislikes { get; set; }
 
-        public virtual RecipeCategory Category { get; set; }
-        public virtual NationalCategory NationalCategory { get; set; }
+        [MaxLength(300)]
+        public string CategoryFilter { get; set; }
+        [MaxLength(300)]
+        public string CookProcessFilter { get; set; }
+        [MaxLength(300)]
+        public string KitchenwareFilter { get; set; }
+        [MaxLength(300)]
+        public string IngredientFilter { get; set; }
+
+        public virtual ExtRecipe ExtRecipe { get; set; }
+
+        public virtual ICollection<RecipeSchema> RecipeSchemas { get; set; }
+
+        public virtual ICollection<RecipeCategory> Categories { get; set; }
+        public virtual ICollection<RecipesKitchenwares> RecipeKitchenwaresRelation { get; set; }
+        public virtual ICollection<RecipesIngredients> RecipeIngredientsRelation { get; set; }
+        public virtual ICollection<CookProcess> CookProcesses { get; set; }
+
         public virtual ICollection<Photo> Photos { get; set; }
-        public virtual ICollection<IRecipePart> RecipeParts { get; set; }
         public virtual ICollection<KRSUser> Users { get; set; }
     }
 }

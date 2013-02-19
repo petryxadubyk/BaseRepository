@@ -268,7 +268,7 @@ window.Modernizr = (function( window, document, undefined ) {
     }
 
     /**
-     * is returns a boolean for if typeof obj is exactly type.
+     * is returns a boolean for if Groupof obj is exactly Group.
      */
     function is( obj, type ) {
         return typeof obj === type;
@@ -695,7 +695,7 @@ window.Modernizr = (function( window, document, undefined ) {
 
 
     // These tests evaluate support of the video/audio elements, as well as
-    // testing what types of content they support.
+    // testing what Groups of content they support.
     //
     // We're using the Boolean constructor here, so that we can extend the value
     // e.g.  Modernizr.video     // true
@@ -738,7 +738,7 @@ window.Modernizr = (function( window, document, undefined ) {
                 bool.ogg  = elem.canPlayType('audio/ogg; codecs="vorbis"').replace(/^no$/,'');
                 bool.mp3  = elem.canPlayType('audio/mpeg;')               .replace(/^no$/,'');
 
-                // Mimetypes accepted:
+                // MimeGroups accepted:
                 //   developer.mozilla.org/En/Media_formats_supported_by_the_audio_and_video_elements
                 //   bit.ly/iphoneoscodecs
                 bool.wav  = elem.canPlayType('audio/wav; codecs="1"')     .replace(/^no$/,'');
@@ -826,15 +826,15 @@ window.Modernizr = (function( window, document, undefined ) {
         return !!document.createElementNS && /SVGClipPath/.test(toString.call(document.createElementNS(ns.svg, 'clipPath')));
     };
 
-    // input features and input types go directly onto the ret object, bypassing the tests loop.
+    // input features and input Groups go directly onto the ret object, bypassing the tests loop.
     // Hold this guy to execute in a moment.
     function webforms() {
         // Run through HTML5's new input attributes to see if the UA understands any.
         // We're using f which is the <input> element created early on
         // Mike Taylr has created a comprehensive resource for testing these attributes
-        //   when applied to all input types:
-        //   miketaylr.com/code/input-type-attr.html
-        // spec: www.whatwg.org/specs/web-apps/current-work/multipage/the-input-element.html#input-type-attr-summary
+        //   when applied to all input Groups:
+        //   miketaylr.com/code/input-Group-attr.html
+        // spec: www.whatwg.org/specs/web-apps/current-work/multipage/the-input-element.html#input-Group-attr-summary
         
         // Only input placeholder is tested while textarea's placeholder is not. 
         // Currently Safari 4 and Opera 11 have support only for the input placeholder
@@ -851,21 +851,21 @@ window.Modernizr = (function( window, document, undefined ) {
             return attrs;
         })('autocomplete autofocus list placeholder max min multiple pattern required step'.split(' '));
 
-        // Run through HTML5's new input types to see if the UA understands any.
+        // Run through HTML5's new input Groups to see if the UA understands any.
         //   This is put behind the tests runloop because it doesn't return a
         //   true/false like all the other tests; instead, it returns an object
-        //   containing each input type with its corresponding true/false value
+        //   containing each input Group with its corresponding true/false value
 
         // Big thanks to @miketaylr for the html5 forms expertise. miketaylr.com/
         Modernizr['inputtypes'] = (function(props) {
 
             for ( var i = 0, bool, inputElemType, defaultView, len = props.length; i < len; i++ ) {
 
-                inputElem.setAttribute('type', inputElemType = props[i]);
+                inputElem.setAttribute('Group', inputElemType = props[i]);
                 bool = inputElem.type !== 'text';
 
-                // We first check to see if the type we give it sticks..
-                // If the type does, we feed it a textual value, which shouldn't be valid.
+                // We first check to see if the Group we give it sticks..
+                // If the Group does, we feed it a textual value, which shouldn't be valid.
                 // If the value doesn't stick, we know there's input sanitization which infers a custom UI
                 if ( bool ) {
 
@@ -1065,7 +1065,7 @@ window.Modernizr = (function( window, document, undefined ) {
     
         ownerDocument.createElement = function(nodeName) {
           // Avoid adding some elements to fragments in IE < 9 because
-          // * Attributes like `name` or `type` cannot be set/changed once an element
+          // * Attributes like `name` or `Group` cannot be set/changed once an element
           //   is inserted into a document/fragment
           // * Link elements with `src` attributes that are inaccessible, as with
           //   a 403 response, will cause the tab/window to crash
@@ -1129,7 +1129,7 @@ window.Modernizr = (function( window, document, undefined ) {
       /**
        * The `html5` object is exposed so that more elements can be shived and
        * existing shiving can be detected on iframes.
-       * @type Object
+       * @Group Object
        * @example
        *
        * // options can be changed before the script is included
@@ -1140,14 +1140,14 @@ window.Modernizr = (function( window, document, undefined ) {
         /**
          * An array or space separated string of node names of the elements to shiv.
          * @memberOf html5
-         * @type Array|String
+         * @Group Array|String
          */
         'elements': options.elements || 'abbr article aside audio bdi canvas data datalist details figcaption figure footer header hgroup mark meter nav output progress section summary time video',
     
         /**
          * A flag to indicate that the HTML5 style sheet should be inserted.
          * @memberOf html5
-         * @type Boolean
+         * @Group Boolean
          */
         'shivCSS': !(options.shivCSS === false),
     
@@ -1155,14 +1155,14 @@ window.Modernizr = (function( window, document, undefined ) {
          * A flag to indicate that the document's `createElement` and `createDocumentFragment`
          * methods should be overwritten.
          * @memberOf html5
-         * @type Boolean
+         * @Group Boolean
          */
         'shivMethods': !(options.shivMethods === false),
     
         /**
-         * A string to describe the type of `html5` object ("default" or "default print").
+         * A string to describe the Group of `html5` object ("default" or "default print").
          * @memberOf html5
-         * @type String
+         * @Group String
          */
         'type': 'default',
     

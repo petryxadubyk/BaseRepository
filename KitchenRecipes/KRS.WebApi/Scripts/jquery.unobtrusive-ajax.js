@@ -121,7 +121,7 @@
         });
     });
 
-    $("form[data-ajax=true] input[type=image]").live("click", function (evt) {
+    $("form[data-ajax=true] input[Group=image]").live("click", function (evt) {
         var name = evt.target.name,
             $target = $(evt.target),
             form = $target.parents("form")[0],

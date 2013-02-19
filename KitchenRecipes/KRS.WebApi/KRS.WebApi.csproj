@@ -132,7 +132,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Bootstrapper.cs" />
-    <Compile Include="Controllers\DeliveryController.cs" />
+    <Compile Include="Controllers\ApiBaseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\RecipeController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
@@ -199,6 +199,82 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <None Include="Scripts\jquery-1.7.1.intellisense.js" />
+    <Content Include="Images\Categories\Ingredients\anymal-dobavku.jpg" />
+    <Content Include="Images\Categories\Ingredients\citruses.jpg" />
+    <Content Include="Images\Categories\Ingredients\fish.jpg" />
+    <Content Include="Images\Categories\Ingredients\fruits.jpg" />
+    <Content Include="Images\Categories\Ingredients\konjak.jpg" />
+    <Content Include="Images\Categories\Ingredients\konservacij.jpg" />
+    <Content Include="Images\Categories\Ingredients\krypu.jpg" />
+    <Content Include="Images\Categories\Ingredients\mashroms.jpg" />
+    <Content Include="Images\Categories\Ingredients\meat.jpg" />
+    <Content Include="Images\Categories\Ingredients\prupravu.jpg" />
+    <Content Include="Images\Categories\Ingredients\ros-dobavku.jpg" />
+    <Content Include="Images\Categories\Ingredients\vegetables.jpg" />
+    <Content Include="Images\Categories\Ingredients\vines.jpg" />
+    <Content Include="Images\Categories\Kitchenware\elektr-devices.jpg" />
+    <Content Include="Images\Categories\Kitchenware\kitchen-devices.jpg" />
+    <Content Include="Images\Categories\Kitchenware\knifes.jpg" />
+    <Content Include="Images\Categories\Kitchenware\pans.jpg" />
+    <Content Include="Images\Categories\Kitchenware\pidnosu.jpg" />
+    <Content Include="Images\Categories\Kitchenware\plates.jpg" />
+    <Content Include="Images\Categories\Kitchenware\skovorodki.jpg" />
+    <Content Include="Images\Categories\Kitchenware\vidkruvachki.jpg" />
+    <Content Include="Images\Categories\Recipes\avtorski-stravu.jpg" />
+    <Content Include="Images\Categories\Recipes\beverages.jpg" />
+    <Content Include="Images\Categories\Recipes\desertu.jpg" />
+    <Content Include="Images\Categories\Recipes\drugi-stravu.jpg" />
+    <Content Include="Images\Categories\Recipes\georgia.jpg" />
+    <Content Include="Images\Categories\Recipes\juses.jpg" />
+    <Content Include="Images\Categories\Recipes\kazak.jpg" />
+    <Content Include="Images\Categories\Recipes\pershi-stravu.jpg" />
+    <Content Include="Images\Categories\Recipes\rus.jpg" />
+    <Content Include="Images\Categories\Recipes\salads.jpg" />
+    <Content Include="Images\Categories\Recipes\soysu.jpg" />
+    <Content Include="Images\Categories\Recipes\ukr.jpg" />
+    <Content Include="Images\Categories\Recipes\vines.jpg" />
+    <Content Include="Images\Categories\Recipes\vupichka.jpg" />
+    <Content Include="Images\Categories\Recipes\zakuski.jpg" />
+    <Content Include="Images\RecipeParts\CookProcesses\buryak-kubyky.jpg" />
+    <Content Include="Images\RecipeParts\CookProcesses\chasnyk.jpg" />
+    <Content Include="Images\RecipeParts\CookProcesses\cybulya.jpg" />
+    <Content Include="Images\RecipeParts\CookProcesses\cybulya2.jpg" />
+    <Content Include="Images\RecipeParts\CookProcesses\kurka-smazh.jpg" />
+    <Content Include="Images\RecipeParts\CookProcesses\kurka.jpg" />
+    <Content Include="Images\RecipeParts\CookProcesses\lymon.jpg" />
+    <Content Include="Images\RecipeParts\CookProcesses\morkva.jpg" />
+    <Content Include="Images\RecipeParts\CookProcesses\myaso.jpg" />
+    <Content Include="Images\RecipeParts\CookProcesses\ogirky.jpg" />
+    <Content Include="Images\RecipeParts\CookProcesses\perets-pechenyj.jpg" />
+    <Content Include="Images\RecipeParts\CookProcesses\perets-smazh.jpg" />
+    <Content Include="Images\RecipeParts\CookProcesses\perets.jpg" />
+    <Content Include="Images\RecipeParts\CookProcesses\petrushka.jpg" />
+    <Content Include="Images\RecipeParts\CookProcesses\pomidory.jpg" />
+    <Content Include="Images\RecipeParts\CookProcesses\sous.jpg" />
+    <Content Include="Images\RecipeParts\Ingredients\apelsun.jpg" />
+    <Content Include="Images\RecipeParts\Ingredients\apple.jpg" />
+    <Content Include="Images\RecipeParts\Ingredients\carrot.jpg" />
+    <Content Include="Images\RecipeParts\Ingredients\chasnuk.jpg" />
+    <Content Include="Images\RecipeParts\Ingredients\chili.jpg" />
+    <Content Include="Images\RecipeParts\Ingredients\images.jpg" />
+    <Content Include="Images\RecipeParts\Ingredients\imbur.jpg" />
+    <Content Include="Images\RecipeParts\Ingredients\mandarun.jpg" />
+    <Content Include="Images\RecipeParts\Ingredients\meat.jpg" />
+    <Content Include="Images\RecipeParts\Ingredients\potato.jpg" />
+    <Content Include="Images\RecipeParts\Ingredients\redperec.jpg" />
+    <Content Include="Images\RecipeParts\Kitchenwares\kastrula1.jpg" />
+    <Content Include="Images\RecipeParts\Kitchenwares\kastrula2.jpg" />
+    <Content Include="Images\RecipeParts\Kitchenwares\skovorod1.jpg" />
+    <Content Include="Images\RecipeParts\Kitchenwares\skovorod2.jpg" />
+    <Content Include="Images\RecipeParts\Kitchenwares\tarilka.jpg" />
+    <Content Include="Images\RecipeParts\Kitchenwares\tarilka2.jpg" />
+    <Content Include="Images\Recipes\cukerky-suhofruktiv.jpg" />
+    <Content Include="Images\Recipes\greyprutovyj-sous.jpg" />
+    <Content Include="Images\Recipes\kuryache-file-kitaysky.jpg" />
+    <Content Include="Images\Recipes\mini-buterbrody-ikroyu-avokado.jpg" />
+    <Content Include="Images\Recipes\myaso-francuzky.jpg" />
+    <Content Include="Images\Recipes\saladshopsky.jpg" />
+    <Content Include="Images\Recipes\vinegret.jpg" />
     <Content Include="Scripts\jquery-1.7.1.js" />
     <Content Include="Scripts\jquery-1.7.1.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
@@ -221,19 +297,6 @@
       <DependentUpon>Web.config</DependentUpon>
     </Content>
     <Content Include="Content\Site.css" />
-    <Content Include="Images\accent.png" />
-    <Content Include="Images\bullet.png" />
-    <Content Include="Images\heroAccent.png" />
-    <Content Include="Images\orderedList0.png" />
-    <Content Include="Images\orderedList1.png" />
-    <Content Include="Images\orderedList2.png" />
-    <Content Include="Images\orderedList3.png" />
-    <Content Include="Images\orderedList4.png" />
-    <Content Include="Images\orderedList5.png" />
-    <Content Include="Images\orderedList6.png" />
-    <Content Include="Images\orderedList7.png" />
-    <Content Include="Images\orderedList8.png" />
-    <Content Include="Images\orderedList9.png" />
     <Content Include="Scripts\_references.js" />
     <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
@@ -249,6 +312,10 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\KRS.DataAccess.Contracts\KRS.DataAccess.Contracts.csproj">
+      <Project>{50437B07-2B5D-480D-A2C8-817AB2A2B1E4}</Project>
+      <Name>KRS.DataAccess.Contracts</Name>
+    </ProjectReference>
     <ProjectReference Include="..\KRS.DataAccess\KRS.DataAccess.csproj">
       <Project>{8b2e9def-abf8-4c55-b42a-f7ad9a708ed9}</Project>
       <Name>KRS.DataAccess</Name>
