@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using KRS.DataAccess.DataContext;
 using KRS.Model.Categories;
 using KRS.Model.RecipesParts;
 
@@ -12,12 +13,8 @@ namespace KRS.DataAccess.SampleData
 
         const SampleTextGenerator.SourceNames TextSource =
                 SampleTextGenerator.SourceNames.Faust;
-        private static readonly IQueryable<IngredientCategory> Categories;
-        static IngredientsCollection()
-        {
-            Categories = CategoriesCollection.IngredientsCategories();
-        }
-        public static IQueryable<Ingredient> Ingredients()
+
+        public static IQueryable<Ingredient> Ingredients(KRSContext context)
         {
             var list = new List<Ingredient>
                            {
@@ -26,7 +23,7 @@ namespace KRS.DataAccess.SampleData
                                        Name = "Ранети",
                                        CreatedOn = DateTime.Now,
                                        ModifiedOn = DateTime.Now,
-                                       Category = Categories.FirstOrDefault(c => c.Name == "Яблука"),
+                                       Category = context.IngredientCategories.FirstOrDefault(c => c.Name == "Яблука"),
                                        PhotoPath = "~/Images/RecipeParts/Ingredients/apple.jpg",
                                        Description = TextGenerator.GenSentences(3, TextSource),
                                        Manufacturer = "ВАТ AllFoods",
@@ -36,7 +33,7 @@ namespace KRS.DataAccess.SampleData
                                        Name = "Апельсини",
                                        CreatedOn = DateTime.Now,
                                        ModifiedOn = DateTime.Now,
-                                       Category = Categories.FirstOrDefault(c => c.Name == "Цитрусові"),
+                                       Category = context.IngredientCategories.FirstOrDefault(c => c.Name == "Цитрусові"),
                                        PhotoPath = "~/Images/RecipeParts/Ingredients/orange.jpg",
                                        Description = TextGenerator.GenSentences(3, TextSource),
                                        Manufacturer = "ВАТ AllFoods"
@@ -46,7 +43,7 @@ namespace KRS.DataAccess.SampleData
                                        Name = "Часник",
                                        CreatedOn = DateTime.Now,
                                        ModifiedOn = DateTime.Now,
-                                       Category = Categories.FirstOrDefault(c => c.Name == "Овочі"),
+                                       Category = context.IngredientCategories.FirstOrDefault(c => c.Name == "Овочі"),
                                        PhotoPath = "~/Images/RecipeParts/Ingredients/chasnuk.jpg",
                                        Description = TextGenerator.GenSentences(3, TextSource),
                                        Manufacturer = "ВАТ AllFoods"
@@ -56,7 +53,7 @@ namespace KRS.DataAccess.SampleData
                                        Name = "Червоний Перець",
                                        CreatedOn = DateTime.Now,
                                        ModifiedOn = DateTime.Now,
-                                       Category = Categories.FirstOrDefault(c => c.Name == "Овочі"),
+                                       Category = context.IngredientCategories.FirstOrDefault(c => c.Name == "Овочі"),
                                        PhotoPath = "~/Images/RecipeParts/Ingredients/chili.jpg",
                                        Description = TextGenerator.GenSentences(3, TextSource),
                                        Manufacturer = "ВАТ AllFoods"
@@ -66,7 +63,7 @@ namespace KRS.DataAccess.SampleData
                                        Name = "Цибуля звичайна",
                                        CreatedOn = DateTime.Now,
                                        ModifiedOn = DateTime.Now,
-                                       Category = Categories.FirstOrDefault(c => c.Name == "Овочі"),
+                                       Category = context.IngredientCategories.FirstOrDefault(c => c.Name == "Овочі"),
                                        PhotoPath = "~/Images/RecipeParts/Ingredients/onion.jpg",
                                        Description = TextGenerator.GenSentences(3, TextSource),
                                        Manufacturer = "ВАТ AllFoods"
@@ -76,7 +73,7 @@ namespace KRS.DataAccess.SampleData
                                        Name = "Імбир",
                                        CreatedOn = DateTime.Now,
                                        ModifiedOn = DateTime.Now,
-                                       Category = Categories.FirstOrDefault(c => c.Name == "Овочі"),
+                                       Category = context.IngredientCategories.FirstOrDefault(c => c.Name == "Овочі"),
                                        PhotoPath = "~/Images/RecipeParts/Ingredients/imbur.jpg",
                                        Description = TextGenerator.GenSentences(3, TextSource),
                                        Manufacturer = "ВАТ AllFoods"
@@ -86,7 +83,7 @@ namespace KRS.DataAccess.SampleData
                                        Name = "Мандарин",
                                        CreatedOn = DateTime.Now,
                                        ModifiedOn = DateTime.Now,
-                                       Category = Categories.FirstOrDefault(c => c.Name == "Цитрусові"),
+                                       Category = context.IngredientCategories.FirstOrDefault(c => c.Name == "Цитрусові"),
                                        PhotoPath = "~/Images/RecipeParts/Ingredients/mandarun.jpg",
                                        Description = TextGenerator.GenSentences(3, TextSource),
                                        Manufacturer = "ВАТ AllFoods"
@@ -96,7 +93,7 @@ namespace KRS.DataAccess.SampleData
                                        Name = "Свинина",
                                        CreatedOn = DateTime.Now,
                                        ModifiedOn = DateTime.Now,
-                                       Category = Categories.FirstOrDefault(c => c.Name == "Мясо"),
+                                       Category = context.IngredientCategories.FirstOrDefault(c => c.Name == "Мясо"),
                                        PhotoPath = "~/Images/RecipeParts/Ingredients/meat.jpg",
                                        Description = TextGenerator.GenSentences(3, TextSource),
                                        Manufacturer = "ВАТ AllFoods"
@@ -106,7 +103,7 @@ namespace KRS.DataAccess.SampleData
                                        Name = "Картопля",
                                        CreatedOn = DateTime.Now,
                                        ModifiedOn = DateTime.Now,
-                                       Category = Categories.FirstOrDefault(c => c.Name == "Овочі"),
+                                       Category = context.IngredientCategories.FirstOrDefault(c => c.Name == "Овочі"),
                                        PhotoPath = "~/Images/RecipeParts/Ingredients/potato.jpg",
                                        Description = TextGenerator.GenSentences(3, TextSource),
                                        Manufacturer = "ВАТ AllFoods"
@@ -116,7 +113,7 @@ namespace KRS.DataAccess.SampleData
                                        Name = "Болгарський перець",
                                        CreatedOn = DateTime.Now,
                                        ModifiedOn = DateTime.Now,
-                                       Category = Categories.FirstOrDefault(c => c.Name == "Овочі"),
+                                       Category = context.IngredientCategories.FirstOrDefault(c => c.Name == "Овочі"),
                                        PhotoPath = "~/Images/RecipeParts/Ingredients/redperec.jpg",
                                        Description = TextGenerator.GenSentences(3, TextSource),
                                        Manufacturer = "ВАТ AllFoods"
@@ -126,7 +123,7 @@ namespace KRS.DataAccess.SampleData
                                        Name = "Морква",
                                        CreatedOn = DateTime.Now,
                                        ModifiedOn = DateTime.Now,
-                                       Category = Categories.FirstOrDefault(c => c.Name == "Овочі"),
+                                       Category = context.IngredientCategories.FirstOrDefault(c => c.Name == "Овочі"),
                                        PhotoPath = "~/Images/RecipeParts/Ingredients/carrot.jpg",
                                        Description = TextGenerator.GenSentences(3, TextSource),
                                        Manufacturer = "ВАТ AllFoods"

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using KRS.DataAccess.DataContext;
 using KRS.Model.Categories;
 using KRS.Model.RecipesParts;
 
@@ -15,12 +16,8 @@ namespace KRS.DataAccess.SampleData
                 SampleTextGenerator.SourceNames.Decameron;
         const SampleTextGenerator.SourceNames TextSource =
                 SampleTextGenerator.SourceNames.Faust;
-        private static readonly IQueryable<KitchenwareCategory> Categories;
-        static KitchenwareCollection()
-        {
-            Categories = CategoriesCollection.KitchenwareCategories();
-        }
-        internal static IQueryable<Kitchenware> Kitchenwares()
+
+        internal static IQueryable<Kitchenware> Kitchenwares(KRSContext context)
         {
             var list = new List<Kitchenware>
                            {
@@ -30,7 +27,7 @@ namespace KRS.DataAccess.SampleData
                                         CreatedOn = DateTime.Now,
                                         ModifiedOn = DateTime.Now,
                                         Description = TextGenerator.GenSentences(3,TextSource),
-                                        Category = Categories.FirstOrDefault(c=>c.Name=="Кастрюлі"),
+                                        Category = context.KitchenwareCategories.FirstOrDefault(c=>c.Name=="Кастрюлі"),
                                         PhotoPath = "~/Images/RecipeParts/Kitchenwares/pan.jpg",
                                    },
                                    new Kitchenware
@@ -39,7 +36,7 @@ namespace KRS.DataAccess.SampleData
                                         CreatedOn = DateTime.Now,
                                         ModifiedOn = DateTime.Now,
                                         Description = TextGenerator.GenSentences(3,TextSource),
-                                        Category = Categories.FirstOrDefault(c=>c.Name=="Сковорідки"),
+                                        Category = context.KitchenwareCategories.FirstOrDefault(c=>c.Name=="Сковорідки"),
                                         PhotoPath = "~/Images/RecipeParts/Kitchenwares/fray.jpg",
                                         Material = "Тефлон",
                                    },
@@ -49,7 +46,7 @@ namespace KRS.DataAccess.SampleData
                                         CreatedOn = DateTime.Now,
                                         ModifiedOn = DateTime.Now,
                                         Description = TextGenerator.GenSentences(3,TextSource),
-                                        Category = Categories.FirstOrDefault(c=>c.Name=="Тарілки"),
+                                        Category = context.KitchenwareCategories.FirstOrDefault(c=>c.Name=="Тарілки"),
                                         PhotoPath = "~/Images/RecipeParts/Kitchenwares/plate.jpg",
                                    },
                                    new Kitchenware
@@ -58,7 +55,7 @@ namespace KRS.DataAccess.SampleData
                                         CreatedOn = DateTime.Now,
                                         ModifiedOn = DateTime.Now,
                                         Description = TextGenerator.GenSentences(3,TextSource),
-                                        Category = Categories.FirstOrDefault(c=>c.Name=="Електричні прибори"),
+                                        Category = context.KitchenwareCategories.FirstOrDefault(c=>c.Name=="Електричні прибори"),
                                         PhotoPath = "~/Images/RecipeParts/Kitchenwares/combain.jpg",
                                    },
                                    new Kitchenware
@@ -67,7 +64,7 @@ namespace KRS.DataAccess.SampleData
                                         CreatedOn = DateTime.Now,
                                         ModifiedOn = DateTime.Now,
                                         Description = TextGenerator.GenSentences(3,TextSource),
-                                        Category = Categories.FirstOrDefault(c=>c.Name=="Обладнання"),
+                                        Category = context.KitchenwareCategories.FirstOrDefault(c=>c.Name=="Обладнання"),
                                         PhotoPath = "~/Images/RecipeParts/Kitchenwares/doshka.jpg",
                                    },
                                    new Kitchenware
@@ -76,7 +73,7 @@ namespace KRS.DataAccess.SampleData
                                         CreatedOn = DateTime.Now,
                                         ModifiedOn = DateTime.Now,
                                         Description = TextGenerator.GenSentences(3,TextSource),
-                                        Category = Categories.FirstOrDefault(c=>c.Name=="Ножі"),
+                                        Category = context.KitchenwareCategories.FirstOrDefault(c=>c.Name=="Ножі"),
                                         PhotoPath = "~/Images/RecipeParts/Kitchenwares/knife1.jpg",
                                    },
                                    new Kitchenware
@@ -85,7 +82,7 @@ namespace KRS.DataAccess.SampleData
                                         CreatedOn = DateTime.Now,
                                         ModifiedOn = DateTime.Now,
                                         Description = TextGenerator.GenSentences(3,TextSource),
-                                        Category = Categories.FirstOrDefault(c=>c.Name=="Ножі"),
+                                        Category = context.KitchenwareCategories.FirstOrDefault(c=>c.Name=="Ножі"),
                                         PhotoPath = "~/Images/RecipeParts/Kitchenwares/knife2.jpg",
                                    },
                                    new Kitchenware
@@ -94,7 +91,7 @@ namespace KRS.DataAccess.SampleData
                                         CreatedOn = DateTime.Now,
                                         ModifiedOn = DateTime.Now,
                                         Description = TextGenerator.GenSentences(3,TextSource),
-                                        Category = Categories.FirstOrDefault(c=>c.Name=="Ножі"),
+                                        Category = context.KitchenwareCategories.FirstOrDefault(c=>c.Name=="Ножі"),
                                         PhotoPath = "~/Images/RecipeParts/Kitchenwares/knife3.jpg",
                                    },
                                    new Kitchenware
@@ -103,7 +100,7 @@ namespace KRS.DataAccess.SampleData
                                         CreatedOn = DateTime.Now,
                                         ModifiedOn = DateTime.Now,
                                         Description = TextGenerator.GenSentences(3,TextSource),
-                                        Category = Categories.FirstOrDefault(c=>c.Name=="Електричні прибори"),
+                                        Category = context.KitchenwareCategories.FirstOrDefault(c=>c.Name=="Електричні прибори"),
                                         PhotoPath = "~/Images/RecipeParts/Kitchenwares/meatcut.jpg",
                                    },
                                    new Kitchenware
@@ -112,7 +109,7 @@ namespace KRS.DataAccess.SampleData
                                         CreatedOn = DateTime.Now,
                                         ModifiedOn = DateTime.Now,
                                         Description = TextGenerator.GenSentences(3,TextSource),
-                                        Category = Categories.FirstOrDefault(c=>c.Name=="Електричні прибори"),
+                                        Category = context.KitchenwareCategories.FirstOrDefault(c=>c.Name=="Електричні прибори"),
                                         PhotoPath = "~/Images/RecipeParts/Kitchenwares/mixer.jpg",
                                    },
                                    new Kitchenware
@@ -121,7 +118,7 @@ namespace KRS.DataAccess.SampleData
                                         CreatedOn = DateTime.Now,
                                         ModifiedOn = DateTime.Now,
                                         Description = TextGenerator.GenSentences(3,TextSource),
-                                        Category = Categories.FirstOrDefault(c=>c.Name=="Обладнання"),
+                                        Category = context.KitchenwareCategories.FirstOrDefault(c=>c.Name=="Обладнання"),
                                         PhotoPath = "~/Images/RecipeParts/Kitchenwares/pidnos.jpg",
                                    },
                                    new Kitchenware
@@ -130,7 +127,7 @@ namespace KRS.DataAccess.SampleData
                                         CreatedOn = DateTime.Now,
                                         ModifiedOn = DateTime.Now,
                                         Description = TextGenerator.GenSentences(3,TextSource),
-                                        Category = Categories.FirstOrDefault(c=>c.Name=="Обладнання"),
+                                        Category = context.KitchenwareCategories.FirstOrDefault(c=>c.Name=="Обладнання"),
                                         PhotoPath = "~/Images/RecipeParts/Kitchenwares/shtopor.jpg",
                                    },
                                    new Kitchenware
@@ -139,7 +136,7 @@ namespace KRS.DataAccess.SampleData
                                         CreatedOn = DateTime.Now,
                                         ModifiedOn = DateTime.Now,
                                         Description = TextGenerator.GenSentences(3,TextSource),
-                                        Category = Categories.FirstOrDefault(c=>c.Name=="Відкривачки"),
+                                        Category = context.KitchenwareCategories.FirstOrDefault(c=>c.Name=="Відкривачки"),
                                         PhotoPath = "~/Images/RecipeParts/Kitchenwares/vidkruvach.jpg",
                                    },
                            };

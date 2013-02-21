@@ -20,18 +20,20 @@ namespace KRS.DataAccess.Configurations
                     .MapRightKey("Id")
                     .ToTable("Recipes_Categories"));
 
-            HasMany(recipe => recipe.CookProcesses)
-                .WithMany(cook => cook.Recipes)
-                .Map(t => t.MapLeftKey("Id")
-                    .MapRightKey("Id")
-                    .ToTable("Recipes_CookProcesses"));
-
             //one to many
             HasMany(recipe => recipe.Photos)
                 .WithOptional()
                 .WillCascadeOnDelete(true);
 
-            HasMany(recipe => recipe.RecipeSchemas)
+            HasMany(recipe => recipe.IngredientsRelation)
+                .WithRequired(schema => schema.Recipe)
+                .WillCascadeOnDelete(true);
+
+            HasMany(recipe => recipe.KitchenwaresRelation)
+                .WithRequired(schema => schema.Recipe)
+                .WillCascadeOnDelete(true);
+
+            HasMany(recipe => recipe.CookProcessesRelation)
                 .WithRequired(schema => schema.Recipe)
                 .WillCascadeOnDelete(true);
 

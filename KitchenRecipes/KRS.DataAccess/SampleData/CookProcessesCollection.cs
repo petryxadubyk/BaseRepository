@@ -15,16 +15,91 @@ namespace KRS.DataAccess.SampleData
                 SampleTextGenerator.SourceNames.Decameron;
         const SampleTextGenerator.SourceNames TextSource =
                 SampleTextGenerator.SourceNames.Faust;
-        private static readonly IQueryable<KitchenwareCategory> Categories;
-        static CookProcessesCollection()
+
+        internal static IQueryable<CookProcess> CookProcesses()
         {
-            Categories = CategoriesCollection.KitchenwareCategories();
-        }
-        internal static IQueryable<Kitchenware> Kitchenwares()
-        {
-            var list = new List<Kitchenware>
+            var list = new List<CookProcess>
                            {
-                               
+                               new CookProcess
+                                   {
+                                       Name = "Порізати на кубики", 
+                                       Description = TextGenerator.GenSentences(3, TextSource),
+                                       CreatedOn = DateTime.Now,
+                                       ModifiedOn = DateTime.Now,
+                                       PhotoPath = "~/Images/RecipeParts/CookProcesses/cut-cubs.jpg",
+                                   },
+                                   new CookProcess
+                                   {
+                                       Name = "Порізати кругами", 
+                                       Description = TextGenerator.GenSentences(3, TextSource),
+                                       CreatedOn = DateTime.Now,
+                                       ModifiedOn = DateTime.Now,
+                                       PhotoPath = "~/Images/RecipeParts/CookProcesses/cut-circles.jpg",
+                                   },
+                                   new CookProcess
+                                   {
+                                       Name = "Порізати на кусочки", 
+                                       Description = TextGenerator.GenSentences(3, TextSource),
+                                       CreatedOn = DateTime.Now,
+                                       ModifiedOn = DateTime.Now,
+                                       PhotoPath = "~/Images/RecipeParts/CookProcesses/cut-into-pieces.jpg",
+                                   },
+                                   new CookProcess
+                                   {
+                                       Name = "Порізати дрібною соломкою", 
+                                       Description = TextGenerator.GenSentences(3, TextSource),
+                                       CreatedOn = DateTime.Now,
+                                       ModifiedOn = DateTime.Now,
+                                       PhotoPath = "~/Images/RecipeParts/CookProcesses/cut-lines.jpg",
+                                   },
+                                   new CookProcess
+                                   {
+                                       Name = "Порізати на дрібні кусочки", 
+                                       Description = TextGenerator.GenSentences(3, TextSource),
+                                       CreatedOn = DateTime.Now,
+                                       ModifiedOn = DateTime.Now,
+                                       PhotoPath = "~/Images/RecipeParts/CookProcesses/cut-into-pieces.jpg",
+                                   },
+                                   new CookProcess
+                                   {
+                                       Name = "Порізати соломкою", 
+                                       Description = TextGenerator.GenSentences(3, TextSource),
+                                       CreatedOn = DateTime.Now,
+                                       ModifiedOn = DateTime.Now,
+                                       PhotoPath = "~/Images/RecipeParts/CookProcesses/cut-solomka.jpg",
+                                   },
+                                   new CookProcess
+                                   {
+                                       Name = "Обжарити", 
+                                       Description = TextGenerator.GenSentences(3, TextSource),
+                                       CreatedOn = DateTime.Now,
+                                       ModifiedOn = DateTime.Now,
+                                       PhotoPath = "~/Images/RecipeParts/CookProcesses/obgarutu.jpg",
+                                   },
+                                   new CookProcess
+                                   {
+                                       Name = "Подрібнити", 
+                                       Description = TextGenerator.GenSentences(3, TextSource),
+                                       CreatedOn = DateTime.Now,
+                                       ModifiedOn = DateTime.Now,
+                                       PhotoPath = "~/Images/RecipeParts/CookProcesses/podribnutu.jpg",
+                                   },
+                                   new CookProcess
+                                   {
+                                       Name = "Смажити", 
+                                       Description = TextGenerator.GenSentences(3, TextSource),
+                                       CreatedOn = DateTime.Now,
+                                       ModifiedOn = DateTime.Now,
+                                       PhotoPath = "~/Images/RecipeParts/CookProcesses/smazhutu.jpg",
+                                   },
+                                   new CookProcess
+                                   {
+                                       Name = "Збити", 
+                                       Description = TextGenerator.GenSentences(3, TextSource),
+                                       CreatedOn = DateTime.Now,
+                                       ModifiedOn = DateTime.Now,
+                                       PhotoPath = "~/Images/RecipeParts/CookProcesses/zbutu.jpg",
+                                   },
                            };
             return list.AsQueryable();
         }

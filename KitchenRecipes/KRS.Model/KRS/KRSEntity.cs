@@ -13,7 +13,6 @@ namespace KRS.Model.KRS
         }
 
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity), Required]
-        [Column("entityId")]
         public int Id { get; set; }
 
         [DataType(DataType.DateTime)]

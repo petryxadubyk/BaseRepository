@@ -5,12 +5,14 @@ using System.Text;
 using System.Threading.Tasks;
 using KRS.DataAccess.Contracts.Repositories.Core;
 using KRS.Model.Recipes;
+using KRS.Model.RecipesParts;
 
 namespace KRS.DataAccess.Contracts.Repositories
 {
     public interface IRecipeRepository: IRepository<Recipe>
     {
-        IQueryable<Recipe> GetByIngredientId(int id);
-        IQueryable<Recipe> GetByUserId(int id);
+        IEnumerable<Ingredient> GetRecipeIngredients(string recipeName);
+        IEnumerable<Recipe> GetRecipesThatIncludeIngredient(string ingredientName);
+        IEnumerable<Recipe> GetByUserId(int id);
     }
 }

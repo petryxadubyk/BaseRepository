@@ -46,8 +46,8 @@
     <Compile Include="Categories\KitchenwareCategory.cs" />
     <Compile Include="Categories\RecipeCategory.cs" />
     <Compile Include="Infrastructure\MeasurementUnit.cs" />
+    <Compile Include="Infrastructure\RecipesCookProcesses.cs" />
     <Compile Include="Infrastructure\RecipesIngredients.cs" />
-    <Compile Include="Infrastructure\RecipeSchema.cs" />
     <Compile Include="Infrastructure\RecipesKitchenwares.cs" />
     <Compile Include="KRS\KRSEntity.cs" />
     <Compile Include="Photos\Photo.cs" />

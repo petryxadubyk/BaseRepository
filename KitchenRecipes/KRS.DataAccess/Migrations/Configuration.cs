@@ -1,3 +1,5 @@
+using KRS.DataAccess.SampleData;
+
 namespace KRS.DataAccess.Migrations
 {
     using System;
@@ -14,6 +16,7 @@ namespace KRS.DataAccess.Migrations
 
         protected override void Seed(KRS.DataAccess.DataContext.KRSContext context)
         {
+            DbInitializer.InitializeDb(context);
             //  This method will be called after migrating to the latest version.
 
             //  You can use the DbSet<T>.AddOrUpdate() helper extension method 

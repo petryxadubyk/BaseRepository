@@ -1,6 +1,8 @@
-﻿namespace KRS.Model.Recipes
+﻿using KRS.Model.KRS;
+
+namespace KRS.Model.Recipes
 {
-    public class ExtRecipe
+    public class ExtRecipe : KRSEntity
     {
         public string FullDescription { get; set; }
     }

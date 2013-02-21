@@ -13,20 +13,21 @@ namespace KRS.DataAccess.DataContext
 {
     public class KRSContext : DbContext
     {
-        public KRSContext() : 
-            base("Name=DataAccess.Context.KitchenContext")
+        public KRSContext() :
+            base("Name=KRS.DataAccess.DataContext.KRSContext")
         { 
         }
 
         static KRSContext()
         {
-            Database.SetInitializer(new KRSDatabaseInitializer());
+            //Database.SetInitializer<KRSContext>(new KRSDatabaseInitializer());
         }
 
         public DbSet<Recipe> Recipes { get; set; }
         public DbSet<ExtRecipe> ExtRecipes { get; set; }
         public DbSet<KRSUser> KRSUsers { get; set; }
         public DbSet<Photo> Photos { get; set; }
+
         public DbSet<RecipeCategory> RecipeCategories { get; set; }
         public DbSet<IngredientCategory> IngredientCategories { get; set; }
         public DbSet<KitchenwareCategory> KitchenwareCategories { get; set; }
@@ -34,11 +35,11 @@ namespace KRS.DataAccess.DataContext
 
         public DbSet<RecipesIngredients> RecipesIngredients { get; set; }
         public DbSet<RecipesKitchenwares> RecipesKitchenwares { get; set; }
+        public DbSet<RecipesCookProcesses> RecipesCookProcesses { get; set; }
+
         public DbSet<Ingredient> Ingredients { get; set; }
         public DbSet<CookProcess> CookProcesses { get; set; }
         public DbSet<Kitchenware> Kitchenwares { get; set; }
-
-        public DbSet<RecipeSchema> RecipeSchema { get; set; }
 
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
@@ -48,7 +49,9 @@ namespace KRS.DataAccess.DataContext
             //Use singular table names
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
 
-            modelBuilder.Configurations.Add(new RecipeConfiguration());
+            //modelBuilder.Configurations.Add(new RecipeConfiguration());
         }
+
+        
     }
 }

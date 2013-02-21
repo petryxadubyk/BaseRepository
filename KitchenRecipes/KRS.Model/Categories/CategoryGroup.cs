@@ -8,7 +8,6 @@ namespace KRS.Model.Categories
     {
         [MaxLength(100)]
         public string Name { get; set; }
-        [MaxLength(500)]
         public string Description { get; set; }
 
         public virtual ICollection<Category> GroupCategories { get; set; }

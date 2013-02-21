@@ -4,7 +4,6 @@ using KRS.Model.Categories;
 using KRS.Model.Infrastructure;
 using KRS.Model.KRS;
 using KRS.Model.Photos;
-using KRS.Model.RecipesParts;
 using KRS.Model.Users;
 
 namespace KRS.Model.Recipes
@@ -38,12 +37,10 @@ namespace KRS.Model.Recipes
 
         public virtual ExtRecipe ExtRecipe { get; set; }
 
-        public virtual ICollection<RecipeSchema> RecipeSchemas { get; set; }
-
         public virtual ICollection<RecipeCategory> Categories { get; set; }
-        public virtual ICollection<RecipesKitchenwares> RecipeKitchenwaresRelation { get; set; }
-        public virtual ICollection<RecipesIngredients> RecipeIngredientsRelation { get; set; }
-        public virtual ICollection<CookProcess> CookProcesses { get; set; }
+        public virtual ICollection<RecipesKitchenwares> KitchenwaresRelation { get; set; }
+        public virtual ICollection<RecipesIngredients> IngredientsRelation { get; set; }
+        public virtual ICollection<RecipesCookProcesses> CookProcessesRelation { get; set; }
 
         public virtual ICollection<Photo> Photos { get; set; }
         public virtual ICollection<KRSUser> Users { get; set; }

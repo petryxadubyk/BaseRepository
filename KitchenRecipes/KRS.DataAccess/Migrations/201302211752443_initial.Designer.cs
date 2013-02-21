@@ -11,7 +11,7 @@ namespace KRS.DataAccess.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201302161425117_initial"; }
+            get { return "201302211752443_initial"; }
         }
         
         string IMigrationMetadata.Source

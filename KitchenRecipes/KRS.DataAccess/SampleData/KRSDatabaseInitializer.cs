@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.Globalization;
 using System.Linq;
-using System.Text;
 using KRS.DataAccess.DataContext;
-using KRS.Model.Photos;
+using KRS.Model.Infrastructure;
+using KRS.Model.RecipesParts;
 
 namespace KRS.DataAccess.SampleData
 {
@@ -14,19 +15,7 @@ namespace KRS.DataAccess.SampleData
     {
         protected override void Seed(KRSContext context)
         {
-            var photos = PhotosCollection.Photos();
-            var ingredientCategories = CategoriesCollection.IngredientsCategories();
-            var kitchenwareCategories = CategoriesCollection.KitchenwareCategories();
-            var recipeCategories = CategoriesCollection.RecipeCategories();
-            var recipeCategoriesTypes = CategoriesCollection.RecipeCategoryTypes();
-
-            var ingredients = IngredientsCollection.Ingredients();
-            var kitchenwares = KitchenwareCollection.Kitchenwares();
-
-            //AddCookProcesses
-            //AddRecipes
-            //AddRecipeSchemas
-            //AddUsers
+            DbInitializer.InitializeDb(context);
         }
     }
 }

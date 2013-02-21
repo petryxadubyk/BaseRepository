@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using KRS.DataAccess.DataContext;
 using KRS.Model.Categories;
 
 namespace KRS.DataAccess.SampleData
@@ -19,7 +20,6 @@ namespace KRS.DataAccess.SampleData
                            {
                                new IngredientCategory
                                    {
-                                       Id = 1,
                                        Name = "Інгредієнти",
                                        CreatedOn = DateTime.Now,
                                        ModifiedOn = DateTime.Now,
@@ -161,7 +161,6 @@ namespace KRS.DataAccess.SampleData
                            {
                                new KitchenwareCategory
                                    {
-                                       Id = 1,
                                        Name = "Kухонне обладнання",
                                        CreatedOn = DateTime.Now,
                                        ModifiedOn = DateTime.Now,
@@ -233,13 +232,12 @@ namespace KRS.DataAccess.SampleData
             return list.AsQueryable();
         }
 
-        internal static IQueryable<RecipeCategory> RecipeCategories()
+        internal static IQueryable<RecipeCategory> RecipeCategories(KRSContext context)
         {
             var list = new List<RecipeCategory>
                            {
                                new RecipeCategory
                                    {
-                                       Id = 1,
                                        Name  = "Категорії рецептів",
                                        Description = TextGenerator.GenSentences(10, DescTextSource),
                                        CreatedOn = DateTime.Now,
@@ -252,7 +250,7 @@ namespace KRS.DataAccess.SampleData
                                        CreatedOn = DateTime.Now,
                                        ModifiedOn = DateTime.Now,
                                        PhotoPath = "~/Images/GroupCategories/Recipes/ukr.jpg",
-                                       Group = RecipeCategoryTypes().FirstOrDefault(x => x.Name=="Національна приналежність"),
+                                       Group = context.CategoryTypes.FirstOrDefault(x => x.Name=="Національна приналежність"),
                                    },
                                    new RecipeCategory
                                    {
@@ -261,7 +259,7 @@ namespace KRS.DataAccess.SampleData
                                        CreatedOn = DateTime.Now,
                                        ModifiedOn = DateTime.Now,
                                        PhotoPath = "~/Images/GroupCategories/Recipes/rus.jpg",
-                                       Group = RecipeCategoryTypes().FirstOrDefault(x => x.Name=="Національна приналежність"),
+                                       Group = context.CategoryTypes.FirstOrDefault(x => x.Name=="Національна приналежність"),
                                    },
                                    new RecipeCategory
                                    {
@@ -270,7 +268,7 @@ namespace KRS.DataAccess.SampleData
                                        CreatedOn = DateTime.Now,
                                        ModifiedOn = DateTime.Now,
                                        PhotoPath = "~/Images/GroupCategories/Recipes/kazak.jpg",
-                                       Group = RecipeCategoryTypes().FirstOrDefault(x => x.Name=="Національна приналежність"),
+                                       Group = context.CategoryTypes.FirstOrDefault(x => x.Name=="Національна приналежність"),
                                    },
                                    new RecipeCategory
                                    {
@@ -279,7 +277,7 @@ namespace KRS.DataAccess.SampleData
                                        CreatedOn = DateTime.Now,
                                        ModifiedOn = DateTime.Now,
                                        PhotoPath = "~/Images/GroupCategories/Recipes/avtorski-stravu.jpg",
-                                       Group = RecipeCategoryTypes().FirstOrDefault(x => x.Name=="Типи страв"),
+                                       Group = context.CategoryTypes.FirstOrDefault(x => x.Name=="Типи страв"),
                                    },
                                    new RecipeCategory
                                    {
@@ -288,7 +286,7 @@ namespace KRS.DataAccess.SampleData
                                        CreatedOn = DateTime.Now,
                                        ModifiedOn = DateTime.Now,
                                        PhotoPath = "~/Images/GroupCategories/Recipes/beverages.jpg",
-                                       Group = RecipeCategoryTypes().FirstOrDefault(x => x.Name=="Типи страв"),
+                                       Group = context.CategoryTypes.FirstOrDefault(x => x.Name=="Типи страв"),
                                    },
                                    new RecipeCategory
                                    {
@@ -297,7 +295,7 @@ namespace KRS.DataAccess.SampleData
                                        CreatedOn = DateTime.Now,
                                        ModifiedOn = DateTime.Now,
                                        PhotoPath = "~/Images/GroupCategories/Recipes/desertu.jpg",
-                                       Group = RecipeCategoryTypes().FirstOrDefault(x => x.Name=="Типи страв"),
+                                       Group = context.CategoryTypes.FirstOrDefault(x => x.Name=="Типи страв"),
                                    },
                                    new RecipeCategory
                                    {
@@ -306,7 +304,7 @@ namespace KRS.DataAccess.SampleData
                                        CreatedOn = DateTime.Now,
                                        ModifiedOn = DateTime.Now,
                                        PhotoPath = "~/Images/GroupCategories/Recipes/drugi-stravu.jpg",
-                                       Group = RecipeCategoryTypes().FirstOrDefault(x => x.Name=="Типи страв"),
+                                       Group = context.CategoryTypes.FirstOrDefault(x => x.Name=="Типи страв"),
                                    },
                                    new RecipeCategory
                                    {
@@ -315,7 +313,7 @@ namespace KRS.DataAccess.SampleData
                                        CreatedOn = DateTime.Now,
                                        ModifiedOn = DateTime.Now,
                                        PhotoPath = "~/Images/GroupCategories/Recipes/georgia.jpg",
-                                       Group = RecipeCategoryTypes().FirstOrDefault(x => x.Name=="Національна приналежність"),
+                                       Group = context.CategoryTypes.FirstOrDefault(x => x.Name=="Національна приналежність"),
                                    },
                                    new RecipeCategory
                                    {
@@ -324,7 +322,7 @@ namespace KRS.DataAccess.SampleData
                                        CreatedOn = DateTime.Now,
                                        ModifiedOn = DateTime.Now,
                                        PhotoPath = "~/Images/GroupCategories/Recipes/juses.jpg",
-                                       Group = RecipeCategoryTypes().FirstOrDefault(x => x.Name=="Типи страв"),
+                                       Group = context.CategoryTypes.FirstOrDefault(x => x.Name=="Типи страв"),
                                    },
                                    new RecipeCategory
                                    {
@@ -333,7 +331,7 @@ namespace KRS.DataAccess.SampleData
                                        CreatedOn = DateTime.Now,
                                        ModifiedOn = DateTime.Now,
                                        PhotoPath = "~/Images/GroupCategories/Recipes/pershi-stravu.jpg",
-                                       Group = RecipeCategoryTypes().FirstOrDefault(x => x.Name=="Типи страв"),
+                                       Group = context.CategoryTypes.FirstOrDefault(x => x.Name=="Типи страв"),
                                    },
                                    new RecipeCategory
                                    {
@@ -342,7 +340,7 @@ namespace KRS.DataAccess.SampleData
                                        CreatedOn = DateTime.Now,
                                        ModifiedOn = DateTime.Now,
                                        PhotoPath = "~/Images/GroupCategories/Recipes/salads.jpg",
-                                       Group = RecipeCategoryTypes().FirstOrDefault(x => x.Name=="Типи страв"),
+                                       Group = context.CategoryTypes.FirstOrDefault(x => x.Name=="Типи страв"),
                                    },
                                    new RecipeCategory
                                    {
@@ -351,7 +349,7 @@ namespace KRS.DataAccess.SampleData
                                        CreatedOn = DateTime.Now,
                                        ModifiedOn = DateTime.Now,
                                        PhotoPath = "~/Images/GroupCategories/Recipes/soysu.jpg",
-                                       Group = RecipeCategoryTypes().FirstOrDefault(x => x.Name=="Типи страв"),
+                                       Group = context.CategoryTypes.FirstOrDefault(x => x.Name=="Типи страв"),
                                    },
                                    new RecipeCategory
                                    {
@@ -360,7 +358,7 @@ namespace KRS.DataAccess.SampleData
                                        CreatedOn = DateTime.Now,
                                        ModifiedOn = DateTime.Now,
                                        PhotoPath = "~/Images/GroupCategories/Recipes/vupichka.jpg",
-                                       Group = RecipeCategoryTypes().FirstOrDefault(x => x.Name=="Типи страв"),
+                                       Group = context.CategoryTypes.FirstOrDefault(x => x.Name=="Типи страв"),
                                    },
                                    new RecipeCategory
                                    {
@@ -369,7 +367,7 @@ namespace KRS.DataAccess.SampleData
                                        CreatedOn = DateTime.Now,
                                        ModifiedOn = DateTime.Now,
                                        PhotoPath = "~/Images/GroupCategories/Recipes/zakuski.jpg",
-                                       Group = RecipeCategoryTypes().FirstOrDefault(x => x.Name=="Типи страв"),
+                                       Group = context.CategoryTypes.FirstOrDefault(x => x.Name=="Типи страв"),
                                    },
                                    new RecipeCategory
                                    {
@@ -378,7 +376,7 @@ namespace KRS.DataAccess.SampleData
                                        CreatedOn = DateTime.Now,
                                        ModifiedOn = DateTime.Now,
                                        PhotoPath = "~/Images/GroupCategories/Recipes/vines.jpg",
-                                       Group = RecipeCategoryTypes().FirstOrDefault(x => x.Name=="Типи страв"),
+                                       Group = context.CategoryTypes.FirstOrDefault(x => x.Name=="Типи страв"),
                                    },
                            };
             return list.AsQueryable();

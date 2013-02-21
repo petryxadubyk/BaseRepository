@@ -57,9 +57,9 @@
     <Compile Include="Infrastructure\PredicateBuilder.cs" />
     <Compile Include="Infrastructure\RepositoryFactories.cs" />
     <Compile Include="Infrastructure\RepositoryProvider.cs" />
-    <Compile Include="Migrations\201302161425117_initial.cs" />
-    <Compile Include="Migrations\201302161425117_initial.Designer.cs">
-      <DependentUpon>201302161425117_initial.cs</DependentUpon>
+    <Compile Include="Migrations\201302211752443_initial.cs" />
+    <Compile Include="Migrations\201302211752443_initial.Designer.cs">
+      <DependentUpon>201302211752443_initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Repositories\Core\BaseEntityRepository.cs" />
@@ -67,11 +67,11 @@
     <Compile Include="Repositories\RecipeRepository.cs" />
     <Compile Include="SampleData\CategoriesCollection.cs" />
     <Compile Include="SampleData\CookProcessesCollection.cs" />
+    <Compile Include="SampleData\DbInitializer.cs" />
     <Compile Include="SampleData\IngredientsCollection.cs" />
     <Compile Include="SampleData\KitchenwareCollection.cs" />
     <Compile Include="SampleData\KRSDatabaseInitializer.cs" />
     <Compile Include="SampleData\MeasureUnits.cs" />
-    <Compile Include="SampleData\PeopleNames.cs" />
     <Compile Include="SampleData\RandomSelector.cs" />
     <Compile Include="SampleData\RecipesCollection.cs" />
     <Compile Include="SampleData\SampleTextGenerator.cs" />
@@ -92,10 +92,9 @@
       <Name>KRS.Model</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201302161425117_initial.resx">
-      <DependentUpon>201302161425117_initial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201302211752443_initial.resx">
+      <DependentUpon>201302211752443_initial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

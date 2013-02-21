@@ -3,6 +3,9 @@ using KRS.DataAccess.Contracts.Repositories;
 using KRS.DataAccess.Contracts.Repositories.Core;
 using KRS.DataAccess.Contracts.UnitOfWork;
 using KRS.DataAccess.DataContext;
+using KRS.Model.Categories;
+using KRS.Model.Infrastructure;
+using KRS.Model.Photos;
 using KRS.Model.RecipesParts;
 
 namespace KRS.DataAccess.Infrastructure
@@ -39,7 +42,17 @@ namespace KRS.DataAccess.Infrastructure
         public IRepository<Ingredient> Ingredients { get { return GetStandardRepo<Ingredient>(); } }
         public IRepository<CookProcess> CookProcesses { get { return GetStandardRepo<CookProcess>(); } }
         public IRepository<Kitchenware> Kitchenwares { get { return GetStandardRepo<Kitchenware>(); } }
+        public IRepository<Photo> Photos { get { return GetStandardRepo<Photo>(); } }
+        public IRepository<RecipesCookProcesses> RecipesCookProcesses { get { return GetStandardRepo<RecipesCookProcesses>(); } }
+        public IRepository<RecipesKitchenwares> RecipesKitchenwares { get { return GetStandardRepo<RecipesKitchenwares>(); } }
+        public IRepository<RecipesIngredients> RecipesIngredients { get { return GetStandardRepo<RecipesIngredients>(); } }
+        public IRepository<IngredientCategory> IngredientCategory { get { return GetStandardRepo<IngredientCategory>(); } }
+        public IRepository<RecipeCategory> RecipeCategory { get { return GetStandardRepo<RecipeCategory>(); } }
+        public IRepository<KitchenwareCategory> KitchenwareCategory { get { return GetStandardRepo<KitchenwareCategory>(); } }
+        
+        
         public IRecipeRepository Recipes { get { return GetRepo<IRecipeRepository>(); } }
+
 
         /// <summary>
         /// Save pending changes to the database
