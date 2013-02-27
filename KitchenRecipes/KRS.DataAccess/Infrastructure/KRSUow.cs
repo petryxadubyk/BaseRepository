@@ -11,7 +11,7 @@ using KRS.Model.RecipesParts;
 namespace KRS.DataAccess.Infrastructure
 {
     /// <summary>
-    /// The Code Camper "Unit of Work"
+    /// "Unit of Work"
     ///     1) decouples the repos from the controllers
     ///     2) decouples the DbContext and EF from the controllers
     ///     3) manages the UoW
@@ -21,11 +21,11 @@ namespace KRS.DataAccess.Infrastructure
     /// the "UoW" serves as a facade for querying and saving to the database.
     /// Querying is delegated to "repositories".
     /// Each repository serves as a container dedicated to a particular
-    /// root entity type such as a <see cref="Person"/>.
+    /// root entity type.
     /// A repository typically exposes "Get" methods for querying and
     /// will offer add, update, and delete methods if those features are supported.
     /// The repositories rely on their parent UoW to provide the interface to the
-    /// data layer (which is the EF DbContext in Code Camper).
+    /// data layer (which is the EF DbContext).
     /// </remarks>
     public class KRSUow : IKRSUow, IDisposable
     {
@@ -59,7 +59,6 @@ namespace KRS.DataAccess.Infrastructure
         /// </summary>
         public void Commit()
         {
-            //System.Diagnostics.Debug.WriteLine("Committed");
             DbContext.SaveChanges();
         }
 

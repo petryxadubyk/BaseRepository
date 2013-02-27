@@ -9,7 +9,7 @@ using KRS.DataAccess.Repositories.Core;
 namespace KRS.DataAccess.Infrastructure
 {
     /// <summary>
-    /// A maker of Code Camper Repositories.
+    /// A maker of Repositories.
     /// </summary>
     /// <remarks>
     /// An instance of this class contains repository factory functions for different types.
@@ -31,7 +31,7 @@ namespace KRS.DataAccess.Infrastructure
         /// <remarks>
         /// MODIFY THIS METHOD TO ADD CUSTOM CODE CAMPER FACTORY FUNCTIONS
         /// </remarks>
-        private IDictionary<Type, Func<DbContext, object>> GetCodeCamperFactories()
+        private IDictionary<Type, Func<DbContext, object>> GetFactories()
         {
             return new Dictionary<Type, Func<DbContext, object>>
                 {
@@ -44,7 +44,7 @@ namespace KRS.DataAccess.Infrastructure
         /// </summary>
         public RepositoryFactories()  
         {
-            _repositoryFactories = GetCodeCamperFactories();
+            _repositoryFactories = GetFactories();
         }
 
         /// <summary>

@@ -18,8 +18,12 @@ namespace CodeCamper.Data.SampleData
         // People should (and do) switch to ADO and bulk insert for that kind of thing
         // It's really for interactive apps with humans driving data creation, not machines
         private const int AttendeesWithFavoritesCount = 4;
-
         protected override void Seed(CodeCamperDbContext context)
+        {
+
+        }
+
+        public void SeedDb(CodeCamperDbContext context)
         {
             // Seed code here
             var rooms = AddRooms(context);

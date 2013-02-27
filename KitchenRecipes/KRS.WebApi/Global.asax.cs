@@ -23,6 +23,9 @@ namespace KRS.WebApi
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
 
+
+            GlobalConfig.CustomizeConfig(GlobalConfiguration.Configuration);
+
             Bootstrapper.Run();
         }
     }

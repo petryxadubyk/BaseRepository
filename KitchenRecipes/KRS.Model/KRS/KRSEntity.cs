@@ -12,7 +12,7 @@ namespace KRS.Model.KRS
             ModifiedOn = DateTime.Now;
         }
 
-        [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity), Required]
+        [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 
         [DataType(DataType.DateTime)]
