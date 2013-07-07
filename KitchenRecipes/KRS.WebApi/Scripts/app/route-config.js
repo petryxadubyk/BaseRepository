@@ -9,35 +9,24 @@
                 var routeData = [
                     // Recipes routes
                     {
+                        isDefault: true,
                         view: config.viewIds.recipes,
-                        routes:
-                            [{
-                                isDefault: true,
-                                route: config.hashes.recipes,
-                                title: 'Recipes',
-                                callback: vm.recipes.activate,
-                                group: '.route-top'
-                            }]
+                        route: config.hashes.recipes,
+                        title: 'recipes',
+                        callback: vm.recipes.activate,
+                        group: '.route-top'
                     },
 
                     // Recipe details routes
                     {
                         view: config.viewIds.recipe,
                         route: config.hashes.recipes + '/:id',
-                        title: 'Recipe',
+                        title: 'recipe',
                         callback: vm.recipe.activate,
                         group: '.route-top'
-                    },
-
-                    // Invalid routes
-                    {
-                        view: '',
-                        route: /.*/,
-                        title: '',
-                        callback: function () {
-                            logger.error(config.toasts.invalidRoute);
-                        }
                     }
+
+
                 ];
 
                 for (var i = 0; i < routeData.length; i++) {

@@ -1,4 +1,8 @@
-﻿<div data-bind="with: recipe">    
+﻿<div data-bind="with: recipe">
+    <div class="topimage titleblock">
+         <label for="title"></label>
+        <img data-bind="attr: {src: photoPath}"/>
+    </div>    
     <div class="titleblock">
         <label for="title">Title</label>
         <input id="title" data-bind="value: name" placeholder="Knockout Fundamentals" />
@@ -21,7 +25,7 @@
         <div>
             <label>Description</label>
             <textarea data-bind="value: shortDescription, valueUpdate: 'afterkeydown'" 
-                placeholder="Session description"></textarea>
+                      placeholder="Session description"></textarea>
         </div>
     </div>
 </div>

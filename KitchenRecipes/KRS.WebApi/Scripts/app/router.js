@@ -1,6 +1,8 @@
-﻿define('router',
+﻿// ReSharper disable InconsistentNaming
+define('router',
     ['jquery', 'underscore', 'sammy', 'presenter', 'config', 'route-mediator', 'store'],
     function ($, _, Sammy, presenter, config, routeMediator, store) {
+// ReSharper restore InconsistentNaming
         var
             currentHash = '',
             defaultRoute = '',
@@ -14,8 +16,9 @@
                     this.use(Sammy.Title);
                     this.setTitle(config.title);
                 }
+                this.element_selector = 'body';
 
-                this.get('', function () {
+                this.get('#/', function () {
                     this.app.runRoute('get', startupUrl);
                 });
             }),
@@ -99,7 +102,7 @@
                 // 1) if i browse to a location, use it
                 // 2) otherwise, use the url i grabbed from storage
                 // 3) otherwise use the default route
-                startupUrl = sammy.getLocation() || url || defaultRoute;
+                startupUrl = /*sammy.getLocation() ||*/ url || defaultRoute;
 
                 if (!startupUrl) {
                     logger.error('No route was indicated.');
