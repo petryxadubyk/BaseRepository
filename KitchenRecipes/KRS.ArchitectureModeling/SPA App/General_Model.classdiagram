@@ -1,0 +1,1221 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="c120cf91-7b5b-44f7-a6d8-c5c596e1bf44" name="General_Model" linkedPackageId="17c5b86c-d732-427d-a164-ae5e1e04f998" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="c0c0aa31-7f1a-4e7e-ba5d-fcb0611ac31d">
+      <profileInstance Id="78596a50-5e97-4204-acea-1d84512ad84d" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="472f0556-3343-43bf-982d-bd9f202c4573">
+      <profileInstance Id="7e920d87-bb53-486c-acd7-e756c23483a4" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasPackages>
+      <package Id="c2e19483-8547-426d-9a6a-51a43358743f" name="Index.cshtml">
+        <elementDefinition Id="3bd64629-c489-4dec-bd7e-05ba00847e66" />
+        <packagedElements>
+          <packageHasNamedElement>
+            <enumeration Id="0008ad4a-0d29-4a2d-979c-d0f65363510f" name="bundles" isAbstract="false" isLeaf="false">
+              <elementDefinition Id="b3cb3190-2bd3-447c-b2bb-dc7addb1ed98" />
+              <targetEnds>
+                <association Id="349c6b05-ea43-4834-a7ae-1a6b993a8b7e" isDerived="false" sourceEndRoleName="" targetEndRoleName="main.js" isLeaf="false" isAbstract="false">
+                  <classMoniker Id="623c14ef-0725-4400-a7b0-23eed2a61f13" LastKnownName="main.js" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="7d3fd9b1-a57d-4dec-8cab-6e65df795d8a" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="2eb1c15f-8a20-43e7-86ff-a616271251e1" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="e8ad71b2-6cec-4366-96ba-21d1abe5e1fe" name="main.js" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                        <elementDefinition Id="592414f9-84ff-421f-b829-1162a9b21aa7" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="1d11ea83-d02f-40aa-b19c-efa8bd54ea5c" />
+                </association>
+              </targetEnds>
+              <ownedLiterals>
+                <enumerationLiteral Id="363e600f-2286-478a-a331-ae3fdcdbeb0b" name="Modernizer Bundle">
+                  <elementDefinition Id="39bed38d-852a-4c80-9b85-bcb97349b24a" />
+                </enumerationLiteral>
+                <enumerationLiteral Id="70badab3-5621-4bc4-9046-abaebdb6fc9c" name="JQuery Bundle">
+                  <elementDefinition Id="3385a6b2-1941-4d08-94c7-3b4dcae338a9" />
+                </enumerationLiteral>
+                <enumerationLiteral Id="f0656bf8-7068-4341-b8c1-2c58a46c12c2" name="Libs Bundle">
+                  <elementDefinition Id="50b3681d-f52c-447a-837e-acff45393ab2" />
+                </enumerationLiteral>
+                <enumerationLiteral Id="99ea2ccb-4b6d-4614-ae25-efa5dc9ed61b" name="Require.js">
+                  <elementDefinition Id="6afd9355-21c9-4cc5-a99e-46692fe9a2fb" />
+                </enumerationLiteral>
+                <enumerationLiteral Id="f3c639cb-ff6c-4f7e-85a7-36b5ea56c7e7" name="Main.js">
+                  <elementDefinition Id="a6da89b8-99f6-4fc4-8dfc-67d873aee097" />
+                </enumerationLiteral>
+                <enumerationLiteral Id="2948741f-428d-4818-bf15-7710d21e2128" name="App Bundle">
+                  <elementDefinition Id="d347f009-c86f-4d83-8e8f-9440f239e472" />
+                </enumerationLiteral>
+                <enumerationLiteral Id="760f4a5f-9040-4638-94eb-5b96ed4fc736" name="Infrastructure Bundle">
+                  <elementDefinition Id="71a0c89d-9af6-4e3f-b146-065bbb6adf6d" />
+                </enumerationLiteral>
+                <enumerationLiteral Id="9a982f7e-d4b2-4b1a-b569-293e770844cd" name="Mock Bundle">
+                  <elementDefinition Id="1bd63644-fb3e-4655-bc43-ca2dbfd3868a" />
+                </enumerationLiteral>
+              </ownedLiterals>
+            </enumeration>
+          </packageHasNamedElement>
+        </packagedElements>
+      </package>
+    </logicalClassDesignerModelHasPackages>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="623c14ef-0725-4400-a7b0-23eed2a61f13" name="main.js" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="cfcb53dc-d1d1-4f0f-9384-a5de99c454e3" />
+        <targetEnds>
+          <association Id="1678b60c-25f0-4e5c-b253-224b93db83c1" isDerived="false" sourceEndRoleName="" targetEndRoleName="run()" isLeaf="false" isAbstract="false">
+            <classMoniker Id="71ee435f-434a-4084-8558-2dcafe2d03f1" LastKnownName="bootstrapper.js" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="f6be2f2f-c11e-4343-bc2e-f8dfe5c370d1" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="01084229-0f46-4809-8c01-9bf649d0185b" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="77eb02b4-e08a-4a8a-8b2b-8a405aa878bc" name="run()" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="446d77da-86f4-461f-a071-c7e8946a29fa" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="f6c236cc-2620-4b91-9999-05fcb1308af7" />
+          </association>
+        </targetEnds>
+        <ownedOperationsInternal>
+          <operation Id="59721b1f-5f51-4d5f-9e2b-98e0121e37dc" name="ctor" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="287d9a74-ed50-4707-b13a-b74568259521" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="41e7a5be-4ed6-4511-9789-a3bf343d96a6" name="boot()" direction="In" isUnique="false">
+                  <elementDefinition Id="4254b2d2-b5cf-43e8-ad08-6e5e01f95e71" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="fe63d4e0-cb4e-42d6-ae03-9c9d29a6cd67" name="ctor" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="c27a955a-34d2-4aa5-a881-e926792849d1" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="8957444b-c45c-40ff-a3c0-f205087f9c6c" name="define3rdPartyLibs()" direction="In" isUnique="false">
+                  <elementDefinition Id="49d85693-549c-42dd-85fc-8d54aa0175b3" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="71ee435f-434a-4084-8558-2dcafe2d03f1" name="bootstrapper.js" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="2523bf91-facf-418f-bf68-603f7ca35ddd" />
+        <targetEnds>
+          <association Id="bba91df1-0664-4f65-93f9-1474879b0cd4" isDerived="false" sourceEndRoleName="" targetEndRoleName="toogleActivity()" isLeaf="false" isAbstract="false">
+            <classMoniker Id="2fba55b8-5ad8-43ba-b7a3-0a9bbbcaa883" LastKnownName="presenter.js" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="7b954178-91fe-4298-a610-dc58f7517f8d" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="a3a62e01-bb94-443d-9c18-9c0d84167d89" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="92e31fe6-4fba-42dc-9969-12434c5c52d2" name="toogleActivity()" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="a58a39f6-9e5d-4d74-beaa-5a07744f7408" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="48670b72-422a-4174-85a7-9027f49e862d" />
+          </association>
+          <association Id="6b9448c0-94cd-46f2-bc78-8a889da570a7" isDerived="false" sourceEndRoleName="" targetEndRoleName="dataserviceInit()" isLeaf="false" isAbstract="false">
+            <classMoniker Id="8acc71ef-80b1-49f1-b3e8-6cbd0d4fe1c4" LastKnownName="config.js" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="acfc6a9a-984f-4510-bb9c-aa37a7d034f0" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="04db97e3-a555-4c61-b368-02abcc2276f7" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="c9e71123-f4b7-4076-b50d-002f60bf5e23" name="dataserviceInit()" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="1d6ee14a-8d05-4e63-b59a-c38500098a6e" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="2fc2b60f-e5b0-430c-bbf8-710aade56b7a" />
+          </association>
+          <association Id="e10bff7b-4a50-4d42-9881-9d4a3a964c03" isDerived="false" sourceEndRoleName="" targetEndRoleName="register()" isLeaf="false" isAbstract="false">
+            <classMoniker Id="dbb93142-7db4-4537-8784-3811b810e9aa" LastKnownName="route-config.js" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="f9060ea2-57b2-4d61-a61e-ca7a163f6ea4" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="b7cdaefd-ef61-43b9-af93-6ef692f31167" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="8214d525-ebc6-480e-9242-3709e3e2883e" name="register()" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="1c0a5c11-f26f-45f3-b39e-be45ea370c73" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="1667aefc-3e6a-4b61-a478-df00ecb34a94" />
+          </association>
+          <association Id="d7894909-2e95-4c9f-9876-c9a9998d2e34" isDerived="false" sourceEndRoleName="" targetEndRoleName="fetch()" isLeaf="false" isAbstract="false">
+            <classMoniker Id="214e8861-8f1e-4f33-a9e7-6104ea6cd4e1" LastKnownName="dataprimer.js" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="8ed854c9-c95b-4783-9a26-38605dbe385a" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="034a0cc8-c811-40a7-9d9b-2f6fe8d830a5" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="3b69bae0-1fb3-4457-ad6f-94c2d0253bdb" name="fetch()" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="11b6f7ac-5039-4fea-8b0b-71b293c66e9c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="dcc7a2d0-d410-4e53-a538-c782d0cc94b7" />
+          </association>
+          <association Id="af01a7b3-facc-406e-95ca-408fc9396f4f" isDerived="false" sourceEndRoleName="" targetEndRoleName="bind()" isLeaf="false" isAbstract="false">
+            <classMoniker Id="37ee9fc1-37d2-4f0b-a082-0b709d3f08b9" LastKnownName="binder.js" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="6c844769-77a3-41fe-a70f-5e5491082013" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="76fe1160-6962-44bb-a697-ae968abea502" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="349f1f8a-9d61-41c9-b60f-bdf0f7177e9f" name="bind()" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="5502c66a-28d9-4dfe-9594-8abbaa67206b" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="0a6a4743-4a53-4e1a-a9b3-0be3cf52a744" />
+          </association>
+        </targetEnds>
+        <ownedOperationsInternal>
+          <operation Id="af8b5ac9-27df-4fc2-84f2-a69c7c6564d1" name="run" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="a820af8b-8862-464f-8a2f-899d149cd5f0" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="8acc71ef-80b1-49f1-b3e8-6cbd0d4fe1c4" name="config.js" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="705ed3b1-37a3-4cea-ab69-468f1843d077" />
+        <ownedAttributesInternal>
+          <property Id="99724546-6099-4ac6-bb07-1632d2fad538" name="hashes" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="844960b4-1ef2-40e3-ab1a-46c34a1e6b66" />
+          </property>
+          <property Id="c72186d2-7b3e-49fe-a379-d6119a0ad239" name="stateKeys" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="3c05f4ce-38cd-42fc-abdc-776aaa5746cc" />
+          </property>
+          <property Id="4f815da6-8035-4308-951a-7a94c67f1aa7" name="logger" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="91afa045-e4b5-4099-9457-261a6cef63e2" />
+          </property>
+          <property Id="4d085dfa-4558-4361-9a81-cd273ef927c8" name="messages" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="54527912-4810-48fd-a30a-d248f983cbb8" />
+          </property>
+          <property Id="f12ed468-9ea8-4e5b-9b35-958dcff21c48" name="viewIds" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="8b0909ee-225f-48f5-ba7c-a9b2e8751ef8" />
+          </property>
+          <property Id="941fc772-dd43-4285-85b6-bb563d92aeb0" name="toasts" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="4767ba16-0234-40c2-a66a-2e81e19da0d6" />
+          </property>
+          <property Id="2b3f1cb6-955c-4e33-899c-f2649ada6dd4" name="currentUser" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="f875a8e3-f3a8-4dab-886e-22ed41b44afd" />
+          </property>
+          <property Id="22d20b04-34ac-42af-9027-d76a62bacabd" name="currentUserId" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="67452dd0-7666-47c5-a132-f213e150004c" />
+          </property>
+          <property Id="4be4cb23-73f8-4acc-848d-3cd8a2a851c3" name="window" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="be50d02d-7a2a-4617-b8ba-4050b8a05f73" />
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="6b662cc0-f074-409b-8892-58f0e5d8740d" name="ctor" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="856ec77f-0c81-4963-b9d6-8230fdac3350" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="4e61ce97-7f49-4e88-88d1-45beeb14c6c8" name="init()" direction="In" isUnique="false">
+                  <elementDefinition Id="662cf280-67af-421b-921e-1bdd814e8535" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="9add3168-e4e6-47b9-9711-8c7f46135638" name="dataserviceInit" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="aea013cf-e909-4b38-886c-7b6aa975645a" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="2fba55b8-5ad8-43ba-b7a3-0a9bbbcaa883" name="presenter.js" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="fd04f22e-2a4f-45cf-8c87-3086d44d5c66" />
+        <ownedAttributesInternal>
+          <property Id="c9d391b4-ce4c-4bcc-9644-a14559d4902f" name="transitionOptions" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="e55ccffa-3959-42a7-ac7e-778f612c7e29" />
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="a42488c6-e0b8-47d8-8beb-6f53431be69d" name="toogleActivity" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="35dcb7f9-373b-4508-b96f-4a3537bc02b8" />
+          </operation>
+          <operation Id="dc38eb94-2450-46dd-a51e-e42162737dbe" name="transitionTo" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="7441276c-0aaf-4050-b6d6-856f725defc9" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="dbb93142-7db4-4537-8784-3811b810e9aa" name="route-config.js" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="8c656f4d-23da-40ee-931d-2a9a322abea3" />
+        <targetEnds>
+          <association Id="62e2e191-1c87-4b18-861f-699e26c62a34" isDerived="false" sourceEndRoleName="" targetEndRoleName="register(), run()" isLeaf="false" isAbstract="false">
+            <classMoniker Id="e9ee62a1-d35b-4fd2-9e17-4c70ad344977" LastKnownName="router.js" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="315e02d2-e213-4c0e-8c6a-49241a7af29b" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="1373f2df-103f-4647-bada-c74e087d0471" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="a3a784ac-772b-4f10-b088-7e5511a88a1b" name="register(), run()" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="730fe069-7084-40cb-8ea0-8e7b45606855" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="c51ff8c5-f39e-4853-aa5e-620ac85de190" />
+          </association>
+          <association Id="b5a3d47f-96dc-4ac0-a9ee-66db6dca06f4" isDerived="false" sourceEndRoleName="" targetEndRoleName="hashes,viewIds,toasts" isLeaf="false" isAbstract="false">
+            <classMoniker Id="8acc71ef-80b1-49f1-b3e8-6cbd0d4fe1c4" LastKnownName="config.js" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="d45d842a-377e-49b4-a3bf-7e5bf2c76da8" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="baa7878f-cf05-4899-8ad8-afb72c1edb7a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="c7228aa6-6d4c-4609-83b1-b70dd44cd746" name="hashes,viewIds,toasts" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="0de62162-4cf2-4999-999a-fa86b233f8be" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="177ad032-8069-4ebe-a289-374e8326cf01" />
+          </association>
+          <association Id="5b09c0e7-f658-44d7-8a77-f1508864671b" isDerived="false" sourceEndRoleName="" targetEndRoleName="recipe.activate(), recipes.activate()" isLeaf="false" isAbstract="false">
+            <classMoniker Id="d3537753-c5d1-4024-90fc-7ab5c9bdb7c5" LastKnownName="vm.js" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="28756a6e-96c3-4647-998d-a8cda517f1e4" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="1d987391-532c-4f19-8719-9763f4911779" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="9b2ca19f-30a7-45f1-89ff-e2ba6f4940a2" name="recipe.activate(), recipes.activate()" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="b86dd6fa-2157-4a3f-811f-1352584ae17f" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="dfcd8ca1-335c-426d-9670-9da306025cb7" />
+          </association>
+        </targetEnds>
+        <ownedOperationsInternal>
+          <operation Id="8acd313b-2bc7-4a56-b753-179e4811ea42" name="register" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="4ea4d289-eec2-48a2-9a7a-fe9ee5d8cfec" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="e9ee62a1-d35b-4fd2-9e17-4c70ad344977" name="router.js" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="0a32f313-c88c-49c5-b1d7-5b5e61dc402e" />
+        <targetEnds>
+          <association Id="3d1e4360-d92f-4a4c-aba1-6f6f05d95987" isDerived="false" sourceEndRoleName="" targetEndRoleName="canLeave()" isLeaf="false" isAbstract="false">
+            <classMoniker Id="4c3997d0-064f-4eec-a5cb-eec46d46a980" LastKnownName="route-mediator.js" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="ebc888c9-ba24-4bab-813d-3a87a1c7e1e4" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="4f5bbc1f-6391-459b-a59c-b06e668389c1" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="a9e39ca9-2a55-4f72-b20f-99a82e3113b1" name="canLeave()" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="df449bac-9e0c-4902-8c77-0b86efe741c4" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="556ad7d9-641f-48b3-a4a6-636a3329d55b" />
+          </association>
+          <association Id="0d6f07ba-4344-4920-b99b-dc4302f49f95" isDerived="false" sourceEndRoleName="" targetEndRoleName="" isLeaf="false" isAbstract="false">
+            <classMoniker Id="b435e7e7-ea01-444d-be22-373807a4db0f" LastKnownName="store.js" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="dba6699d-9344-4cb0-9251-db69b7eae02d" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="d04ea854-c276-4207-8576-df3f277487ba" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="be87e1d3-0723-4bc4-b31d-c32184ce01bc" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="aa5c4dad-8db4-453e-a3c0-27f786c6738b" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="561f9cfb-bca2-4ca4-9ef4-037804bf59f1" />
+          </association>
+          <association Id="7862ef7b-7b40-41cd-916a-02b02cbf30b9" isDerived="false" sourceEndRoleName="" targetEndRoleName="transitionTo()" isLeaf="false" isAbstract="false">
+            <classMoniker Id="2fba55b8-5ad8-43ba-b7a3-0a9bbbcaa883" LastKnownName="presenter.js" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="b31baa01-dbdd-4964-98c0-5d0313b246b8" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="24b5437b-fc69-466e-aaf5-1b7af580f12a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="4a2465b9-c47a-4aa6-814a-399be8a1c856" name="transitionTo()" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="bdbf7d3e-2cdc-4cb1-86b4-2832b22572c0" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="f25d1bb6-dda3-463b-b3c2-e46724fcd7ef" />
+          </association>
+        </targetEnds>
+        <ownedOperationsInternal>
+          <operation Id="e4d19a00-38d0-4443-86f5-dff66eee9d28" name="navigateBack" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="6f2c788c-3932-4875-9abf-6e686250183a" />
+          </operation>
+          <operation Id="129ad329-9fee-40c7-8bd9-39e3151f6526" name="navigateTo" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="e585faf1-4b28-4672-a9dc-d1f51f32376c" />
+          </operation>
+          <operation Id="1e843449-64ff-4720-bf50-906d202b19e9" name="register" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="186c1c40-8e5e-4ac2-9b89-0fcf89a0a80d" />
+          </operation>
+          <operation Id="fa58638b-2b9e-4f2d-8653-333a7b6e18a5" name="run" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="977e0cdc-1f2a-45c2-96ef-61ce49b82936" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="d3537753-c5d1-4024-90fc-7ab5c9bdb7c5" name="vm.js" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="6774cb75-39dd-4ff2-9b0c-61d3ebfee096" />
+        <targetEnds>
+          <association Id="e002044b-47c9-4c76-bba9-26ed5133024a" isDerived="false" sourceEndRoleName="" targetEndRoleName="recipes" isLeaf="false" isAbstract="false">
+            <classMoniker Id="7c4737a5-8858-4a39-b0aa-1621692954b6" LastKnownName="vm.recipes.js" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="699194dc-a127-4942-8567-b5579c44da58" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="926307ef-cfc4-4a59-b60e-10638feebb75" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="3f8fc818-8404-49f0-9806-ddfcfaed2b60" name="recipes" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="50089b03-a3a7-4a9f-b40e-a55cdb158b52" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="eb47a2f2-6656-424f-bc73-720f1afec9cb" />
+          </association>
+          <association Id="1bb68068-ed2c-49d1-94b4-d62a38e84015" isDerived="false" sourceEndRoleName="" targetEndRoleName="recipe" isLeaf="false" isAbstract="false">
+            <classMoniker Id="e0c4da58-5f49-4a9c-9278-231242749359" LastKnownName="vm.recipe.js" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="6d43362d-5615-4667-91e2-a2e43847b0c7" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="b61254f1-97a1-4dc8-9549-0f08f4649de7" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="00483c6d-03ea-48a8-97f0-8bf401299542" name="recipe" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="d47dd88b-4ddf-4f78-a729-b0d458eba24f" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="3c73c8d9-06ed-454b-af67-a5df6fd5490d" />
+          </association>
+          <association Id="04fc8c77-efc3-4aa9-b442-fa526d6074e5" isDerived="false" sourceEndRoleName="" targetEndRoleName="shell" isLeaf="false" isAbstract="false">
+            <classMoniker Id="dd5eff3b-3708-4a33-8178-2e9e0b85d8af" LastKnownName="vm.shell" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="db81d2de-3d67-40f1-9dbc-60cd255eb691" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="18e74f21-580f-4311-99a0-ec51734d12d4" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="2e8d9f02-05f9-4e43-a66b-4ecfe4ee6a56" name="shell" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="89bb773f-aff4-4ea8-8e45-af71bd1d5ffc" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="4f26dbfb-b450-484f-ad2a-16ab4a8c6e8f" />
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="4278c065-f9e6-4c97-a656-5ee931a2e83c" name="recipe" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="ba943eea-53cf-455f-bd13-946cd8a50425" />
+          </property>
+          <property Id="dcf5ae5e-40b6-421c-96e1-5e233e8e6f0e" name="recipes" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="afdfb74b-3638-4d38-bd32-f0eb8663dda4" />
+          </property>
+          <property Id="33bba180-bc3c-4632-a770-f9ac89dc62b6" name="shell" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="605f2d63-5928-4246-b20a-83c30b4a29af" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="e0c4da58-5f49-4a9c-9278-231242749359" name="vm.recipe.js" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="8a0b299a-96b4-4fef-be37-6f6965dee70b" />
+        <targetEnds>
+          <association Id="f033811e-a7ed-4c4c-a479-2eee1232a97c" isDerived="false" sourceEndRoleName="" targetEndRoleName="recipes" isLeaf="false" isAbstract="false">
+            <classMoniker Id="b8751585-a53e-4d7e-a9b6-5283a81407d5" LastKnownName="datacontext.js" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="74f85f5f-40bc-41bd-b2eb-4991e20e3006" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="54c18686-9742-4b6d-86f4-c26fc9c05337" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="7cdacf91-2122-4423-8e05-da44108f23fd" name="recipes" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="664a336c-e670-4e12-be4d-c38aabc74fb2" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="f3d22de6-02c8-4d25-9c5e-6dd66a7177b6" />
+          </association>
+          <association Id="b22f075e-6a89-43e0-b1c2-6d78b771a976" isDerived="false" sourceEndRoleName="" targetEndRoleName="publish()" isLeaf="false" isAbstract="false">
+            <classMoniker Id="18a42483-9032-4d95-8db0-b1b88f5a8ab8" LastKnownName="messanger.js" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="5dde250f-68e1-4e59-997c-e0a742474194" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="2dc3670b-8dd6-4051-aa47-71c01582d255" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="805611f9-b0f6-4f07-a6de-c2538904ac5c" name="publish()" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="1c634fde-4e45-4d46-8336-c1d9a8a789c5" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="534a9dec-15c4-4816-a0fe-7b80ec9f42e8" />
+          </association>
+          <association Id="bcd76aa8-17fc-4121-b438-8c088586d1ad" isDerived="false" sourceEndRoleName="" targetEndRoleName="navigateBack()" isLeaf="false" isAbstract="false">
+            <classMoniker Id="e9ee62a1-d35b-4fd2-9e17-4c70ad344977" LastKnownName="router.js" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="0ad8777c-1619-4cc9-ab13-24184233e0dd" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="dfe04fc9-55b3-4f80-9b7d-064c67ab021c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="d0e92ccd-fcb3-4926-848d-fd774c22ee6d" name="navigateBack()" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="2100e5e4-4846-409c-a6a1-7a999a260171" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="a1ea9542-cf1c-41ea-81ee-e9e18dc9df0c" />
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="8b9b478d-d5fd-437c-8f8c-c011b744ac80" name="isDirty" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="d3dfb5c8-251f-4fd6-a7fc-43d8a8f9cf57" />
+          </property>
+          <property Id="1b6130f2-f1f7-4a5a-994a-13f9972debee" name="isValid" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="f56c51cc-cac4-4b69-b905-d994365685b2" />
+          </property>
+          <property Id="f3e561de-f59f-40f7-82f5-71f18ae6fde1" name="recipe" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="95435537-b3eb-4624-9e03-682af783779b" />
+          </property>
+          <property Id="70469fb5-1d93-4068-9943-4f8afa6d0d8f" name="canEdit" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="885ce37f-ebd5-460b-8483-800a68503dd6" />
+          </property>
+          <property Id="bddb0d84-2e0e-40a6-a45b-f3ef0adf363e" name="canLeave" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="0bf3ff65-e7ba-4ac6-9db7-bc07f2c27ee2" />
+          </property>
+          <property Id="7171f689-88bd-449c-bc01-5080b194b87a" name="tmplName" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="33a16508-149e-4deb-9560-3c6c437ef52e" />
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="f1ddb7d3-8acb-4f56-8cf0-8ff0fe879993" name="activate" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="c148492f-7b49-44d4-a398-e94140537d17" />
+          </operation>
+          <operation Id="9b841cda-3e87-4107-b970-09e9bfc6406e" name="cancelCmd" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="a1572c58-453f-4317-adb6-db0f24a2ecb4" />
+          </operation>
+          <operation Id="ce93c31e-9c78-4366-a014-08e1e6819cf6" name="goBackCmd" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="d6745a5b-985c-4c80-a6db-558a67522895" />
+          </operation>
+          <operation Id="2b2e9a5d-b83b-4b1e-8667-19fb6524ee34" name="saveCmd" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="166b0765-c3ca-4d15-bfc5-861a32570180" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="7c4737a5-8858-4a39-b0aa-1621692954b6" name="vm.recipes.js" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="51d7573f-0d5b-46d2-af9c-f1c84f956267" />
+        <targetEnds>
+          <association Id="7f0cc7d5-eb0c-4f83-b819-b09568292c5a" isDerived="false" sourceEndRoleName="" targetEndRoleName="publish()" isLeaf="false" isAbstract="false">
+            <classMoniker Id="18a42483-9032-4d95-8db0-b1b88f5a8ab8" LastKnownName="messanger.js" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="c797d6f5-ae63-48fc-8020-1335579fe68e" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="831da83b-ec44-429e-a6ef-c06b5d0d1d3c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="aed92dcc-c9f7-4abf-8088-91590cb68402" name="publish()" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="caea8887-a846-4a78-887a-5c3157fd19e0" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="a3717fce-0250-4c6e-9e36-69a8b9e22c64" />
+          </association>
+          <association Id="956a5dc0-d609-40f5-9cca-00b4ef50ff58" isDerived="false" sourceEndRoleName="" targetEndRoleName="navigateTo()" isLeaf="false" isAbstract="false">
+            <classMoniker Id="e9ee62a1-d35b-4fd2-9e17-4c70ad344977" LastKnownName="router.js" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="95db2fc7-5909-4df5-a564-b8e974c697b5" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="6017ce50-b058-490c-971c-29e22995a7ea" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="12decdbb-3834-4357-b2de-4aeec70df81d" name="navigateTo()" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="fce142bf-5ce2-4d88-89bb-9483fd7ebfc4" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="2f6fbd3b-69cb-48b1-ac1e-e8fa093fa593" />
+          </association>
+          <association Id="735ae5ca-334e-4fe4-86cf-8598c38e2f0e" isDerived="false" sourceEndRoleName="" targetEndRoleName="recipes" isLeaf="false" isAbstract="false">
+            <classMoniker Id="b8751585-a53e-4d7e-a9b6-5283a81407d5" LastKnownName="datacontext.js" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="78ca021c-2b44-47de-b8a7-273971bc9471" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="e3299861-76f3-4cd9-a312-5370d41b6e82" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="97248303-ab72-4610-bffa-0dafd51f2450" name="recipes" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="4ed7462c-5aa3-4891-9190-1d76efc6eccb" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="670e64d8-c9a4-4ef8-9c50-6676d3f6fb15" />
+          </association>
+          <association Id="cd117095-8446-4d53-8f10-2deaec09dada" isDerived="false" sourceEndRoleName="" targetEndRoleName="" isLeaf="false" isAbstract="false">
+            <classMoniker Id="b435e7e7-ea01-444d-be22-373807a4db0f" LastKnownName="store.js" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="3c9f689f-d6a4-4f2f-b8a6-7e00dbdd0bc4" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="fde1d18b-0fec-46bd-b06d-3c0bbc25992d" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="ffc48395-cf1f-493c-8f92-7e5ff6b58735" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="24a41988-040b-4274-b913-41b6f13a362c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="d516e3f4-1247-44d3-8a2b-c52cb184425d" />
+          </association>
+          <association Id="236139e1-396d-443e-b491-4055a0b1683a" isDerived="false" sourceEndRoleName="" targetEndRoleName="RecipeFilter" isLeaf="false" isAbstract="false">
+            <classMoniker Id="54affda9-ce2f-4ed5-8c70-1853d416b188" LastKnownName="filter-recipes.js" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="491f4e17-dc4c-4fa8-a5f4-ef769ca6fb72" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="d2723be6-7aff-45f2-8ce4-c2f9833a2fb5" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="e0ca36d1-0d41-4e1a-bdc5-f2e530b17f49" name="RecipeFilter" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="253fa322-54b9-4ebe-90d0-bfb34348a353" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="4fa353dd-fef4-4ddc-a9ba-0f3c92958e37" />
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="a61532f9-7446-4142-96da-db962ee1e84e" name="recipes" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="790047d3-9d30-4834-8e09-92e61b39b208" />
+          </property>
+          <property Id="07fbcc99-dbe3-47fe-b4c3-55275a1c3988" name="canLeave" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="a8ceeab7-3381-4c6f-9525-748192a0a22b" />
+          </property>
+          <property Id="73687e6f-81b3-4a68-b091-cabd2a4e73b8" name="recipeTemplate" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="53897beb-12d1-4607-b6c0-c4b38992fc9f" />
+          </property>
+          <property Id="5653a459-f2e3-4cc7-9636-bdafb115ba2f" name="recipeFilter" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="731863ac-ef95-4994-a9fc-52923d9253ea" />
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="af2c8ccd-f41e-45f4-ba6e-6b8bd35d3a8d" name="activate" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="14f1e90a-6686-42a8-baf3-c96b8a9968f0" />
+          </operation>
+          <operation Id="67e62f92-adcf-41c4-b83a-871b6adae804" name="clearFilter" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="c706ef13-2fa3-4022-88fb-0ff272d24cbe" />
+          </operation>
+          <operation Id="eea260cc-e2c1-432b-bb7f-b343379cfd76" name="clearAllFilters" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="7b4c752a-29cc-4cc5-acdf-96cce70d6d68" />
+          </operation>
+          <operation Id="716f2341-a4d2-47ef-96d4-d6e34eabf122" name="forceRefreshCmd" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="4215c387-e564-4f78-bcdc-b16d573e6d9c" />
+          </operation>
+          <operation Id="45fe435d-af6d-4b21-b8de-855a4e41c6ce" name="ctor" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="a49fecb4-63e0-466c-b0df-8762e45dfe7d" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="73aa3493-7ef8-49f5-8a48-fb43527b5ea4" name="init()" direction="In" isUnique="false">
+                  <elementDefinition Id="1e92819b-1bab-4dfa-bc0e-e30760e01cd0" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="4c3997d0-064f-4eec-a5cb-eec46d46a980" name="route-mediator.js" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="ba9593d8-fbf9-42fc-aae9-5233557d837a" />
+        <targetEnds>
+          <association Id="3a544e31-8fa6-45fe-8034-433f839244cb" isDerived="false" sourceEndRoleName="" targetEndRoleName="subscribe()" isLeaf="false" isAbstract="false">
+            <classMoniker Id="18a42483-9032-4d95-8db0-b1b88f5a8ab8" LastKnownName="messanger.js" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="e23a0e76-ae97-4658-802b-966b0cf6bd5f" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="1b7092a0-5af7-4fc6-b954-aa03e8c54655" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="75568933-f993-4bea-9cb9-d8293b510922" name="subscribe()" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="7890a84f-b7c5-4d3c-a91a-3c7f82700b8b" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="e80b2c78-d381-4dea-9df5-f9b1bd90fa19" />
+          </association>
+        </targetEnds>
+        <ownedOperationsInternal>
+          <operation Id="45154c5b-f5fd-4c2a-8c05-87124e9faf9d" name="canLeave" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="066b2845-fc08-45e1-9969-1a2a55355861" />
+          </operation>
+          <operation Id="6b5b9cdd-03d4-44c0-80a1-c2fe2e7a7e29" name="ctor" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="3ae57913-86e3-43cf-bd40-8aa28aa5d2a5" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="7a627647-5530-4593-a3cd-010a781f43b7" name="init()" direction="In" isUnique="false">
+                  <elementDefinition Id="7731b819-b673-4f4a-8beb-dd18f3bfa051" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="b435e7e7-ea01-444d-be22-373807a4db0f" name="store.js" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="b9f40282-f1ae-4d27-889c-d42b37d898b2" />
+        <ownedOperationsInternal>
+          <operation Id="c5bb9af0-02b8-48fe-98bf-f671a570972c" name="save" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="cc77ea90-8263-4d3e-a9c8-18f86e01d07b" />
+          </operation>
+          <operation Id="2f1ec6cd-d51b-40ca-8f16-35f63a9fba99" name="clear" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="d38a7f13-1bfc-494f-9efe-5e820618a3bd" />
+          </operation>
+          <operation Id="debf7c08-2a8a-4d97-8a2f-9e97bc78a251" name="fetch" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="910d436d-a3af-4e46-87c8-0c3a9a1bd490" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="18a42483-9032-4d95-8db0-b1b88f5a8ab8" name="messanger.js" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="10ed8a39-ec06-4c1c-a1c8-7740529911df" />
+        <ownedOperationsInternal>
+          <operation Id="60820c13-ddae-45f2-909d-4a5469e784ce" name="publish" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="370dbf25-587b-4038-9b05-548dd9113aaa" />
+          </operation>
+          <operation Id="8f44b7ef-6bd9-4985-80d5-e839c5935460" name="subscribe" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="009c4802-61cc-4ffa-bacd-0bc942a34e4e" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="b8751585-a53e-4d7e-a9b6-5283a81407d5" name="datacontext.js" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="cbb7a57e-c246-4f8d-bd62-8ffc612cd975" />
+        <targetEnds>
+          <association Id="2c9b5fa8-04ad-431c-932e-4c6208c6a651" isDerived="false" sourceEndRoleName="" targetEndRoleName="model, setDataContext()" isLeaf="false" isAbstract="false">
+            <classMoniker Id="fd150a15-6874-44a1-b100-3623295e5f4b" LastKnownName="model.js" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="e82a764c-c7ac-44ea-9e4d-e65776b8844d" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="f33daf5d-e607-45d5-b396-630c1795d12b" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="61703776-b789-4527-a108-dceefecfcd40" name="model, setDataContext()" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="1e4fb9d0-d4cf-4f94-8e92-3de32db70f5d" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="e79c3387-fa0f-4aa5-b35e-37e9b5e0e05b" />
+          </association>
+          <association Id="a98bb246-c306-4def-a968-1bd5699fd5d2" isDerived="false" sourceEndRoleName="" targetEndRoleName="recipe" isLeaf="false" isAbstract="false">
+            <classMoniker Id="c94c9736-10dc-4bc8-b02a-5cba47d86e2e" LastKnownName="model.mapper.js" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="cdea8904-9c28-42cf-a920-5e5bfb131bc1" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="2c4396ec-11be-41a9-8b63-e5cf00ee5819" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="2d8622b6-3d47-4395-bde6-fcaeccecd745" name="recipe" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="3d6510a9-580b-44c0-9958-87b90e3e2eac" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="abfb853a-ccb8-4a5a-882d-1ac40539a8cc" />
+          </association>
+          <association Id="1594c723-34f6-4191-a9eb-630367894cc9" isDerived="false" sourceEndRoleName="" targetEndRoleName="recipe" isLeaf="false" isAbstract="false">
+            <classMoniker Id="54713c23-7a9a-49d2-b3d6-ab773d4cba0e" LastKnownName="dataservice.js" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="88aad42c-1838-4332-ab14-09d29c8bd0d8" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="7b01f001-1422-47fc-a464-278d2ac7d770" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="d6023010-7660-4e82-ab1d-33c44af93256" name="recipe" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="f2b0e113-d725-49e0-8139-00e95bb45976" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="adc151d4-3555-4fe5-a0c4-efb7cf56a45c" />
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="17b6d100-7772-4dbb-86bf-e3aae81ba2e6" name="EntitySet recipes" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="06e64e84-b869-4750-9ca1-5ef9077e54ae" />
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="d5d5c2f2-de22-4c7f-b29e-31a06b16b106" name="getCurrentUserById" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="fd75329d-8299-4df9-932d-bad254d4085d" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="54affda9-ce2f-4ed5-8c70-1853d416b188" name="filter-recipes.js" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="7b58a1e2-6b68-4d67-a041-d81474560af8" />
+        <ownedAttributesInternal>
+          <property Id="442d09b1-dca2-4307-b8dc-a3432256928b" name="RecipeFilter" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="e52460e7-0c9c-4c50-bd59-fb0386c1be29" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="214e8861-8f1e-4f33-a9e7-6104ea6cd4e1" name="dataprimer.js" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="13631b1a-089b-458a-a8a3-0e98be562291" />
+        <targetEnds>
+          <association Id="3c6966ad-bb43-4c89-bebb-715ec15add33" isDerived="false" sourceEndRoleName="" targetEndRoleName="recipes" isLeaf="false" isAbstract="false">
+            <classMoniker Id="b8751585-a53e-4d7e-a9b6-5283a81407d5" LastKnownName="datacontext.js" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="6a73fc19-f929-432c-9170-5d882b2ae6c3" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="4f7f09ab-ddc5-4648-9021-1a73044e87df" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="68749084-9cd1-433a-b7f1-21b3374247fd" name="recipes" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="f30d09db-e3fc-4a0b-80e5-3b39e1e280ee" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="d1227bcd-77e4-4375-b4b7-167da4561884" />
+          </association>
+        </targetEnds>
+        <ownedOperationsInternal>
+          <operation Id="b563ecbf-621e-4c1b-b3c1-de9e3813626f" name="fetch" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="148df7cf-e8a1-44a6-b067-0ab79ea5f77c" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="37ee9fc1-37d2-4f0b-a082-0b709d3f08b9" name="binder.js" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="979586b4-f0cd-4600-ae6b-0d8700d0326f" />
+        <targetEnds>
+          <association Id="8925a1ad-d7e6-4d8a-893a-5a4a746629ba" isDerived="false" sourceEndRoleName="" targetEndRoleName="all view models" isLeaf="false" isAbstract="false">
+            <classMoniker Id="d3537753-c5d1-4024-90fc-7ab5c9bdb7c5" LastKnownName="vm.js" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="a763d353-7f8e-4c5e-99db-d00885b890a0" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="9530e830-8317-4b92-8d6c-5c4ebe6958ba" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="f77c9e4b-e1c6-46e2-b2e8-b657eb282aae" name="all view models" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="21d57afd-eb5b-4c60-9253-8b216dfe64b6" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="10d5a65f-1f7a-400f-b4f6-0a2788760d04" />
+          </association>
+        </targetEnds>
+        <ownedOperationsInternal>
+          <operation Id="7f284e79-13ac-4996-a6d0-084c1cb1eeb0" name="bind" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="dbf0eb49-415b-4413-9f77-36ed4218d811" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="fd150a15-6874-44a1-b100-3623295e5f4b" name="model.js" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="6ba6fa31-3fde-4985-bd46-0e0572804fe5" />
+        <targetEnds>
+          <association Id="42fb78a4-822a-449b-908f-5645e1dc2155" isDerived="false" sourceEndRoleName="" targetEndRoleName="Recipe" isLeaf="false" isAbstract="false">
+            <classMoniker Id="1c45684b-0235-4d86-ba8f-bf0f8238d689" LastKnownName="model.recipe.js" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="22447cfb-af79-4ee4-a220-f026333b3261" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="ceed0e8d-fc7b-4227-a441-0019757519ad" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="b680fe64-7d86-4e26-b777-bb95290ed399" name="Recipe" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="884a99ba-b4ff-4d37-b5c7-b818f6efc12f" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="797f4c2f-fb48-4698-af71-289302e565e4" />
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="72e0e00f-e845-4e06-be70-df470300d6c0" name="model" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="38429b2c-5e18-4687-81d4-c442b9050cf9" />
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="7ee1c196-68b6-4ce2-abf9-1a5206ba06a1" name="setDataContext" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="25ee0969-b129-4056-9c09-c4fa692d98ac" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="c4ea2a70-a575-4cd2-8a37-a5d44cc2771b" name="dc" direction="In" isUnique="false">
+                  <elementDefinition Id="b71b6785-1e39-4f3b-82f9-3785a1868cb5" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="c831bade-d93c-4b6d-a01e-98baad4f1de3" name="Recipe" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="aa2208f1-f165-4617-b7e8-5138eaad4c9f" />
+        <targetEnds>
+          <association Id="df9578ee-1e83-4c40-b747-244bb0910a14" isDerived="false" sourceEndRoleName="" targetEndRoleName="Recipe" isLeaf="false" isAbstract="false">
+            <classMoniker Id="1c45684b-0235-4d86-ba8f-bf0f8238d689" LastKnownName="model.recipe.js" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="7cbf78d2-1859-42fc-a11b-4bdff59013af" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="a4913ce6-e026-4623-80a2-d4084ac155d4" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="ef1d1ac8-cf62-4a33-b9bb-ede7c8534d93" name="Recipe" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="true">
+                  <elementDefinition Id="51924380-3994-4245-a944-10b3c42d026e" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="67dfbaf8-ab0e-4cf0-a81c-7cf126ec62fe" />
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="e7016f87-51c3-4646-ba5a-23b3f4fca209" name="dislikes" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="af95c959-e5b8-480f-adaf-4e75fa091a37" />
+          </property>
+          <property Id="f82a1102-294c-49c3-b4b9-9dc2d97a1699" name="likes" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="f4c27f6e-6198-475f-9812-7968f3b1cbec" />
+          </property>
+          <property Id="7f2af440-fbca-4d89-a98e-7ef10b971215" name="id" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="e07a2973-3a88-402b-b3b8-c0bb3cd6bba9" />
+          </property>
+          <property Id="1ffd1f7e-1845-4ade-b598-5fd2db99f254" name="name" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="42f47985-2828-4bc8-838e-6fd5606f4871" />
+          </property>
+          <property Id="347ca9de-2862-4c07-a7f3-c60e02f7b1b3" name="shortDescription" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="223cdd51-1a1e-414b-b18b-e8bb7fb18c3a" />
+          </property>
+          <property Id="6b77140b-c637-4c3c-bc96-8426fdb9936a" name="photoPath" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="6169f330-0352-4768-a856-746405fbb479" />
+          </property>
+          <property Id="c05050f0-29ca-4052-ba4c-1716be266fa4" name="isBrief" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="406914d3-3f20-4682-97f9-fd18f9a6dc7f" />
+          </property>
+          <property Id="ec903b09-2a14-4d01-86a4-22f993fe2325" name="dirtyFlag" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="3320cc85-c6f8-490b-be8b-9de581aaba6c" />
+          </property>
+          <property Id="565f978a-0045-49c4-a424-c35ee3036e29" name="Nullo" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="130fe7ea-2a13-4a76-af28-f9cb3beeed03" />
+          </property>
+          <property Id="b4ef92b3-9c33-4f04-8808-1d72b3ba7e6c" name="recipeHash" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="874fad24-8a77-4a43-add9-d2bd80b1bc53" />
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="d864bbbe-4c7a-48c2-87ea-30bda130df08" name="datacontext" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="aab70bbb-9d31-4e8a-ac0d-2ccd2812dff3" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="1c45684b-0235-4d86-ba8f-bf0f8238d689" name="model.recipe.js" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="aedd18b3-4c0d-4c13-9356-07469d639c50" />
+        <ownedAttributesInternal>
+          <property Id="537a068d-95be-4779-b18f-b9e3d84b9cbb" name="Recipe" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="37d98c4d-2522-4613-8641-c201342a8f3a" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="c94c9736-10dc-4bc8-b02a-5cba47d86e2e" name="model.mapper.js" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="6d993d25-fcb9-47f5-8239-dcc46df861dc" />
+        <ownedAttributesInternal>
+          <property Id="41a81288-9060-4ffb-a55c-a74248b91505" name="recipe" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="b31b8699-b6b5-40bc-bbae-50fd68399254" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="646e6b4b-d2f0-4f52-8b94-0b201307653b" name="EntitySet" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="ad9711de-9a4a-4474-86d5-8724b552ca46" />
+        <targetEnds>
+          <association Id="4ac8b996-1465-4d3c-9e19-2e9825d90760" isDerived="false" sourceEndRoleName="" targetEndRoleName="EntitySet" isLeaf="false" isAbstract="false">
+            <classMoniker Id="b8751585-a53e-4d7e-a9b6-5283a81407d5" LastKnownName="datacontext.js" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="90e2ef2e-add1-4dad-b164-b59a539df2f6" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="c46c90b0-d582-4164-baf6-b0db70656626" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="6b1cc082-0625-47b4-81fe-d2bfdc909849" name="EntitySet" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="true">
+                  <lowerValueInternal>
+                    <literalString Id="fddd7f4f-0c05-4e5b-9891-8b9f12fb74c5" name="Lower" value="n">
+                      <elementDefinition Id="479ab033-a041-4a3e-b25c-81378519f99c" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="4927b62f-d123-4e61-9c34-20160e13be79" name="Upper" value="n">
+                      <elementDefinition Id="d56cca41-243a-40c8-88d3-a48e00feb7dc" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="371129fd-b249-4930-8d63-1dac15dccfab" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="69f77d34-7070-4847-8569-04cad6959702" />
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="4d3864e5-dfcb-407f-806f-6a40029d7148" name="items" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="e1b1321b-fa01-4b53-8e29-00708e05c35c" />
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="3f6b0cf6-8262-4d97-8b3d-3768b8f94475" name="mapDtoToContext" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="6701bce3-4055-4ea5-ae48-d77ffa39f166" />
+          </operation>
+          <operation Id="ab29baa4-0d7a-4acf-92d1-c4f032db1def" name="add" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="533c0728-38b3-4ebf-9c2e-076502ae4900" />
+          </operation>
+          <operation Id="db042ba4-f8ea-4691-ba66-fe1e819d6eb9" name="removeById" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="b5ad3f91-f02e-45b8-ba7b-324747b6172b" />
+          </operation>
+          <operation Id="26c1deb9-0198-4dc8-8d1a-258768b4de7c" name="getLocalById" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="198724ac-74a0-498b-a58c-66c885c92efb" />
+          </operation>
+          <operation Id="a5521667-f2bf-45da-8271-7c567dacc91a" name="getAllLocal" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="b263a74d-df0e-45a9-b796-289c633cbc12" />
+          </operation>
+          <operation Id="aa51ab32-61bd-4aef-8c25-5dd1c54d473c" name="getData" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="35ca1415-212e-48f6-8f82-47663920b708" />
+          </operation>
+          <operation Id="09617fc7-df21-40c2-a1d0-06a5631360e1" name="updateData" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="c2e5018c-65cf-40a0-92ea-a209156f9999" />
+          </operation>
+          <operation Id="43546a4f-3a2a-470c-a8e3-66990f96d86e" name="ctor" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="cbca39cc-709e-4022-ac61-030aa326c6c3" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="6969dd09-eb81-42f9-899e-1568fbf0c415" name="getFunc" direction="In" isUnique="false">
+                  <elementDefinition Id="22a73018-5454-4ef0-872a-9d93b577cfbd" />
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="ae8fb401-6fbc-4a7c-8762-237a743e70f5" name="mapper" direction="In" isUnique="false">
+                  <elementDefinition Id="6683d24d-19b2-47f3-91f5-f1e4e419a4e0" />
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="4fb4df53-1dd8-4361-81e6-fefbfb3eafe5" name="null" direction="In" isUnique="false">
+                  <elementDefinition Id="2749f524-5564-453a-80f5-0bd902a3837f" />
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="f8a0c6fb-943d-4507-bf63-6a8ca6bd6cad" name="updateFunc" direction="In" isUnique="false">
+                  <elementDefinition Id="1e0ba995-132e-4323-a88f-1511841fd192" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="54713c23-7a9a-49d2-b3d6-ab773d4cba0e" name="dataservice.js" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="7608791c-d709-44e2-9d70-b86154735f59" />
+        <targetEnds>
+          <association Id="c93734ef-2f2f-4a64-8ac1-2729a3fc2713" isDerived="false" sourceEndRoleName="" targetEndRoleName="instance" isLeaf="false" isAbstract="false">
+            <classMoniker Id="dea093ce-2723-48fe-96c1-617dcacbbc9b" LastKnownName="dataservice.recipe" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="2e1edfb0-bc88-47b6-a65b-292c208d9749" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="5d76c1a9-bb4f-49f2-995e-279de8103b72" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="60c3865f-a5c5-4dfc-b739-ea119882accd" name="instance" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="e2632522-50c8-4c27-abe1-c7b273b9bbb3" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="e454b72e-7f41-4dc7-b411-94e0d906d123" />
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="ac874e3b-8192-430d-9827-05e12f5bc3fb" name="recipe" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="018075fb-664f-42a1-9bf5-3bdd11fb5b3c" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="dea093ce-2723-48fe-96c1-617dcacbbc9b" name="dataservice.recipe" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="b1d7d1b5-03ba-4368-a1e2-ee06533b534e" />
+        <suppliersInternal>
+          <dependency Id="a3d0eb57-f3b9-49c9-8070-b0fb63beec95">
+            <packageMoniker Id="bbaf181e-588d-4096-a899-73f75a4c15e2" LastKnownName="WEB API" />
+            <elementDefinition Id="94869264-117b-4907-bf18-0cf60d6d3319" />
+          </dependency>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation Id="218fbe4f-d766-4cb8-989b-b92d6f0f12e5" name="ctor" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="8af46d57-c81e-45df-842f-a70d8ae050d5" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="f1e68d41-5d37-4521-890d-517b6331ffad" name="init()" direction="In" isUnique="false">
+                  <elementDefinition Id="5f55d564-5dda-4cef-8855-07cfec157e31" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="40ca0f72-5bef-47e1-868a-83e13fb72bb8" name="getRecipes" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="88b38015-d7c4-4cf0-a4f3-083803e0ba5f" />
+          </operation>
+          <operation Id="d0f3d0aa-9045-49c7-9058-e0692ee1b6e6" name="getRecipe" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="dfedd67e-2b97-4492-84e5-887ddd88ec89" />
+          </operation>
+          <operation Id="3c3df9c3-b2d9-4d46-b4db-214196d91487" name="updateRecipe" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="060e7667-7c07-4844-9588-251f9c976a3d" />
+          </operation>
+          <operation Id="a09a8f60-4d30-4dd6-81c2-4b8a84945bfd" name="getRecipeBriefs" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="178418cc-0f3e-443c-9599-d2d86959f19f" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="5259d20e-f65a-4c33-8482-3de1f62c27c5" name="RecipeFilter" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="6c576007-3670-4721-a3f3-0086f9cef082" />
+        <targetEnds>
+          <association Id="53917c78-2f50-4eb6-9202-59ede9cdc451" isDerived="false" sourceEndRoleName="" targetEndRoleName="RecipeFilter" isLeaf="false" isAbstract="false">
+            <classMoniker Id="54affda9-ce2f-4ed5-8c70-1853d416b188" LastKnownName="filter-recipes.js" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="49ae8248-7b94-411a-98fd-6f7148df9a38" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="010cc657-d199-4682-9001-0f1fddd1878b" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="f8a80812-043b-461c-a6db-9111a5ae1b7b" name="RecipeFilter" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="true">
+                  <elementDefinition Id="55ee98c8-3026-457c-8211-259f2dcd94ba" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="433df502-beaa-4fac-8bb1-fd40e2eda95b" />
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="ea145d70-ae63-44ce-9c35-1dd78aaf2172" name="searchText" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="b808ccda-1776-4f6b-8adc-5156148b8f24" />
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="e0f5ef9e-c3b9-4d90-8fe4-8f647e311ede" name="predicate" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="376c6407-3a3c-4356-8452-c75ee6988a9a" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasPackages>
+      <package Id="bbaf181e-588d-4096-a899-73f75a4c15e2" name="WEB API">
+        <elementDefinition Id="d6f706be-0539-473e-8f5e-4e26e7a05109" />
+      </package>
+    </logicalClassDesignerModelHasPackages>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="dd5eff3b-3708-4a33-8178-2e9e0b85d8af" name="vm.shell" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="120b0ecf-c3c2-417a-9476-52a8a21b4875" />
+        <ownedAttributesInternal>
+          <property Id="fb4a1ff3-5322-47e6-b923-f040904dc610" name="menuHashes" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="e17eb88b-6da9-4278-adca-1b107bfca679" />
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="c307d705-09c9-44d4-9824-f8ab44a01368" name="ctor" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="5d73582c-4ccc-4b02-b739-0f0e1759e2fb" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="50e01533-63e4-44ed-8fe1-cd7fd90bd1d7" name="init(activate())" direction="In" isUnique="false">
+                  <elementDefinition Id="6a265770-8088-492e-a0c4-a5d01215b27e" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="59900120-c7a9-4f38-b3ea-2cb6d5e26082" name="activate" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="6b216725-fa54-45b6-82dc-9d24524db56a" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="17c5b86c-d732-427d-a164-ae5e1e04f998" name="KRS.ArchitectureModeling">
+    <elementDefinition Id="86c41531-8766-453c-9775-a6850d9c5a0d" />
+  </package>
+</logicalClassDesignerModel>

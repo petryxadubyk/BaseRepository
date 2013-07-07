@@ -1,0 +1,2063 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="86c41531-8766-453c-9775-a6850d9c5a0d"
+  name="KRS.ArchitectureModeling" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <profileInstances>
+    <packageHasProfileInstances
+      Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b">
+      <profileInstance
+        Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791"
+        name="StandardProfileL2" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances
+      Id="29349502-908c-4fda-9054-c48619c59ed0">
+      <profileInstance
+        Id="532ea607-fb19-44b8-8502-3351b05452be"
+        name="StandardProfileL3" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <Interface
+        Id="8acb711f-5351-47ed-b715-4000c4758dce"
+        name="Interface1"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="47a86a53-7f06-41eb-a87b-4b625076f06e"
+        name="IRecipe"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="01360b0e-34e6-41b3-b5e4-e46abfed37e2"
+        name="Recipe"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <interfaceRealization
+            Id="98c54cde-17ec-4ac2-ac1b-ffa459d14643">
+            <interfaceMoniker
+              Id="47a86a53-7f06-41eb-a87b-4b625076f06e"
+              LastKnownName="IRecipe"
+              LastKnownLocation="KRS.ArchitectureModeling.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="ee418a53-8a74-41a1-8340-7475886048a4"
+        name="IRecipePart"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="7fb7ede7-3365-4dfc-8041-bfc02f65472e"
+        name="IKitchenware"
+        isAbstract="false"
+        isLeaf="false">
+        <generalsInternal>
+          <generalization
+            Id="11858138-0efb-46e3-b1aa-b390bd194318"
+            isSubstitutable="false">
+            <interfaceMoniker
+              Id="ee418a53-8a74-41a1-8340-7475886048a4"
+              LastKnownName="IRecipePart"
+              LastKnownLocation="KRS.ArchitectureModeling.uml" />
+          </generalization>
+        </generalsInternal>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="39ebb06e-d0b0-417d-b976-b9f6392dae49"
+        name="ICookProcess"
+        isAbstract="false"
+        isLeaf="false">
+        <generalsInternal>
+          <generalization
+            Id="4571ba9d-bdb5-4401-81fd-74e4a6e9f173"
+            isSubstitutable="false">
+            <interfaceMoniker
+              Id="ee418a53-8a74-41a1-8340-7475886048a4"
+              LastKnownName="IRecipePart"
+              LastKnownLocation="KRS.ArchitectureModeling.uml" />
+          </generalization>
+        </generalsInternal>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="e2dcc6f0-6949-43cd-b241-2e8d657528ee"
+        name="IIngredient"
+        isAbstract="false"
+        isLeaf="false">
+        <generalsInternal>
+          <generalization
+            Id="e7e8e835-2033-46d2-87b0-5c892f8f8239"
+            isSubstitutable="false">
+            <interfaceMoniker
+              Id="ee418a53-8a74-41a1-8340-7475886048a4"
+              LastKnownName="IRecipePart"
+              LastKnownLocation="KRS.ArchitectureModeling.uml" />
+          </generalization>
+        </generalsInternal>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="fe8c156d-d8e0-4db2-a85e-30af7ca6f8b3"
+        name="RecipeSchema"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="b756301c-6bf1-4d69-9055-ed04cc0197b4"
+            name="RecipeId"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="a3235b4e-fc47-4ea7-8d45-ee622c774acc"
+            name="RecipePartId"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="107521df-28c7-41b2-8be5-022882e6b6a7"
+            name="RecipePartMajor"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="35b43781-540a-4c4b-a55c-15115b9405af"
+        name="IUser"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="96f5f3e7-00ec-4bbf-a135-3d62ff4a79cb"
+        name="IRecipe"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="aac22020-4c61-4d98-8f55-236f7b2d6d1d"
+        name="User_RecipeMap"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="168ed2ea-b1c3-4209-bbd6-62a573e80288"
+            name="UserId"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="5e005cd8-4900-4477-988a-7998172725be"
+            name="RecipeID"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="d2e9fd64-451c-4354-a16b-aab35d65e1a3"
+        name="User"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="37640561-996b-4fc6-9904-d180690b916b"
+            isDerived="false"
+            sourceEndRoleName="User"
+            targetEndRoleName="User_RecipeMap"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="aac22020-4c61-4d98-8f55-236f7b2d6d1d"
+              LastKnownName="User_RecipeMap"
+              LastKnownLocation="KRS.ArchitectureModeling.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="561a29a3-9112-4933-9fdd-08d49cff9313"
+                  name="User"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="1d04d0b0-4d79-4bb0-95d7-4fee31d986cf"
+                  name="User_RecipeMap"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="7ca589f4-b460-4b44-a0b1-53812d222fab"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="2ff0b0ff-12e6-4f83-a2cf-a17e0353fb07"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="f165cc66-f836-40f0-8078-696a4764bdf7"
+            name="UserId"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="b87557ed-70b9-43f5-9bcf-9cf25f51871c"
+        name="Recipe"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="534c2e57-de77-4f9a-a756-d08e10146807"
+            isDerived="false"
+            sourceEndRoleName="Recipe"
+            targetEndRoleName="User_RecipeMap"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="aac22020-4c61-4d98-8f55-236f7b2d6d1d"
+              LastKnownName="User_RecipeMap"
+              LastKnownLocation="KRS.ArchitectureModeling.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="189f5f7b-d6b5-4bfe-bcf1-1c32c7980f46"
+                  name="Recipe"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="a96657ab-0871-4895-8688-54fce2a4a429"
+                  name="User_RecipeMap"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="0f0ea901-e134-4a44-912b-e5f46db651bd"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="2a7a19ae-921f-4d41-a95c-12a370829366"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="d6ab2284-5b27-4ca2-aeef-fbb93d449c97"
+            name="RecipeId"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="93ecf3e7-ad1e-4166-a3b9-fe7ff9fa5d6d"
+        name="Category"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <dependency
+            Id="63a0a4f0-92ce-41a4-9197-d2d18c629429">
+            <classMoniker
+              Id="09512765-e40e-4613-9ca9-0d6f686f3afb"
+              LastKnownName="Recipe"
+              LastKnownLocation="KRS.ArchitectureModeling.uml" />
+          </dependency>
+          <dependency
+            Id="fc42488b-7a6c-46aa-8f4a-090393dfa3a7">
+            <interfaceMoniker
+              Id="6354e8eb-a15d-448f-9a40-dcab10214557"
+              LastKnownName="IRecipe"
+              LastKnownLocation="KRS.ArchitectureModeling.uml" />
+          </dependency>
+          <dependency
+            Id="e0a7c30d-c315-4682-9f87-d4d38469262a">
+            <interfaceMoniker
+              Id="f59c275d-8640-40aa-b432-775c3463d2b9"
+              LastKnownName="IRecipePart"
+              LastKnownLocation="KRS.ArchitectureModeling.uml" />
+          </dependency>
+        </suppliersInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="4c941b78-5f32-4119-b725-95eb7c7ac799"
+            name="CategoryId"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="eda9ae10-17e0-4473-b18f-84873497d5c3"
+            name="Name"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="f0428027-2d58-4222-bd50-ed55aac3c6ba"
+        name="RecipeCategory"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <generalsInternal>
+          <generalization
+            Id="4f4ed892-4933-4953-9719-5cf71315ffd3"
+            isSubstitutable="false">
+            <classMoniker
+              Id="93ecf3e7-ad1e-4166-a3b9-fe7ff9fa5d6d"
+              LastKnownName="Category"
+              LastKnownLocation="KRS.ArchitectureModeling.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="7b754ceb-c99b-449f-aad2-4a6db9fdbfca"
+            name="ICollection&lt;Recipe&gt; Recipes"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="09512765-e40e-4613-9ca9-0d6f686f3afb"
+        name="Recipe"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="f4ba03e7-7c32-4d8a-b0b5-b8db9e1d9ccc"
+            name="RecipeId"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="b1c44ff9-03cb-4090-925c-c46b8377cb78"
+            name="Category"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="a73499f1-2266-4081-846b-bbfb4cf3e255"
+        name="IngredientCategory"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <generalsInternal>
+          <generalization
+            Id="d741786d-d8d7-4566-b1f3-637cefba8019"
+            isSubstitutable="false">
+            <classMoniker
+              Id="93ecf3e7-ad1e-4166-a3b9-fe7ff9fa5d6d"
+              LastKnownName="Category"
+              LastKnownLocation="KRS.ArchitectureModeling.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="697799eb-70fa-4ad1-9625-b75f02dd396d"
+            name="ICollection&lt;RecipeParts&gt; Ingredients"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="1f7b776e-a75a-442a-8605-13749a7a9405"
+        name="KitchenwareCategory"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <generalsInternal>
+          <generalization
+            Id="9fbcb693-4fda-4113-bbd3-afd44b168f37"
+            isSubstitutable="false">
+            <classMoniker
+              Id="93ecf3e7-ad1e-4166-a3b9-fe7ff9fa5d6d"
+              LastKnownName="Category"
+              LastKnownLocation="KRS.ArchitectureModeling.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="e2e6ef72-50ff-4efa-91a8-3a8fc093e90b"
+            name="ICollection&lt;IIngredients&gt; Ingredients"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="f59c275d-8640-40aa-b432-775c3463d2b9"
+        name="IRecipePart"
+        isAbstract="false"
+        isLeaf="false">
+        <ownedAttributes>
+          <property
+            Id="ba4c4eba-814d-4922-9b77-17a50051f48b"
+            name="Category"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributes>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="6354e8eb-a15d-448f-9a40-dcab10214557"
+        name="IRecipe"
+        isAbstract="false"
+        isLeaf="false">
+        <ownedAttributes>
+          <property
+            Id="f2169d92-cccc-464f-987a-a33a3ced47f1"
+            name="Category"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="c9f35114-224f-442a-abc5-8b5ee17a9a22"
+            name="NationalCategory"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributes>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="de213ccd-3d87-4556-8b11-936d208e51a7"
+        name="NationalCategory"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="3817a060-8df4-40f3-b0b8-9a2a7b3c5ca8"
+            name="ICollection&lt;IRecipe&gt; Recipes"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="24faba8e-c14f-45a7-bb9c-5eb61b7fa639"
+        name="DbContext"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <dependency
+            Id="0629a2f4-2909-4882-a190-2007daf1980a">
+            <classMoniker
+              Id="bedeb762-9002-4343-bd03-486eca7e7586"
+              LastKnownName="EFRepository"
+              LastKnownLocation="KRS.ArchitectureModeling.uml" />
+          </dependency>
+        </suppliersInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="a61869be-8c9c-45f2-9e96-d10ffdd7dcff"
+            name="DbSet&lt;Session&gt; Sessions"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="9457d2c2-b34e-4a9b-bb13-b6c7998698fa"
+            name="DbSet&lt;Person&gt; Persons"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="ad2859a7-d2df-4534-8c3b-39b54aace759"
+            name="DbSet&lt;Room&gt; Rooms"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="9b1430a1-0d28-427d-9f64-96893127f430"
+            name="DbSet&lt;TimeSlot&gt; TimeSlots"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="69344c20-4eab-4336-b572-c7bb72f0765f"
+        name="POCO's Model"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <dependency
+            Id="200f7c6e-e1fa-43f4-8fbf-0a8117e02a4f">
+            <classMoniker
+              Id="24faba8e-c14f-45a7-bb9c-5eb61b7fa639"
+              LastKnownName="DbContext"
+              LastKnownLocation="KRS.ArchitectureModeling.uml" />
+          </dependency>
+        </suppliersInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="307643da-f89b-45c2-9dea-e224322882e0"
+            name="prop2"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="7162c71f-78ce-451b-a145-63f77be6c295"
+            name="prop1"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="487de57c-db56-4d0a-848d-fa28b329239d"
+        name="IRepository&lt;T&gt;"
+        isAbstract="false"
+        isLeaf="false">
+        <ownedOperations>
+          <operation
+            Id="6aeac2fc-20d1-4acc-84f5-ca96fc551289"
+            name="GetAll"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="e6ccf536-896b-4050-9b73-c391d6d53d00"
+            name="GetById"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="c2abe8ff-80f9-422c-9889-275f14bfa77d"
+                  name="int id"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="1137fbaa-ba3e-4937-9052-12a4bc019e51"
+            name="Update"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="4decb38b-8821-4bde-8591-cc199de34ff1"
+                  name="T entity"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="08a4c835-e62b-4f80-9e7b-baf4c44eba26"
+            name="Delete"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="5f0e072e-44dc-4d44-baa7-abee05adcf1b"
+                  name="int id"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="1ec31a5f-a8d4-48b5-83d9-b654f95b089a"
+            name="Delete"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="b464d983-0f60-4ebf-a078-eae6f74d361e"
+                  name="T entity"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="658ea896-19b8-4cc2-8a9b-c75dda0bebf2"
+            name="Add"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="18001b54-7629-46bc-90bb-fe8c1df3e4f5"
+                  name="T entity"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="bedeb762-9002-4343-bd03-486eca7e7586"
+        name="EFRepository"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <interfaceRealization
+            Id="49d0d7e4-ff40-40d2-be26-d20db0546555">
+            <interfaceMoniker
+              Id="487de57c-db56-4d0a-848d-fa28b329239d"
+              LastKnownName="IRepository&lt;T&gt;"
+              LastKnownLocation="KRS.ArchitectureModeling.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="3f20988f-ef4c-484b-b014-33ae1e5fa09b"
+            name="DbSet&lt;T&gt; _DbSet"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="57ec7689-fb73-4e96-b4ae-401c122804f1"
+            name="DbContext _DbContext"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="e8a3527c-6e33-4f3e-9b32-76a6fde09bcf"
+            name="ctor"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="6de7b7a5-a802-4a52-b7d3-95f94f2515fe"
+                  name="DbContext"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="972014b1-aad0-4448-bb12-483f86649957"
+            name="GetAll"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="0fdcca22-ca05-4d7b-84da-5532f558b40d"
+            name="GetById"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="1f12e075-2d1e-4aed-9acf-4666b0777f5f"
+                  name="int id"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="c6b7fe2b-fa63-424c-b8ea-58aefae62511"
+            name="Update"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="37000e3f-3b5b-4f5b-ba2a-d5993a29645a"
+                  name="T entity"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="c19e3780-c9a6-4b7e-9f29-79f32a143640"
+            name="Delete"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="8756d67c-be93-4ff1-8d6e-896186fd808e"
+                  name="int id"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="cc221428-95a4-4c32-8a0c-448527c01752"
+            name="Delete"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="2458469e-d58f-4884-b0f9-636a939d1c5a"
+                  name="T entity"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="fbf0788a-8494-48a0-be53-6cbe29544af9"
+            name="Add"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="bbcd2e4a-a627-4b90-bb99-c4a8a350029d"
+                  name="T entity"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="aa9151f8-4d05-4e5c-ada9-b8dd77e50cd4"
+        name="IPersonRepository"
+        isAbstract="false"
+        isLeaf="false">
+        <generalsInternal>
+          <generalization
+            Id="9da74cc4-0800-46c7-a76f-271be77c2fe9"
+            isSubstitutable="false">
+            <interfaceMoniker
+              Id="487de57c-db56-4d0a-848d-fa28b329239d"
+              LastKnownName="IRepository&lt;T&gt;"
+              LastKnownLocation="KRS.ArchitectureModeling.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperations>
+          <operation
+            Id="e104e4bc-0f39-4f65-bb0e-fb087063ff09"
+            name="GetSpeakers"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperations>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="9dc02766-3b5d-4561-b360-236e7d59e67d"
+        name="PersonRepository"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <interfaceRealization
+            Id="5a08f043-a828-4613-87cb-64a4e6774ca9">
+            <interfaceMoniker
+              Id="aa9151f8-4d05-4e5c-ada9-b8dd77e50cd4"
+              LastKnownName="IPersonRepository"
+              LastKnownLocation="KRS.ArchitectureModeling.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <generalsInternal>
+          <generalization
+            Id="e1ca3025-e2ad-4ff7-8557-b8ea0ffb901e"
+            isSubstitutable="false">
+            <classMoniker
+              Id="bedeb762-9002-4343-bd03-486eca7e7586"
+              LastKnownName="EFRepository"
+              LastKnownLocation="KRS.ArchitectureModeling.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="1e9d1c86-d1ec-439f-b1d7-e6f8a0ee4b9c"
+            name="GetSpeakers"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="9b1f194e-83e2-49fa-9be8-ed98d40fe23f"
+            name="GetAll"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="11920fe3-71d3-4e99-a364-e177bfa4a280"
+            name="GetById"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="452f4a91-8b4f-45a7-ba2a-9f3e866a9ef2"
+                  name="int id"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="7c79d951-a58f-4ad4-a54d-b51fb9e97817"
+            name="Update"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="aa0f6ee2-f892-4a5c-8e8a-530f38ee7585"
+                  name="T entity"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="cebd2ee8-cad1-4df9-b89f-95df9846405d"
+            name="Delete"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="f0da55a0-dc86-4dfc-aa1b-1e3f58981f42"
+                  name="int id"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="0e767a8a-f076-41f5-81f5-e53054f6b29b"
+            name="Delete"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="020541b1-601d-4cef-b267-71089cb08d43"
+                  name="T entity"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="cb4db57c-b608-4b05-a151-5dd19e163c30"
+            name="Add"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="55627076-1ff9-4497-b393-0b34f551ba14"
+                  name="T entity"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="358fbf4a-d167-477d-baa4-ba7edadd7c34"
+        name="ISessionRepository"
+        isAbstract="false"
+        isLeaf="false">
+        <generalsInternal>
+          <generalization
+            Id="421ad8fd-3957-478b-8b59-770dac3c3893"
+            isSubstitutable="false">
+            <interfaceMoniker
+              Id="487de57c-db56-4d0a-848d-fa28b329239d"
+              LastKnownName="IRepository&lt;T&gt;"
+              LastKnownLocation="KRS.ArchitectureModeling.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperations>
+          <operation
+            Id="7854ba39-6d8d-4909-bcee-595ec2a45178"
+            name="GetSessionBriefs"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="61cb5ab2-28be-47b4-9cfd-df749e674e0c"
+            name="GetTagGroup"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperations>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="ca69d8b3-8561-4ed4-afc0-94aa0d90e9aa"
+        name="SessionRepository"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <interfaceRealization
+            Id="347f98f2-a925-4371-9b23-b2ea3653a6b5">
+            <interfaceMoniker
+              Id="358fbf4a-d167-477d-baa4-ba7edadd7c34"
+              LastKnownName="ISessionRepository"
+              LastKnownLocation="KRS.ArchitectureModeling.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <generalsInternal>
+          <generalization
+            Id="ba7d2fab-bf31-4fff-816d-6d3612eb8dde"
+            isSubstitutable="false">
+            <classMoniker
+              Id="bedeb762-9002-4343-bd03-486eca7e7586"
+              LastKnownName="EFRepository"
+              LastKnownLocation="KRS.ArchitectureModeling.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="4b7a3d59-5cad-45a3-b2ce-51289bcca409"
+            name="GetSessionBriefs"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="bf689eec-3b82-4cfb-86c7-8c583c74440b"
+            name="GetTagGroup"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="d54479de-444c-468f-a154-8ea464b37a0c"
+            name="GetAll"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="52818d01-09a2-4f3b-abd4-1bcc5fdd0ce0"
+            name="GetById"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="7dd263fc-1ad6-4648-bedc-090fc948ad75"
+                  name="int id"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="16fef61e-1cbd-4c89-b8e5-0f5696715970"
+            name="Update"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="6af127fc-4948-477f-a9d2-3e55d9d074ed"
+                  name="T entity"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="a58e8703-66a9-4755-9a36-e5c60b7e0f46"
+            name="Delete"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="60129b3c-69c4-4143-8008-c9f0a541585e"
+                  name="int id"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="526820f6-c97c-4d81-8d9b-0bef9f542692"
+            name="Delete"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="7e45300e-cf5f-4ef6-8e57-4f46be36b433"
+                  name="T entity"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="5c3dde4f-e641-4d43-8af5-e52a7f46da6b"
+            name="Add"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="b977626f-749c-4174-a6c8-bc20eb26c729"
+                  name="T entity"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="87f934e4-f01d-43b7-8444-7b548796ff68"
+        name="IRepositoryProvider"
+        isAbstract="false"
+        isLeaf="false">
+        <ownedAttributes>
+          <property
+            Id="bf6bb38d-3e03-4ef1-b7cb-a5b693435840"
+            name="DbContext _DbContext"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributes>
+        <ownedOperations>
+          <operation
+            Id="8db6baab-e612-466d-b0b5-9900cff885df"
+            name="IRepository&lt;T&gt; GetRepositoryForEntityType&lt;T&gt;"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="15cb1acb-69b8-4a33-a220-3759114c92d8"
+            name="T GetRepository&lt;T&gt;"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="b207366f-1041-4eba-bb3f-956cfbf9dee5"
+            name="SetRepository"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperations>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="524a4b5b-a014-4903-95ea-5a0dac614f0a"
+        name="RepositoryProvider"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <interfaceRealization
+            Id="642ba2be-38db-46db-b8b2-0d0c8d0190ba">
+            <interfaceMoniker
+              Id="87f934e4-f01d-43b7-8444-7b548796ff68"
+              LastKnownName="IRepositoryProvider"
+              LastKnownLocation="KRS.ArchitectureModeling.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="4a610b78-3385-46ab-8982-1399685609c1"
+            name="RepositoryFactories _RepositoryFactories"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="7282eb68-8c41-4eb2-8783-414fe3b7ce5c"
+            name="Dictionary&lt;Type, object&gt; _Repositories"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="66388b37-f67b-4ba2-b114-7a6e7371d3fa"
+            name="DbContext _DbContext"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="dde6141c-b513-40a3-956d-ae9186099474"
+            name="IRepository&lt;T&gt; GetRepositoryForEntityType&lt;T&gt;"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="ed0b2a7a-0f4f-4e89-8aec-7fe66eb41069"
+            name="T GetRepository&lt;T&gt;"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="b6a60b8b-4b3e-459f-b287-fd7a49d64cf7"
+            name="SetRepository"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="cdf365a9-e8ca-4b9e-92dc-92f6ae966856"
+            name="T MakeRepository"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="500768a7-13fe-46b7-80e0-1643eb040f30"
+            name="ctor"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="de9a1766-e63e-42c7-bed1-ec2586bb64ea"
+                  name="RepositoryFactories"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="dcae08bf-9d7d-4d09-90dc-47fbcd396eb0"
+        name="RepositoryFactories"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <dependency
+            Id="d7549b6c-f9df-4811-804e-02520b460f99">
+            <classMoniker
+              Id="524a4b5b-a014-4903-95ea-5a0dac614f0a"
+              LastKnownName="RepositoryProvider"
+              LastKnownLocation="KRS.ArchitectureModeling.uml" />
+          </dependency>
+          <dependency
+            Id="192a81c7-9a51-419e-85da-677e17a673ad">
+            <interfaceMoniker
+              Id="487de57c-db56-4d0a-848d-fa28b329239d"
+              LastKnownName="IRepository&lt;T&gt;"
+              LastKnownLocation="KRS.ArchitectureModeling.uml" />
+          </dependency>
+        </suppliersInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="449d8f81-a169-48e0-a7a1-95a060f8118d"
+            name="IDictionary&lt;Type, Func&lt;DbContext, object&gt;&gt; _repFactories"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="1ee7519e-a77a-4a84-95a9-b897ef9840a8"
+            name="GetFactories"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="48f81377-c500-4c39-807c-a2cfae71cca7"
+            name="DefaultEntityRepositoryFactory&lt;T&gt;"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="f7fed4cb-02d0-4918-b2f3-fa7c253faade"
+            name="GetRepositoryFactoryForEntityType&lt;T&gt;"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="ab3c04ec-773d-4175-9b8b-f0f734c1200b"
+            name="GetRepositoryFactory&lt;T&gt;"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="b64e0cb6-11aa-452f-af47-1c3d79662153"
+            name="ctor"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="a73258e2-d3bc-415d-9777-726e0f3f9030"
+            name="ctor"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="f6e18a1f-fac6-4293-8de4-fe982ace13bd"
+                  name="IDictionary&lt;Type"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="80e8ee1c-f1b6-478c-bd35-808ffd7f44cf"
+                  name="Func&lt;&gt;&gt; factories"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="064d7a55-8f94-4a23-a4e2-145eddcdb7db"
+        name="IUnitOfWork"
+        isAbstract="false"
+        isLeaf="false">
+        <ownedAttributes>
+          <property
+            Id="f0c261d0-d153-47c5-b352-002c81f2f557"
+            name="IRepository&lt;Room&gt; Rooms"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="aa1b8bee-51a3-4b25-a01b-21015b49371a"
+            name="IRepository&lt;Track&gt; Tracks"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="26ff2cc7-96a8-4d55-ab29-485676659ba2"
+            name="IRepository&lt;TimeSlot&gt; TimeSlots"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="8610bf6b-d27f-4552-b8b1-2e4f000fe645"
+            name="IPersonRepository Persons"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="d6d529d5-b24e-4489-9b32-9295f9e50120"
+            name="ISessionsRepository Sessions"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="bd0460e4-705d-4f9a-af0e-e7c0378c5a99"
+            name="IAttendanceRepository Attendances"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributes>
+        <ownedOperations>
+          <operation
+            Id="1d8c1197-ceb6-47ef-a2b9-3e2e211486ff"
+            name="Commit"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperations>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="6f7bf460-6712-4676-a7c0-e0d96fb4bedc"
+        name="UnitOfWork"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <interfaceRealization
+            Id="71f701dc-4450-4e5b-a9a3-6aa6e1f417a3">
+            <interfaceMoniker
+              Id="064d7a55-8f94-4a23-a4e2-145eddcdb7db"
+              LastKnownName="IUnitOfWork"
+              LastKnownLocation="KRS.ArchitectureModeling.uml" />
+          </interfaceRealization>
+          <dependency
+            Id="cdd95270-2334-4f97-b181-ce3db64ce78c">
+            <interfaceMoniker
+              Id="87f934e4-f01d-43b7-8444-7b548796ff68"
+              LastKnownName="IRepositoryProvider"
+              LastKnownLocation="KRS.ArchitectureModeling.uml" />
+          </dependency>
+        </suppliersInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="6e274d7f-88e7-4058-8206-359f2dde1867"
+            name="DbContext _dbContext"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="d7beb660-2bd6-463d-bc12-252cf060c72b"
+            name="RepositoryProvider _repoProvider"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="7adad724-93ee-4a44-abc2-1ecfe01c256a"
+            name="IAttendanceRepository Attendances"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="76a0b9ff-c330-4ce7-974d-c74295ee8ad6"
+            name="IPersonRepository Persons"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="9e92da99-4bd5-42fb-950e-ac2eae9e1d81"
+            name="IRepository&lt;Room&gt; Rooms"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="85ff67f2-29de-4f84-8058-94e6fdd125cf"
+            name="IRepository&lt;TimeSlot&gt; TimeSlots"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="b86b5dca-e3c3-445e-af41-1dccc1363893"
+            name="IRepository&lt;Track&gt; Tracks"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="2a7301e7-8559-4b27-9f50-f042cc83f8ee"
+            name="ISessionsRepository Sessions"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="03168c00-6216-476f-998a-d0155f8d12b6"
+            name="Commit"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="1190ce54-8057-403f-87c0-33a861db1787"
+            name="ctor"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="b9d32eaa-96f6-42f1-8ad2-500a97be1bf7"
+                  name="IRepositoryProvider"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="9360d9ac-d665-4399-a87a-0960bdd08f33"
+            name="Dispose"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="460023ce-825f-4188-ace2-0403f3a169f3"
+            name="T GetRepo&lt;T&gt;"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="94bc46d7-cebc-4b4e-bab0-eb6620ddcdcd"
+            name="IRepository&lt;T&gt; GetStandardRepo&lt;T&gt;"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="1a673be4-572f-47a0-aac7-f4c87f67147c"
+            name="CreateDbContext"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="aa2c1803-bae9-4284-9f0b-e42720ffe999"
+        name="ApiController"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="f1aff202-7bdb-4303-acfb-2aee2c666bf2"
+        name="AApiControllerBase"
+        isAbstract="false"
+        isLeaf="false">
+        <ownedAttributes>
+          <property
+            Id="a36620a0-0b17-41c7-9655-c474baa4b522"
+            name="IUnitOfWork _UnitOfWork"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributes>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="69683ea4-be3d-4224-b6fd-583ca62eea90"
+        name="ApiControllerBase"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <generalsInternal>
+          <generalization
+            Id="3ef74442-1653-4529-96d6-2bc83c08cb09"
+            isSubstitutable="false">
+            <classMoniker
+              Id="aa2c1803-bae9-4284-9f0b-e42720ffe999"
+              LastKnownName="ApiController"
+              LastKnownLocation="KRS.ArchitectureModeling.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="be201076-426c-4b78-8ce8-ead7cd3c68f1"
+            name="IUnitOfWork _UnitOfWork"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="6968690d-2379-490b-8274-e9fe218c0e9c"
+        name="SessionsController"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <dependency
+            Id="c808dd59-934c-4b4d-a42f-aef6d93554a8">
+            <interfaceMoniker
+              Id="064d7a55-8f94-4a23-a4e2-145eddcdb7db"
+              LastKnownName="IUnitOfWork"
+              LastKnownLocation="KRS.ArchitectureModeling.uml" />
+          </dependency>
+        </suppliersInternal>
+        <generalsInternal>
+          <generalization
+            Id="a31689a0-7080-4a30-a080-ed9eebd554d3"
+            isSubstitutable="false">
+            <classMoniker
+              Id="69683ea4-be3d-4224-b6fd-583ca62eea90"
+              LastKnownName="ApiControllerBase"
+              LastKnownLocation="KRS.ArchitectureModeling.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="76a465e0-91d1-4218-8ebf-46ac6a6c14ca"
+            name="ctor"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="78c33534-9467-459a-822d-564f9e8df466"
+                  name="IUnitOfWork _UOF"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="fb85b50f-effc-482b-a679-1c1ce48c348a"
+            name="IEnumerable&lt;Session&gt; Get"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="6f4f0066-680b-4b53-9ddc-1a521d5ccc73"
+            name="Session Get"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="9260aac5-58ac-4517-b204-eb02641e6f03"
+                  name="int id"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="c1edc338-49e6-462c-b693-d3a48967428b"
+            name="Post"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="53de6cfc-c362-47b8-b1de-67e3ac6e2355"
+                  name="Session session"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="a232ef58-721e-47fc-b095-75e25efdf5f1"
+            name="Put"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="f4088e98-2782-400c-9c0b-5b563d357ec4"
+                  name="Session session"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="54521548-adb4-4e53-b709-0556f3afa503"
+            name="Delete"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="27b81b7d-e0cd-4b94-875e-adef87ce955d"
+                  name="int id"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+  <primitiveType
+    Id="220a3521-e091-4221-bae9-3ef9018e845c"
+    name="Integer"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+    name="Boolean"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+    name="String"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="3ab42e7d-4969-445a-b209-471f5cb8209c"
+    name="UnlimitedNatural"
+    isAbstract="false"
+    isLeaf="false" />
+</modelStoreModel>

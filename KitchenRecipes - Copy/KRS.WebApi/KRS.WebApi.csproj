@@ -1,0 +1,492 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F0440B5D-24A1-47F2-ADF1-37AF1CA2F3B4}</ProjectGuid>
+    <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>KRS.WebApi</RootNamespace>
+    <AssemblyName>KRS.WebApi</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Autofac">
+      <HintPath>..\packages\Autofac.3.0.1\lib\net40\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="Autofac.Configuration">
+      <HintPath>..\packages\Autofac.3.0.1\lib\net40\Autofac.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Autofac.Integration.WebApi">
+      <HintPath>..\packages\Autofac.WebApi.3.0.0\lib\net40\Autofac.Integration.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="dotless.Core">
+      <HintPath>..\packages\dotless.1.3.1.0\lib\dotless.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.4.5.6\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.4.0.20710.0\lib\net40\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.4.0.20710.0\lib\net40\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.4.0.20710.0\lib\net40\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.20710.0\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.0.0\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Providers">
+      <HintPath>..\packages\Microsoft.AspNet.Providers.Core.1.1\lib\net40\System.Web.Providers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.20710.0\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.1.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.1.0\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\GlobalConfig.cs" />
+    <Compile Include="App_Start\LessTransform.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\ValidationActionFilter.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Bootstrapper.cs" />
+    <Compile Include="Controllers\ApiBaseController.cs" />
+    <Compile Include="Controllers\CookProcessesController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\IngredientsController.cs" />
+    <Compile Include="Controllers\KitchenwaresController.cs" />
+    <Compile Include="Controllers\RecipesController.cs" />
+    <Compile Include="Controllers\ValuesController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\base.css" />
+    <Content Include="Content\images\archive\back.png" />
+    <Content Include="Content\images\archive\blue-bookmark.png" />
+    <Content Include="Content\images\archive\blue-bookmarkchecked.png" />
+    <Content Include="Content\images\archive\blue-bookmarklocked.png" />
+    <Content Include="Content\images\archive\cancel.png" />
+    <Content Include="Content\images\archive\checkbox-checked-black.png" />
+    <Content Include="Content\images\archive\checkbox-checked-white.png" />
+    <Content Include="Content\images\archive\checkbox-unchecked-black.png" />
+    <Content Include="Content\images\archive\checkbox-unchecked-white.png" />
+    <Content Include="Content\images\archive\clear.png" />
+    <Content Include="Content\images\archive\heart-black.png" />
+    <Content Include="Content\images\archive\heart-checked.png" />
+    <Content Include="Content\images\archive\heart-locked-black.png" />
+    <Content Include="Content\images\archive\heart-locked-white.png" />
+    <Content Include="Content\images\archive\heart-white.png" />
+    <Content Include="Content\images\archive\icon-blue.png" />
+    <Content Include="Content\images\archive\icon-light-blue.png" />
+    <Content Include="Content\images\archive\icon.png" />
+    <Content Include="Content\images\archive\invalid.png" />
+    <Content Include="Content\images\archive\refresh.png" />
+    <Content Include="Content\images\archive\save.png" />
+    <Content Include="Content\images\archive\search.png" />
+    <Content Include="Content\images\archive\star-empty.png" />
+    <Content Include="Content\images\archive\star-full-dark.png" />
+    <Content Include="Content\images\archive\star-full-light.png" />
+    <Content Include="Content\images\archive\trash.png" />
+    <Content Include="Content\images\archive\valid.png" />
+    <Content Include="Content\images\archive\val_asterisk.png" />
+    <Content Include="Content\images\back.png" />
+    <Content Include="Content\images\cancel.png" />
+    <Content Include="Content\images\checkbox-checked-black.png" />
+    <Content Include="Content\images\checkbox-checked-white.png" />
+    <Content Include="Content\images\checkbox-unchecked-black.png" />
+    <Content Include="Content\images\checkbox-unchecked-white.png" />
+    <Content Include="Content\images\clear.png" />
+    <Content Include="Content\images\heart-black.png" />
+    <Content Include="Content\images\heart-checked.png" />
+    <Content Include="Content\images\heart-locked-black.png" />
+    <Content Include="Content\images\heart-locked-white.png" />
+    <Content Include="Content\images\heart-white.png" />
+    <Content Include="Content\images\icon-blue.png" />
+    <Content Include="Content\images\icon-light-blue.png" />
+    <Content Include="Content\images\invalid.png" />
+    <Content Include="Content\images\photos\aaron_skonnard.jpg" />
+    <Content Include="Content\images\photos\dan_wahlin.jpg" />
+    <Content Include="Content\images\photos\dave_ward.jpg" />
+    <Content Include="Content\images\photos\elijah_manor.jpg" />
+    <Content Include="Content\images\photos\eric_barnard.jpg" />
+    <Content Include="Content\images\photos\esteban_garcia.jpg" />
+    <Content Include="Content\images\photos\felix_fanboi.jpg" />
+    <Content Include="Content\images\photos\fritz_onion.jpg" />
+    <Content Include="Content\images\photos\glenn_block.jpg" />
+    <Content Include="Content\images\photos\hans_fjallemark.jpg" />
+    <Content Include="Content\images\photos\howard_dierking.jpg" />
+    <Content Include="Content\images\photos\jesse_liberty.jpg" />
+    <Content Include="Content\images\photos\jim_cowart.jpg" />
+    <Content Include="Content\images\photos\john_papa.jpg" />
+    <Content Include="Content\images\photos\john_smith.jpg" />
+    <Content Include="Content\images\photos\julie_lerman.jpg" />
+    <Content Include="Content\images\photos\mads_kristensen.jpg" />
+    <Content Include="Content\images\photos\mike_callaghan.jpg" />
+    <Content Include="Content\images\photos\pete_brown.jpg" />
+    <Content Include="Content\images\photos\ryan_niemeyer.jpg" />
+    <Content Include="Content\images\photos\scott_guthrie.jpg" />
+    <Content Include="Content\images\photos\scott_hanselman.jpg" />
+    <Content Include="Content\images\photos\scott_hunter.jpg" />
+    <Content Include="Content\images\photos\shawn_wildermuth.jpg" />
+    <Content Include="Content\images\photos\steve_sanderson.jpg" />
+    <Content Include="Content\images\photos\sue_menot.jpg" />
+    <Content Include="Content\images\photos\tim_heuer.jpg" />
+    <Content Include="Content\images\photos\unknown_person.jpg" />
+    <Content Include="Content\images\photos\ward_bell.jpg" />
+    <Content Include="Content\images\refresh.png" />
+    <Content Include="Content\images\save.png" />
+    <Content Include="Content\images\search.png" />
+    <Content Include="Content\images\star-empty.png" />
+    <Content Include="Content\images\star-full-dark.png" />
+    <Content Include="Content\images\star-full-light.png" />
+    <Content Include="Content\images\trash.png" />
+    <Content Include="Content\images\valid.png" />
+    <Content Include="Content\images\val_asterisk.png" />
+    <Content Include="Content\normalize.css" />
+    <Content Include="Content\toastr.css" />
+    <Content Include="Content\toastr.min.css" />
+    <Content Include="Content\styles.less" />
+    <None Include="index.cshtml" />
+    <Content Include="Scripts\app\datacontext.js" />
+    <Content Include="Scripts\app\dataservice.js" />
+    <Content Include="Scripts\app\dataservice.recipe.js" />
+    <Content Include="Scripts\app\event.delegates.js" />
+    <Content Include="Scripts\app\filter.recipes.js" />
+    <Content Include="Scripts\app\messenger.js" />
+    <Content Include="Scripts\app\model.js" />
+    <Content Include="Scripts\app\model.mapper.js" />
+    <Content Include="Scripts\app\model.recipe.js" />
+    <Content Include="Scripts\app\sort.js" />
+    <Content Include="Scripts\app\vm.recipe.js" />
+    <None Include="Scripts\lib\amplify-vsdoc.js" />
+    <Content Include="Scripts\app\binder.js" />
+    <Content Include="Scripts\app\bootstrapper.js" />
+    <Content Include="Scripts\app\config.js" />
+    <Content Include="Scripts\app\dataprimer.js" />
+    <Content Include="Scripts\app\presenter.js" />
+    <Content Include="Scripts\app\route-config.js" />
+    <Content Include="Scripts\app\route-mediator.js" />
+    <Content Include="Scripts\app\router.js" />
+    <Content Include="Scripts\app\store.js" />
+    <Content Include="Scripts\app\utils.js" />
+    <Content Include="Scripts\app\vm.js" />
+    <Content Include="Scripts\app\vm.recipes.js" />
+    <Content Include="Scripts\lib\knockout.activity.js" />
+    <Content Include="Scripts\lib\knockout.command.js" />
+    <Content Include="Scripts\lib\knockout.dirtyFlag.js" />
+    <Content Include="Scripts\lib\knockout.validation.debug.js" />
+    <Content Include="Scripts\lib\knockout.validation.js" />
+    <Content Include="Scripts\lib\koExternalTemplateEngine-amd.js" />
+    <Content Include="Scripts\lib\koExternalTemplateEngine-amd.min.js" />
+    <Content Include="Scripts\lib\koExternalTemplateEngine.js" />
+    <Content Include="Scripts\lib\koExternalTemplateEngine.min.js" />
+    <Content Include="Scripts\lib\koExternalTemplateEngine_all.js" />
+    <Content Include="Scripts\lib\koExternalTemplateEngine_all.min.js" />
+    <Content Include="Scripts\lib\infuser-amd.js" />
+    <Content Include="Scripts\lib\infuser-amd.min.gz.js" />
+    <Content Include="Scripts\lib\infuser-amd.min.js" />
+    <Content Include="Scripts\lib\infuser.js" />
+    <Content Include="Scripts\lib\infuser.min.gz.js" />
+    <Content Include="Scripts\lib\infuser.min.js" />
+    <Content Include="Scripts\lib\jquery.mockjson.js" />
+    <Content Include="Scripts\lib\json2.js" />
+    <Content Include="Scripts\lib\json2.min.js" />
+    <Content Include="Scripts\lib\amplify.js" />
+    <Content Include="Scripts\lib\amplify.min.js" />
+    <Content Include="Scripts\infrastructure\base.js" />
+    <Content Include="Scripts\lib\require.js" />
+    <Content Include="Scripts\lib\underscore.js" />
+    <Content Include="Scripts\lib\underscore.min.js" />
+    <Content Include="Scripts\lib\moment.js" />
+    <Content Include="Scripts\lib\moment.min.js" />
+    <Content Include="Scripts\lib\sammy-0.7.4.js" />
+    <Content Include="Scripts\lib\sammy-0.7.4.min.js" />
+    <Content Include="Scripts\lib\toastr.js" />
+    <Content Include="Scripts\lib\toastr.min.js" />
+    <Content Include="Scripts\lib\TrafficCop-amd.js" />
+    <Content Include="Scripts\lib\TrafficCop-amd.min.gz.js" />
+    <Content Include="Scripts\lib\TrafficCop-amd.min.js" />
+    <Content Include="Scripts\lib\TrafficCop.js" />
+    <Content Include="Scripts\lib\TrafficCop.min.gz.js" />
+    <Content Include="Scripts\lib\TrafficCop.min.js" />
+    <Content Include="Scripts\main.js" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="Images\Categories\Ingredients\anymal-dobavku.jpg" />
+    <Content Include="Images\Categories\Ingredients\citruses.jpg" />
+    <Content Include="Images\Categories\Ingredients\fish.jpg" />
+    <Content Include="Images\Categories\Ingredients\fruits.jpg" />
+    <Content Include="Images\Categories\Ingredients\konjak.jpg" />
+    <Content Include="Images\Categories\Ingredients\konservacij.jpg" />
+    <Content Include="Images\Categories\Ingredients\krypu.jpg" />
+    <Content Include="Images\Categories\Ingredients\mashroms.jpg" />
+    <Content Include="Images\Categories\Ingredients\meat.jpg" />
+    <Content Include="Images\Categories\Ingredients\prupravu.jpg" />
+    <Content Include="Images\Categories\Ingredients\ros-dobavku.jpg" />
+    <Content Include="Images\Categories\Ingredients\vegetables.jpg" />
+    <Content Include="Images\Categories\Ingredients\vines.jpg" />
+    <Content Include="Images\Categories\Kitchenware\elektr-devices.jpg" />
+    <Content Include="Images\Categories\Kitchenware\kitchen-devices.jpg" />
+    <Content Include="Images\Categories\Kitchenware\knifes.jpg" />
+    <Content Include="Images\Categories\Kitchenware\pans.jpg" />
+    <Content Include="Images\Categories\Kitchenware\pidnosu.jpg" />
+    <Content Include="Images\Categories\Kitchenware\plates.jpg" />
+    <Content Include="Images\Categories\Kitchenware\skovorodki.jpg" />
+    <Content Include="Images\Categories\Kitchenware\vidkruvachki.jpg" />
+    <Content Include="Images\Categories\Recipes\avtorski-stravu.jpg" />
+    <Content Include="Images\Categories\Recipes\beverages.jpg" />
+    <Content Include="Images\Categories\Recipes\desertu.jpg" />
+    <Content Include="Images\Categories\Recipes\drugi-stravu.jpg" />
+    <Content Include="Images\Categories\Recipes\georgia.jpg" />
+    <Content Include="Images\Categories\Recipes\juses.jpg" />
+    <Content Include="Images\Categories\Recipes\kazak.jpg" />
+    <Content Include="Images\Categories\Recipes\pershi-stravu.jpg" />
+    <Content Include="Images\Categories\Recipes\rus.jpg" />
+    <Content Include="Images\Categories\Recipes\salads.jpg" />
+    <Content Include="Images\Categories\Recipes\soysu.jpg" />
+    <Content Include="Images\Categories\Recipes\ukr.jpg" />
+    <Content Include="Images\Categories\Recipes\vines.jpg" />
+    <Content Include="Images\Categories\Recipes\vupichka.jpg" />
+    <Content Include="Images\Categories\Recipes\zakuski.jpg" />
+    <Content Include="Images\RecipeParts\CookProcesses\buryak-kubyky.jpg" />
+    <Content Include="Images\RecipeParts\CookProcesses\chasnyk.jpg" />
+    <Content Include="Images\RecipeParts\CookProcesses\cybulya.jpg" />
+    <Content Include="Images\RecipeParts\CookProcesses\cybulya2.jpg" />
+    <Content Include="Images\RecipeParts\CookProcesses\kurka-smazh.jpg" />
+    <Content Include="Images\RecipeParts\CookProcesses\kurka.jpg" />
+    <Content Include="Images\RecipeParts\CookProcesses\lymon.jpg" />
+    <Content Include="Images\RecipeParts\CookProcesses\morkva.jpg" />
+    <Content Include="Images\RecipeParts\CookProcesses\myaso.jpg" />
+    <Content Include="Images\RecipeParts\CookProcesses\ogirky.jpg" />
+    <Content Include="Images\RecipeParts\CookProcesses\perets-pechenyj.jpg" />
+    <Content Include="Images\RecipeParts\CookProcesses\perets-smazh.jpg" />
+    <Content Include="Images\RecipeParts\CookProcesses\perets.jpg" />
+    <Content Include="Images\RecipeParts\CookProcesses\petrushka.jpg" />
+    <Content Include="Images\RecipeParts\CookProcesses\pomidory.jpg" />
+    <Content Include="Images\RecipeParts\CookProcesses\sous.jpg" />
+    <Content Include="Images\RecipeParts\Ingredients\apelsun.jpg" />
+    <Content Include="Images\RecipeParts\Ingredients\apple.jpg" />
+    <Content Include="Images\RecipeParts\Ingredients\carrot.jpg" />
+    <Content Include="Images\RecipeParts\Ingredients\chasnuk.jpg" />
+    <Content Include="Images\RecipeParts\Ingredients\chili.jpg" />
+    <Content Include="Images\RecipeParts\Ingredients\images.jpg" />
+    <Content Include="Images\RecipeParts\Ingredients\imbur.jpg" />
+    <Content Include="Images\RecipeParts\Ingredients\mandarun.jpg" />
+    <Content Include="Images\RecipeParts\Ingredients\meat.jpg" />
+    <Content Include="Images\RecipeParts\Ingredients\potato.jpg" />
+    <Content Include="Images\RecipeParts\Ingredients\redperec.jpg" />
+    <Content Include="Images\RecipeParts\Kitchenwares\combain.jpg" />
+    <Content Include="Images\RecipeParts\Kitchenwares\doshka.jpg" />
+    <Content Include="Images\RecipeParts\Kitchenwares\fray.jpg" />
+    <Content Include="Images\RecipeParts\Kitchenwares\knife1.jpg" />
+    <Content Include="Images\RecipeParts\Kitchenwares\knife2.jpg" />
+    <Content Include="Images\RecipeParts\Kitchenwares\knife3.jpg" />
+    <Content Include="Images\RecipeParts\Kitchenwares\meatcut.jpg" />
+    <Content Include="Images\RecipeParts\Kitchenwares\mixer.jpg" />
+    <Content Include="Images\RecipeParts\Kitchenwares\pan.jpg" />
+    <Content Include="Images\RecipeParts\Kitchenwares\pidnos.jpg" />
+    <Content Include="Images\RecipeParts\Kitchenwares\plate.jpg" />
+    <Content Include="Images\RecipeParts\Kitchenwares\shtopor.jpg" />
+    <Content Include="Images\RecipeParts\Kitchenwares\vidkruvach.jpg" />
+    <Content Include="Images\Recipes\cukerky-suhofruktiv.jpg" />
+    <Content Include="Images\Recipes\greyprutovyj-sous.jpg" />
+    <Content Include="Images\Recipes\kuryache-file-kitaysky.jpg" />
+    <Content Include="Images\Recipes\mini-buterbrody-ikroyu-avokado.jpg" />
+    <Content Include="Images\Recipes\myaso-francuzky.jpg" />
+    <Content Include="Images\Recipes\saladshopsky.jpg" />
+    <Content Include="Images\Recipes\vinegret.jpg" />
+    <None Include="Scripts\lib\jquery-1.9.1.intellisense.js" />
+    <Content Include="Scripts\lib\knockout-2.2.1.debug.js" />
+    <Content Include="Scripts\lib\knockout-2.2.1.js" />
+    <Content Include="Scripts\lib\jquery-1.9.1.js" />
+    <Content Include="Scripts\lib\jquery-1.9.1.min.js" />
+    <Content Include="Scripts\lib\jquery-1.9.1.min.map" />
+    <Content Include="Scripts\lib\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\lib\jquery.unobtrusive-ajax.min.js" />
+    <Content Include="Scripts\lib\modernizr-2.6.2.js" />
+    <Content Include="Test\qunit\qunit-composite.css" />
+    <Content Include="Test\qunit\qunit-composite.js" />
+    <Content Include="Test\qunit\qunit.css" />
+    <Content Include="Test\qunit\qunit.js" />
+    <Content Include="Test\webapi\qunit-utils.js" />
+    <Content Include="Test\webapi\temp\webapi.attendance-cud.tests.html" />
+    <Content Include="Test\webapi\temp\webapi.attendance-cud.tests.js" />
+    <Content Include="Test\webapi\webapi.endpoint.tests.html" />
+    <Content Include="Test\webapi\webapi.endpoint.tests.js" />
+    <Content Include="Test\webapi\webapi.get-result.tests.html" />
+    <Content Include="Test\webapi\webapi.get-result.tests.js" />
+    <Content Include="Test\webapi\webapi.recipe-crud.tests.html" />
+    <Content Include="Test\webapi\webapi.recipe-crud.tests.js" />
+    <Content Include="Test\webapi\webapi.recipe-crud-validation.tests.html" />
+    <Content Include="Test\webapi\webapi.recipe-crud-validation.tests.js" />
+    <Content Include="Test\webapi\temp\webapi.session-cud.tests.html" />
+    <Content Include="Test\webapi\temp\webapi.session-cud.tests.js" />
+    <Content Include="Test\webapi\webapi.testsuite.html" />
+    <Content Include="Tmpl\_recipe.edit.tmpl.html" />
+    <Content Include="Tmpl\_recipe.view.tmpl.html" />
+    <Content Include="Tmpl\_recipes.filterbox.tmpl.html" />
+    <Content Include="Tmpl\_recipes.view.tmpl.html" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\recipe.cshtml" />
+    <Content Include="Views\recipes.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
+    <Folder Include="Scripts\app\mock\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\KRS.DataAccess.Contracts\KRS.DataAccess.Contracts.csproj">
+      <Project>{50437B07-2B5D-480D-A2C8-817AB2A2B1E4}</Project>
+      <Name>KRS.DataAccess.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\KRS.DataAccess\KRS.DataAccess.csproj">
+      <Project>{8b2e9def-abf8-4c55-b42a-f7ad9a708ed9}</Project>
+      <Name>KRS.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\KRS.Model\KRS.Model.csproj">
+      <Project>{6b4499a2-9d67-4d82-835d-92dc41bf479a}</Project>
+      <Name>KRS.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:17143/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

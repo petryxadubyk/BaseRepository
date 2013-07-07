@@ -7,6 +7,7 @@ using System.Web.Http;
 using KRS.DataAccess.Contracts.UnitOfWork;
 using KRS.Model.Recipes;
 using KRS.Model.RecipesParts;
+using KRS.Model.ViewModels;
 
 namespace KRS.WebApi.Controllers
 {
@@ -56,8 +57,13 @@ namespace KRS.WebApi.Controllers
             return query4.ToList();
         }
 
+        [ActionName("recipebriefs")]
+        public IEnumerable<RecipeBrief> GetRecipeBriefs()
+        {
+            return Uow.Recipes.GetBriefRecipes();
+        }
 
-        // GET /api/recipes/ingredients
+            // GET /api/recipes/ingredients
         [ActionName("ingredients")]
         public IEnumerable<Ingredient> GetIngredients(string name)
         {
@@ -91,7 +97,7 @@ namespace KRS.WebApi.Controllers
             // Compose location header that tells how to get this session
             // e.g. ~/api/session/5
             response.Headers.Location =
-                new Uri(Url.Link(WebApiConfig.ControllerAndId, new { id = recipe.Id }));
+                new Uri(Url.Link(RouteConfig.ControllerAndId, new { id = recipe.Id }));
 
             return response;
         }

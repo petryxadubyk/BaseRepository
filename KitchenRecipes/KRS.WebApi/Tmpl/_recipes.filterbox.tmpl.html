@@ -1,0 +1,12 @@
+﻿<div class="filter-box-container">
+    
+    <input class="filter-box"
+           data-bind="value: recipeFilter.searchText, valueUpdate: 'afterkeydown', escape: clearFilter"
+           placeholder="filter by name" type="text" />
+    
+    <a class="clear-text" data-bind="click: clearFilter" title="Clear"></a>
+    
+    
+    <small>Showing <span data-bind="text:recipes().length"></span> recipes</small>
+
+</div>

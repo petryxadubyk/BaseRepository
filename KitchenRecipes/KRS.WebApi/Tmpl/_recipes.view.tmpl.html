@@ -1,0 +1,13 @@
+﻿<article class="article-right-content">
+    
+    <div class="recipe-brief" title="Go to recipe details">
+        <img data-bind="attr: {src: photoPath}"/>
+        <small data-bind="text:likes" class="right"></small>
+        <small data-bind="text:dislikes" class="right"></small>
+        <h1 data-bind="text: name"></h1>
+        <address data-bind="text: shortDescription"></address>
+    </div>
+
+    <button data-bind="favoriteCheckbox: {enable: isUnlocked}"></button>
+
+</article>

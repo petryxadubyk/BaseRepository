@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="3bd64629-c489-4dec-bd7e-05ba00847e66"
+  name="Index.cshtml" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <packagedElements>
+    <packageHasNamedElement>
+      <enumeration
+        Id="b3cb3190-2bd3-447c-b2bb-dc7addb1ed98"
+        name="bundles"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="1d11ea83-d02f-40aa-b19c-efa8bd54ea5c"
+            isDerived="false"
+            sourceEndRoleName=""
+            targetEndRoleName="main.js"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="cfcb53dc-d1d1-4f0f-9384-a5de99c454e3"
+              LastKnownName="main.js"
+              LastKnownLocation="KRS.ArchitectureModeling.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="2eb1c15f-8a20-43e7-86ff-a616271251e1"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="592414f9-84ff-421f-b829-1162a9b21aa7"
+                  name="main.js"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedLiterals>
+          <enumerationLiteral
+            Id="39bed38d-852a-4c80-9b85-bcb97349b24a"
+            name="Modernizer Bundle" />
+          <enumerationLiteral
+            Id="3385a6b2-1941-4d08-94c7-3b4dcae338a9"
+            name="JQuery Bundle" />
+          <enumerationLiteral
+            Id="50b3681d-f52c-447a-837e-acff45393ab2"
+            name="Libs Bundle" />
+          <enumerationLiteral
+            Id="6afd9355-21c9-4cc5-a99e-46692fe9a2fb"
+            name="Require.js" />
+          <enumerationLiteral
+            Id="a6da89b8-99f6-4fc4-8dfc-67d873aee097"
+            name="Main.js" />
+          <enumerationLiteral
+            Id="d347f009-c86f-4d83-8e8f-9440f239e472"
+            name="App Bundle" />
+          <enumerationLiteral
+            Id="71a0c89d-9af6-4e3f-b146-065bbb6adf6d"
+            name="Infrastructure Bundle" />
+          <enumerationLiteral
+            Id="1bd63644-fb3e-4655-bc43-ca2dbfd3868a"
+            name="Mock Bundle" />
+        </ownedLiterals>
+      </enumeration>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

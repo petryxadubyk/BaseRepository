@@ -1,43 +1,82 @@
-﻿using System.Web;
-using System.Web.Optimization;
+﻿using System.Web.Optimization;
 
 namespace KRS.WebApi
 {
     public class BundleConfig
     {
-        // For more information on Bundling, visit http://go.microsoft.com/fwlink/?LinkId=254725
         public static void RegisterBundles(BundleCollection bundles)
         {
-            bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
-                        "~/Scripts/jquery-{version}.js"));
+            // either use a Content delivery networks
+            bundles.UseCdn = false;
 
-            bundles.Add(new ScriptBundle("~/bundles/jqueryui").Include(
-                        "~/Scripts/jquery-ui-{version}.js"));
+            // .debug.js, -vsdoc.js and .intellisense.js files 
+            // are in BundleTable.Bundles.IgnoreList by default.
+            // Clear out the list and add back the ones we want to ignore.
+            // Don't add back .debug.js.
+            bundles.IgnoreList.Clear();
+            bundles.IgnoreList.Ignore("*-vsdoc.js");
+            bundles.IgnoreList.Ignore("*intellisense.js");
 
-            bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
-                        "~/Scripts/jquery.unobtrusive*",
-                        "~/Scripts/jquery.validate*"));
+            // Modernizer goes separate since it loads first
+            bundles.Add(new ScriptBundle("~/bundles/modernizr")
+                .Include("~/Scripts/lib/modernizr-{version}.js"));
 
-            // Use the development version of Modernizr to develop with and learn from. Then, when you're
-            // ready for production, use the build tool at http://modernizr.com to pick only the tests you need.
-            bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
-                        "~/Scripts/modernizr-*"));
+            // jQuery
+            bundles.Add(new ScriptBundle("~/bundles/jquery",
+                "//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js")
+                .Include("~/Scripts/lib/jquery-{version}.js"));
 
-            bundles.Add(new StyleBundle("~/Content/css").Include("~/Content/site.css"));
+            // 3rd Party JavaScript files
+            bundles.Add(new ScriptBundle("~/bundles/extlibs")
+                .Include(
+                    // IE7 needs this
+                    "~/Scripts/lib/json2.js",
 
-            bundles.Add(new StyleBundle("~/Content/themes/base/css").Include(
-                        "~/Content/themes/base/jquery.ui.core.css",
-                        "~/Content/themes/base/jquery.ui.resizable.css",
-                        "~/Content/themes/base/jquery.ui.selectable.css",
-                        "~/Content/themes/base/jquery.ui.accordion.css",
-                        "~/Content/themes/base/jquery.ui.autocomplete.css",
-                        "~/Content/themes/base/jquery.ui.button.css",
-                        "~/Content/themes/base/jquery.ui.dialog.css",
-                        "~/Content/themes/base/jquery.ui.slider.css",
-                        "~/Content/themes/base/jquery.ui.tabs.css",
-                        "~/Content/themes/base/jquery.ui.datepicker.css",
-                        "~/Content/themes/base/jquery.ui.progressbar.css",
-                        "~/Content/themes/base/jquery.ui.theme.css"));
+                    // jQuery plugins
+                    "~/Scripts/lib/jquery.mockjson.js",
+                    "~/Scripts/lib/TrafficCop.js",
+                    "~/Scripts/lib/infuser.js", //depends on TrafficCop
+
+                    // Knockout and its plugins
+                    "~/Scripts/lib/knockout-{version}.js",
+                    "~/Scripts/lib/knockout.validation.js",
+                    "~/Scripts/lib/knockout.dirtyFlag.js",
+                    "~/Scripts/lib/knockout.command.js",
+                    "~/Scripts/lib/knockout.activity.js",
+                    "~/Scripts/lib/koExternalTemplateEngine.js",
+                    "~/Scripts/lib/koExternalTemplateEngine_all.js",
+
+                    // Other 3rd party libraries
+                    "~/Scripts/lib/underscore.js",
+                    "~/Scripts/lib/moment.js",
+                    "~/Scripts/lib/sammy-{version}.js",
+                    "~/Scripts/lib/amplify.*",
+                    "~/Scripts/lib/toastr.js"
+                ));
+
+            // cross-browser behaviour resolve scripts
+            bundles.Add(new ScriptBundle("~/bundles/infrastructure")
+                .IncludeDirectory("~/Scripts/infrastructure/", "*.js", searchSubdirectories: true));
+
+            // application scripts
+            bundles.Add(new ScriptBundle("~/bundles/application")
+                .IncludeDirectory("~/Scripts/app/", "*.js", searchSubdirectories: false));
+
+            // mock scripts
+            bundles.Add(new ScriptBundle("~/bundles/jsmocks")
+                .IncludeDirectory("~/Scripts/app/mock", "*.js", searchSubdirectories: false));
+
+            // CSS files
+            bundles.Add(new StyleBundle("~/Content/css")
+                .Include("~/Content/normalize.css")
+                .Include("~/Content/base.css")
+                .Include("~/Content/toastr.css")
+                );
+
+            // LESS files
+            bundles.Add(new Bundle("~/Content/less",
+                new LessTransform(), new CssMinify())
+                .Include("~/Content/styles.less"));
         }
     }
 }

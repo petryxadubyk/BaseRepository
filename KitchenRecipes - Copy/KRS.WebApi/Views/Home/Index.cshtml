@@ -1,0 +1,18 @@
+﻿    <div id="busyindicator"></div>
+    <header>
+        <h1>Kitchen Recipes</h1>
+        <nav id="shellTop-view" class="main-nav">
+            <div class="accent-top" data-bind="text: currentUser().fullName"></div>
+            <div class="accent-left"></div>
+            <ul data-bind="with: menuHashes">
+                <li class="route-top"><a data-bind="attr: {href: recipes}">Sessions 1</a></li>
+                <li class="route-top"><a data-bind="attr: {href: recipes}">Sessions 2</a></li>
+                <li class="route-top"><a data-bind="attr: {href: recipes}">Sessions 3</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+<section class="main">
+    @RenderPage("../recipes.cshtml")
+    @RenderPage("../recipe.cshtml")
+</section>
