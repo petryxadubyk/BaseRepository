@@ -60,11 +60,11 @@ namespace KRS.WebApi
 
             // application scripts
             bundles.Add(new ScriptBundle("~/bundles/application")
-                .IncludeDirectory("~/Scripts/app/", "*.js", searchSubdirectories: false));
+                .IncludeDirectory("~/Scripts/app/", "*.js", searchSubdirectories: true));
 
             // mock scripts
             bundles.Add(new ScriptBundle("~/bundles/jsmocks")
-                .IncludeDirectory("~/Scripts/app/mock", "*.js", searchSubdirectories: false));
+                .IncludeDirectory("~/Scripts/mock", "*.js", searchSubdirectories: false));
 
             // CSS files
             bundles.Add(new StyleBundle("~/Content/css")

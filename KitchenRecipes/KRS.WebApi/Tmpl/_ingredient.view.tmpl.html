@@ -1,19 +1,19 @@
-﻿<div data-bind="with: recipe">    
+﻿<div data-bind="with: ingredient">
+    <div class="topimage titleblock">
+        <label for="title"></label>
+        <img data-bind="attr: {src: photoPath}" />
+    </div>
     <div class="titleblock">
         <h1 data-bind="text:name"></h1>
     </div>
     <div class="details-left">
         <div>
-            <label>Photo</label>
-            <address data-bind="text: photoPath"></address>
+            <label>Manufacturer</label>
+            <address data-bind="text: manufacturer"></address>
         </div>
         <div>
-            <label>Likes</label>
-            <address data-bind="text: likes"></address>
-        </div>
-        <div>
-            <label>Dislikes</label>
-            <address data-bind="text: dislikes"></address>
+            <label>Created</label>
+            <address data-bind="text: createdOn"></address>
         </div>
     </div>
     <div class="details-right">
@@ -26,7 +26,8 @@
                 -->
 
             <label>Description</label>
-            <span class="scrollable-text" data-bind="text: shortDescription"></span>
+            <span class="scrollable-text" data-bind="text: description"></span>
         </div>
     </div>
 </div>
+

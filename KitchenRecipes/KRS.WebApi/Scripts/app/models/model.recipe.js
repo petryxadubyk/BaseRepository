@@ -9,10 +9,14 @@
             self.photoPath = ko.observable();
             self.likes = ko.observable();
             self.dislikes = ko.observable();
-            //self.categoryFilter = ko.observable();
-            //self.cookProcessFilter = ko.observable();
-            //self.kitchenwareFilter = ko.observable();
-            //self.ingredientFilter = ko.observable();
+            self.createdOn = ko.observable();
+            self.modifiedOn = ko.observable();
+            self.createdBy = ko.observable();
+            self.modifiedBy = ko.observable();
+            self.categoryFilter = ko.observable();
+            self.cookProcessFilter = ko.observable();
+            self.kitchenwareFilter = ko.observable();
+            self.ingredientFilter = ko.observable();
 
             self.recipeHash = ko.computed(function () {
                 return config.hashes.recipes + '/' + self.id();
@@ -43,16 +47,15 @@
         // It has access to the properties of the instance of Session.
         Recipe.prototype = function () {
             var dc = Recipe.datacontext;
-                /*categories = function () {
+                /*recipeIngredients = function() {
+                    return dc().ingredients.getLocalRecipeIngredients(this.id());
+                },
+                categories = function () {
                     return dc().categories.getLocalCategories(this.id());
                 },
 
                 kitchenwares = function () {
                     return dc().kitchenwares.getLocalKitchenwares(this.id());
-                },
-
-                ingredients = function () {
-                    return dc().ingredients.getLocalIngredients(this.id());
                 },
 
                 cookProcesses = function () {
@@ -70,10 +73,10 @@
                 
 
             return {
-                isNullo: false,
+                isNullo: false
                 //categories: categories,
                 //kitchenwares: kitchenwares,
-                //ingredients: ingredients,
+                //recipeIngredients: recipeIngredients,
                 //cookProcesses: cookProcesses,
                 //photos: photos,
                 //users: users

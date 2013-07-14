@@ -3,7 +3,6 @@ using Autofac;
 using Autofac.Integration.WebApi;
 using System.Web.Http;
 using KRS.DataAccess.Contracts.UnitOfWork;
-using KRS.DataAccess.IInfrastructure;
 using KRS.DataAccess.Infrastructure;
 using KRS.DataAccess.Repositories;
 

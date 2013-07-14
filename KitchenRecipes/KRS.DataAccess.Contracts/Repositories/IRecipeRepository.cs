@@ -12,8 +12,8 @@ namespace KRS.DataAccess.Contracts.Repositories
 {
     public interface IRecipeRepository: IRepository<Recipe>
     {
-        IEnumerable<Ingredient> GetRecipeIngredients(string recipeName);
-        IEnumerable<Recipe> GetRecipesThatIncludeIngredient(string ingredientName);
+        IEnumerable<Ingredient> GetRecipeIngredients(int recipeId);
+        IEnumerable<Recipe> GetRecipesThatIncludeIngredient(int ingredientId);
         IEnumerable<Recipe> GetByUserId(int id);
         IEnumerable<RecipeBrief> GetBriefRecipes();
     }

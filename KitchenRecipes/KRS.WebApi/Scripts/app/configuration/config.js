@@ -7,9 +7,10 @@
             //-----------------
             
             //currentUserId = 3, // John Papa 
-            //currentUser = ko.observable(),
+            currentUser = ko.observable(),
             hashes = {
                 recipes: '#/recipes',
+                ingredients: '#/ingredients'
             },
             logger = toastr, // use toastr for the logger
             messages = {
@@ -32,7 +33,9 @@
             viewIds = {
                 recipe: '#recipe-view',
                 recipes: '#recipes-view',
-                shellTop: '#shellTop-view'
+                shellTop: '#shellTop-view',
+                ingredient: '#ingredient-view',
+                ingredients: '#ingredients-view'
             },
             
             toasts = {

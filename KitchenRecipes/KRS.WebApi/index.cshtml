@@ -33,7 +33,7 @@
             <div class="accent-left"></div>
             <ul data-bind="with: menuHashes">
                 <li class="route-top"><a data-bind="attr: {href: recipes}">Recipes</a></li>
-                <li class="route-top"><a data-bind="attr: {href: recipes}">Recipes</a></li>
+                <li class="route-top"><a data-bind="attr: {href: ingredients}">Ingredients</a></li>
                 <li class="route-top"><a data-bind="attr: {href: recipes}">Recipes</a></li>
             </ul>
         </nav>
@@ -42,6 +42,8 @@
     <section class="main">
         @RenderPage("Views/recipe.cshtml")
         @RenderPage("Views/recipes.cshtml")
+        @RenderPage("Views/ingredient.cshtml")
+        @RenderPage("Views/ingredients.cshtml")
     </section>
 
     @Scripts.Render(

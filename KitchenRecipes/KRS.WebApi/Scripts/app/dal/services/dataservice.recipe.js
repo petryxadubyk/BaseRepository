@@ -20,7 +20,7 @@
                 });
 
                 amplify.request.define('recipe', 'ajax', {
-                    url: '/api/recipes/{id}',
+                    url: '/api/recipes/getrecipebyid?id={id}',
                     dataType: 'json',
                     type: 'GET'
                 });
@@ -57,7 +57,7 @@
                     error: callbacks.error
                 });
             },
-
+            
             updateRecipe = function (callbacks, data) {
                 return amplify.request({
                     resourceId: 'recipeUpdate',

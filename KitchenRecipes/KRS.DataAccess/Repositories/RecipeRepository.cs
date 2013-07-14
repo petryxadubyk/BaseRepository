@@ -15,24 +15,24 @@ namespace KRS.DataAccess.Repositories
     {
         public RecipeRepository(DbContext context) : base(context) { }
 
-        public IEnumerable<Ingredient> GetRecipeIngredients(string recipeName)
+        public IEnumerable<Ingredient> GetRecipeIngredients(int recipeId)
         {
             //інгредієнти які використовуються в рецепті з імям 'name'
             var query = from recipe in DbSet
                         join schema in DbContext.Set<RecipesIngredients>() on recipe.Id equals schema.Recipe.Id
                         join ingredient in DbContext.Set<Ingredient>() on schema.Ingredient.Id equals ingredient.Id
-                        where recipe.Name == recipeName
+                        where recipe.Id == recipeId
                         select ingredient;
 
             return query.ToList();
         }
 
-        public IEnumerable<Recipe> GetRecipesThatIncludeIngredient(string ingredientName)
+        public IEnumerable<Recipe> GetRecipesThatIncludeIngredient(int ingredientId)
         {
             //рецепти які включають інгредієнт з імям 'name'
             var query2 =
                 from ingredient in DbContext.Set<Ingredient>()
-                where ingredient.Name == ingredientName
+                where ingredient.Id == ingredientId
                 from recipeIngredients in ingredient.IngredientRecipes
                 select recipeIngredients;
             var query3 =

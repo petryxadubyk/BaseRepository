@@ -1,14 +1,14 @@
-﻿define('vm.recipe',
+﻿define('vm.ingredient',
     ['ko', 'datacontext', 'config', 'router', 'messenger', 'sort'],
     function (ko, datacontext, config, router, messenger, sort) {
-        
+
         var
-            currentRecipeId = ko.observable(),
+            currentIngredientId = ko.observable(),
             logger = config.logger,
-            recipe = ko.observable(),
+            ingredient = ko.observable(),
             validationErrors = ko.observableArray([]),
 
-            canEditRecipe = ko.computed(function () {
+            canEditIngredient = ko.computed(function () {
                 return true;
             }),
 
@@ -17,22 +17,22 @@
             }),
 
             isValid = ko.computed(function () {
-                return canEditRecipe() ? validationErrors().length === 0 : true;
+                return canEditIngredient() ? validationErrors().length === 0 : true;
             }),
-            
-            activate = function(routeData, callback) {
+
+            activate = function (routeData, callback) {
                 messenger.publish.viewModelActivated({ canleaveCallback: canLeave });
-                currentRecipeId(routeData.id);
-                getRecipe(callback);
+                currentIngredientId(routeData.id);
+                getIngredient(callback);
             },
-            
+
             cancelCmd = ko.asyncCommand({
                 execute: function (complete) {
                     var callback = function () {
                         complete();
                         logger.success(config.toasts.retreivedData);
                     };
-                    getRecipe(callback, true);
+                    getIngredient(callback, true);
                 },
                 canExecute: function (isExecuting) {
                     return !isExecuting && isDirty();
@@ -52,31 +52,23 @@
             canLeave = function () {
                 return !isDirty() && isValid;
             },
-            
-            getRecipe = function(completeCallback, forceRefresh) {
-                var callback = function() {
+
+            getIngredient = function (completeCallback, forceRefresh) {
+                var callback = function () {
                     if (completeCallback) {
                         completeCallback();
                     }
-                    validationErrors = ko.validation.group(recipe());
+                    validationErrors = ko.validation.group(ingredient());
                 };
 
-                datacontext.recipes.getFullRecipeById(
-                    currentRecipeId(), {
-                        success: function(s) {
-                            recipe(s);
-                            callback();
-                        },
-                        error: callback
-                    },
-                    forceRefresh
-                );
+                var elem = datacontext.ingredients.getLocalById(currentIngredientId());
+                ingredient(elem);
             },
-            
+
             saveCmd = ko.asyncCommand({
                 execute: function (complete) {
-                    if (canEditRecipe()) {
-                        $.when(datacontext.recipes.updateData(recipe()))
+                    if (canEditIngredient()) {
+                        $.when(datacontext.ingredients.updateData(ingredient()))
                             .always(complete);
                         return;
                     }
@@ -85,20 +77,20 @@
                     return !isExecuting && isDirty() && isValid;
                 }
             }),
-            
+
             tmplName = function () {
-                return canEditRecipe() ? 'recipe.edit' : 'recipe.view';
+                return canEditIngredient() ? 'ingredient.view' : 'ingredient.view';
             };
 
         return {
             activate: activate,
             cancelCmd: cancelCmd,
-            canEditRecipe: canEditRecipe,
+            canEditIngredient: canEditIngredient,
             canLeave: canLeave,
             goBackCmd: goBackCmd,
             isDirty: isDirty,
             isValid: isValid,
-            recipe: recipe,
+            ingredient: ingredient,
             saveCmd: saveCmd,
             tmplName: tmplName
         };

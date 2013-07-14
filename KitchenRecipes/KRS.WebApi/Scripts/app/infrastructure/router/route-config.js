@@ -16,7 +16,6 @@
                         callback: vm.recipes.activate,
                         group: '.route-top'
                     },
-
                     // Recipe details routes
                     {
                         view: config.viewIds.recipe,
@@ -24,9 +23,22 @@
                         title: 'recipe',
                         callback: vm.recipe.activate,
                         group: '.route-top'
+                    },
+                    {
+                        view: config.viewIds.ingredients,
+                        route: config.hashes.ingredients,
+                        title: 'ingredients',
+                        callback: vm.ingredients.activate,
+                        group: '.route-top'
+                    },
+                    // Recipe details routes
+                    {
+                        view: config.viewIds.ingredient,
+                        route: config.hashes.ingredients + '/:id',
+                        title: 'ingredient',
+                        callback: vm.ingredient.activate,
+                        group: '.route-top'
                     }
-
-
                 ];
 
                 for (var i = 0; i < routeData.length; i++) {

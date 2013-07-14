@@ -8,6 +8,9 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KRS.DataAccess", "KRS.DataAccess\KRS.DataAccess.csproj", "{8B2E9DEF-ABF8-4C55-B42A-F7AD9A708ED9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KRS.WebApi", "KRS.WebApi\KRS.WebApi.csproj", "{F0440B5D-24A1-47F2-ADF1-37AF1CA2F3B4}"
+	ProjectSection(ProjectDependencies) = postProject
+		{975EFE73-8706-4342-9699-33053E1F314C} = {975EFE73-8706-4342-9699-33053E1F314C}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KRS.Web.Core", "KRS.Web.Core\KRS.Web.Core.csproj", "{0BC61F31-1843-4393-866E-08E0AB64E91A}"
 EndProject

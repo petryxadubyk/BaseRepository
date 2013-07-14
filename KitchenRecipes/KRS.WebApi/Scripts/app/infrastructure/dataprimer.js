@@ -10,14 +10,17 @@
 
                     var data = {
                         recipes: ko.observable(),
+                        ingredients: ko.observable(),
                     };
 
                     $.when(
-                        datacontext.recipes.getData({ results: data.recipes })
+                        datacontext.recipes.getData({ results: data.recipes }),
+                        datacontext.ingredients.getData({results: data.ingredients})
                     )
                     .pipe(function() {
                         logger.success('Fetched data for: '
                             + '<div>' + data.recipes().length + ' recipes </div>'
+                            + '<div>' + data.ingredients().length + ' ingredients </div>'
                         );
                     })
                     .fail(function () { def.reject(); })

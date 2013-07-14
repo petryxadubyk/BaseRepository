@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="ActionFilters\AntiForgeryTokenFilterProvider .cs" />
     <Compile Include="ActionFilters\CompressResponseAttribute.cs" />
+    <Compile Include="ActionFilters\DisableCacheFilter.cs" />
     <Compile Include="ActionFilters\EFMVCAuthorize.cs" />
     <Compile Include="ActionFilters\UserFilter.cs" />
     <Compile Include="Authentification\DefaultFormsAuthentication.cs" />

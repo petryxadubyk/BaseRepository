@@ -7,4 +7,18 @@
             data-bind="command: saveCmd, activity: saveCmd.isExecuting">Save</button>
     </div>
     <div data-bind="template: {name: tmplName}"></div>
+    <button data-bind="click: getRecipeIngredients">Ingredients</button>
+    <div class="details-bottom" data-bind="if: recipeIngredients().length">
+
+        <label>Ingredients</label>
+        <section class="view-list" data-bind="foreach: recipeIngredients">
+            <article class="article-right-content">
+                <div class="recipe-brief" title="Go to ingredient details" data-bind="click: $parent.gotoIngredientDetails">
+                    <img data-bind="attr: {src: photoPath}" />
+                    <h1 data-bind="text: name"></h1>
+                </div>
+            </article>
+        </section>
+        <!--<section class="view-list" data-bind="template: {name: 'ingredients.view', foreach: $parent.recipeIngredients}"></section>-->
+    </div>
 </section>

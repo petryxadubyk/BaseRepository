@@ -65,19 +65,20 @@ namespace KRS.WebApi.Controllers
 
             // GET /api/recipes/ingredients
         [ActionName("ingredients")]
-        public IEnumerable<Ingredient> GetIngredients(string name)
+        public IEnumerable<Ingredient> GetIngredients(int id)
         {
-            return Uow.Recipes.GetRecipeIngredients(name);
+            return Uow.Recipes.GetRecipeIngredients(id);
         }
 
         // GET /api/recipes/byingredient
         [ActionName("byingredient")]
-        public IEnumerable<string> GetRecipesByIngredientName(string name)
+        public IEnumerable<string> GetRecipesByIngredientName(int id)
         {
-            return Uow.Recipes.GetRecipesThatIncludeIngredient(name).Select(r => r.Name);
+            return Uow.Recipes.GetRecipesThatIncludeIngredient(id).Select(r => r.Name);
         }
 
         // GET /api/recipes/5
+        [ActionName("getrecipebyid")]
         public Recipe Get(int id)
         {
             var session = Uow.Recipes.GetById(id);

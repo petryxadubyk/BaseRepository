@@ -8,8 +8,8 @@ namespace KRS.Model.KRS
     {
         public KRSEntity()
         {
-            CreatedOn = DateTime.Now;
-            ModifiedOn = DateTime.Now;
+            CreatedOn = DateTime.Now.ToUniversalTime();
+            ModifiedOn = DateTime.Now.ToUniversalTime();
         }
 
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]

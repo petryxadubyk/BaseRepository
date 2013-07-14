@@ -23,8 +23,8 @@
         requirejs([
                 //'jquery.activity-ex',
                 //'ko.utils'
-                'ko.bindingHandlers'
-                //'ko.debug.helpers'
+                'ko.bindingHandlers',
+                'ko.debug.helpers'
                 //'ko.asyncCommand'
         ], boot);
     }

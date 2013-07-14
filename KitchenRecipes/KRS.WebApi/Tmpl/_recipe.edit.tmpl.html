@@ -1,8 +1,8 @@
 ﻿<div data-bind="with: recipe">
     <div class="topimage titleblock">
-         <label for="title"></label>
-        <img data-bind="attr: {src: photoPath}"/>
-    </div>    
+        <label for="title"></label>
+        <img data-bind="attr: {src: photoPath}" />
+    </div>
     <div class="titleblock">
         <label for="title">Title</label>
         <input id="title" data-bind="value: name" placeholder="Knockout Fundamentals" />
@@ -10,22 +10,28 @@
     <div class="details-left">
         <div>
             <label>Photo</label>
-            <input data-bind="value: photoPath" placeholder="WEB121"/>
+            <input data-bind="value: photoPath" placeholder="WEB121" />
         </div>
         <div>
             <label>Likes</label>
-            <input data-bind="value: likes" placeholder="300"/>
+            <input data-bind="value: likes" placeholder="300" />
         </div>
         <div>
             <label>Dislikes</label>
-            <input data-bind="value: dislikes" placeholder="CSS, HTML5"/>
-        </div>       
+            <input data-bind="value: dislikes" placeholder="CSS, HTML5" />
+        </div>
     </div>
     <div class="details-right">
         <div>
             <label>Description</label>
-            <textarea data-bind="value: shortDescription, valueUpdate: 'afterkeydown'" 
-                      placeholder="Session description"></textarea>
+            <textarea data-bind="value: shortDescription, valueUpdate: 'afterkeydown'"
+                placeholder="Session description"></textarea>
         </div>
     </div>
+    <!--<div style="border: white dotted thin; clear: both">
+            <h4>Ingredients JSON</h4>
+            <pre data-bind="text:ko.utils.debugInfo($parent.recipeIngredients())"></pre>
+        </div>-->
+
+
 </div>

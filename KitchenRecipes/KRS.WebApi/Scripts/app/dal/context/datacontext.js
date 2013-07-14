@@ -140,39 +140,70 @@
             //  dataservice's 'get' method
             //  model mapper
             //----------------------------------
-            recipes = new EntitySet(dataservice.recipe.getRecipes, modelmapper.recipe, model.Recipe.Nullo, dataservice.recipe.updateRecipe);
+            recipes = new EntitySet(dataservice.recipe.getRecipes, modelmapper.recipe, model.Recipe.Nullo, dataservice.recipe.updateRecipe),
+            ingredients = new EntitySet(dataservice.ingredient.getIngredients, modelmapper.ingredient, model.Ingredient, dataservice.ingredient.updateIngredient);
 
         // extend Recipes EntitySet
-        recipes.getFullRecipeById = function (id, callbacks, forceRefresh) {
-            return $.Deferred(function (def) {
+        recipes.getFullRecipeById = function(id, callbacks, forceRefresh) {
+            return $.Deferred(function(def) {
                 var recipe = recipes.getLocalById(id);
                 if (recipe.isNullo || recipe.isBrief() || forceRefresh) {
                     // if nullo or brief, get fresh from database
                     dataservice.recipe.getRecipe({
-                        success: function (dto) {
-                            // updates the recipe returned from getLocalById() above
-                            recipe = recipes.mapDtoToContext(dto);
-                            recipe.isBrief(false); // now a full recipe
-                            if (callbacks && callbacks.success) { callbacks.success(recipe); }
-                            def.resolve(dto);
+                            success: function(dto) {
+                                // updates the recipe returned from getLocalById() above
+                                recipe = recipes.mapDtoToContext(dto);
+                                recipe.isBrief(false); // now a full recipe
+                                if (callbacks && callbacks.success) {
+                                    callbacks.success(recipe);
+                                }
+                                def.resolve(dto);
+                            },
+                            error: function(response) {
+                                logger.error('oops! could not retrieve recipe ' + id);
+                                if (callbacks && callbacks.error) {
+                                    callbacks.error(response);
+                                }
+                                def.reject(response);
+                            }
                         },
-                        error: function (response) {
-                            logger.error('oops! could not retrieve recipe ' + id);
-                            if (callbacks && callbacks.error) { callbacks.error(response); }
-                            def.reject(response);
-                        }
-                    },
-                    id);
-                }
-                else {
-                    if (callbacks && callbacks.success) { callbacks.success(recipe); }
+                        id);
+                } else {
+                    if (callbacks && callbacks.success) {
+                        callbacks.success(recipe);
+                    }
                     def.resolve(recipe);
                 }
+            }).promise();
+
+        };
+
+        // This is a "Local" method, so it gets it from the DC only, no promise returned, no callbacks.
+        recipes.getRecipeIngredients = function(options) {
+            return $.Deferred(function (def) {
+                var results = options && options.results,
+                    recipeId = options && options.param;
+
+                dataservice.ingredient.getRecipeIngredients(
+                    {
+                        success: function (dtoList) {
+                            var items = { };
+                            mapToContext(dtoList, items, results, modelmapper.ingredient);
+                            def.resolve(results);
+                        },
+                        error: function() {
+                            logger.error('oops! could not retrieve recipe with id = "' + recipeId + '" ingredients');
+                            def.reject(results);
+                        }
+                    },
+                    recipeId
+                );
             }).promise();
         };
 
         var datacontext = {
-            recipes: recipes
+            recipes: recipes,
+            ingredients: ingredients
         };
 
         model.setDataContext(datacontext);
